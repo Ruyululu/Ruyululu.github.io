@@ -5,10 +5,10 @@
     
     <entry>
       <title>Hello World</title>
-      <link href="/2019/02/14/hello-world/"/>
-      <url>/2019/02/14/hello-world/</url>
+      <link href="/2018/07/13/hello-world/"/>
+      <url>/2018/07/13/hello-world/</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
       
       
       
@@ -17,6 +17,39 @@
     
   
   
+    
+    
+    <entry>
+      <title>Categories</title>
+      <link href="/Categories/index.html"/>
+      <url>/Categories/index.html</url>
+      
+        <content type="html"><![CDATA[<p>A<br>B</p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="关于这个博客和我"><a href="#关于这个博客和我" class="headerlink" title="关于这个博客和我"></a><strong>关于这个博客和我</strong></h1><h3 id="我为什么要写这个博客"><a href="#我为什么要写这个博客" class="headerlink" title="我为什么要写这个博客"></a>我为什么要写这个博客</h3><p>本博客记录博主的一些所思所想和学习经历，是博主整理自己脑内知识条理的一种方式，有条理的复刻自己脑内的知识体系。但碍于时间，仅记录了博主一部分的知识。希望在更远的将来，能记录下更多。</p><h3 id="我想做PM的原因"><a href="#我想做PM的原因" class="headerlink" title="我想做PM的原因"></a>我想做PM的原因</h3><p>在博主小时候，跟很多贪玩男孩一样，总是想做一些新奇的玩具。长大一点呢，觉得有技术才能做自己想要的东西，故选择了技术之路。随着慢慢对社会、工业和商业方面的了解，博主发现一般人都是帮别人做别人的东西，自己想做的东西呢，单凭自己也做不出来。那作为老板就能随便做自己想要的产品吗？那当然也不是。老板不根据市场需求来做产品，最终不能盈利的话，这个产品最后还是得凉凉。</p><p>世上没有谁是能完全随心所欲的。所以我想，我能不能根据市场需求加入一点自己的想法去做一个东西，这样我便萌生了做产品经理的想法。</p><p>​       </p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>想要成为PM要怎么起步？</title>
+      <link href="/about/hello-world.html"/>
+      <url>/about/hello-world.html</url>
+      
+        <content type="html"><![CDATA[<p>想要解答一个问题的方法，从小学开始老师就已经教授过了。首先我们得知道定义，然后从定义出发，发掘我们所需要的条件。</p><h2 id="什么是PM"><a href="#什么是PM" class="headerlink" title="什么是PM"></a>什么是PM</h2><blockquote><p><strong>产品经理</strong>（英文：<strong>Product manager</strong>，缩写：<strong>PM</strong>）也称<strong>产品企划</strong>，是指在公司中针对某一项或是某一类的产品进行规划和管理的人员，主要负责产品的研发、制造、营销、渠道等工作。产品经理是很难定义的一个角色，如果非要一句话定义，那么产品经理是为终端用户服务，负责产品整个生命周期的人。——维基百科</p></blockquote><p>有产品的地方就有产品经理，就算在相同行业，对产品经理的要求也不太相同<del>（一般都是因为对应岗位没人，PM顶上）</del>。但是产品经理的核心能力是确实不变的，只是在不同行业内形式有些差别。下面我总结了一个导图，叶子节点不一定很全面，主要是上面的核心技能。</p><p><img src="" alt=""></p>]]></content>
+      
+    </entry>
+    
     
   
 </search>

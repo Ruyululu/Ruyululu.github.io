@@ -21,7 +21,7 @@
       <link href="/2019/02/15/%E5%B8%82%E5%9C%BA%E8%B0%83%E7%A0%94%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
       <url>/2019/02/15/%E5%B8%82%E5%9C%BA%E8%B0%83%E7%A0%94%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</url>
       
-        <content type="html"><![CDATA[<hr><p>title： 产品经理怎么做数据分析</p><h2 id="data-2018-07-23"><a href="#data-2018-07-23" class="headerlink" title="data:2018/07/23"></a>data:2018/07/23</h2><p>PM需要分析的数据，一般都是市场数据，所以大家一般也把这个过程叫做市场调研。</p><h2 id="为什么要做市场调研"><a href="#为什么要做市场调研" class="headerlink" title="为什么要做市场调研"></a>为什么要做市场调研</h2><p>一般公司都有marketing部门帮助PM完成这项工作，但是这并不代表我们不需要学习它了。从原理上理解我们的工作是十分重要的，就像搞数据分析的人可以用matlab、可以用R写脚本但还是得学好基本的数学一样。</p><h2 id="做市场调研的基本方法"><a href="#做市场调研的基本方法" class="headerlink" title="做市场调研的基本方法"></a>做市场调研的基本方法</h2><p>先上个例子。cesim公司的市场调研报告的目录。</p><p><img src="https://s2.ax1x.com/2019/02/15/krJoC9.md.jpg" alt="cesim市场调研报告目录"></p><p>其中市场调研部分包括广告效应、销售预测、影响用户购买决策的产品特性、渠道投资、PDA特征喜好。那么为什么企业要调查这些指标呢？</p><ol><li><h3 id="明确目标"><a href="#明确目标" class="headerlink" title="明确目标"></a>明确目标</h3><p>做市场调研之前，首先要明确我们想搞清楚的问题是什么。一般对于to c的产品，常用5W1H法（六何分析法）。</p><h3 id="以互联网产品为例（用户导向）："><a href="#以互联网产品为例（用户导向）：" class="headerlink" title="以互联网产品为例（用户导向）："></a>以互联网产品为例（用户导向）：</h3><p>Who: <strong>目标用户</strong>是什么样的<br>When：用户使用产品的<strong>时间</strong>（行为习惯）<br>What：用户会<strong>做什么</strong><br>Where：用户使用的<strong>场景</strong><br>Why：用户<strong>需求</strong></p><p>How：用户执行任务或达到目标所使用的具体方法<br>简而言之就是，什么样的人 在什么时间 什么场景 用什么样的设备 干什么样的事情 以及是怎么干的。</p><h3 id="以传统生产行业为例（产品导向）："><a href="#以传统生产行业为例（产品导向）：" class="headerlink" title="以传统生产行业为例（产品导向）："></a>以传统生产行业为例（产品导向）：</h3></li></ol><table><thead><tr><th></th><th>现状</th><th>原因</th><th>如何改善</th></tr></thead><tbody><tr><td><strong>对象（What）</strong></td><td>现在的产品是怎样的</td><td>为什么生产这个产品</td><td>工艺改良？能不能生产别的？</td></tr><tr><td><strong>目的（Why）</strong></td><td>生产的原因</td><td>为什么是这个目的</td><td>能不能是别的目的</td></tr><tr><td><strong>场所（Where）</strong></td><td>在哪儿做</td><td>为什么在那儿干</td><td>有没有更好的场所</td></tr><tr><td><strong>时间（When）</strong></td><td>什么时候做</td><td>为什么是这个时候</td><td>有没有更好的时间</td></tr><tr><td><strong>作业员（Who）</strong></td><td>谁来做</td><td>为什么是这样的人</td><td>有没有更好的人选</td></tr><tr><td><strong>方法（How）</strong></td><td>怎么做</td><td>为什么这么做</td><td>能不能改进现有的方法</td></tr></tbody></table><p>   可见虽然两者思考的东西不同，但仍可用相同的方式思考。</p><p>   市场经济时代大家都很注重成本，于是又提出了一个How much,变成了5W2H。</p><p>   可扩为下图</p><p>   <img src="https://s2.ax1x.com/2019/02/15/kr31ts.png" alt="5W2H分析法"></p><ol start="2"><li><h3 id="设计调研方法（主要部分）"><a href="#设计调研方法（主要部分）" class="headerlink" title="设计调研方法（主要部分）"></a>设计调研方法（主要部分）</h3></li></ol><p>那么，如何去填补我们不知道的部分？就和做其他任何研究一样，这一步必须明确调研的方法。  一般有竞品分析、行业分析、需求分析、数据收集等方面。</p><ol start="3"><li><h3 id="实施"><a href="#实施" class="headerlink" title="实施"></a>实施</h3><p>根据方法目标和具体调查对象等因素，收集数据，分析数据。这些会在数据分析部分着重讨论。 </p></li><li><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>得出结果。</p></li></ol>]]></content>
+        <content type="html"><![CDATA[<hr><p>title： 产品经理怎么做数据分析</p><h2 id="data-2018-06-23"><a href="#data-2018-06-23" class="headerlink" title="data:2018/06/23"></a>data:2018/06/23</h2><p>PM需要分析的数据，一般都是市场数据，所以大家一般也把这个过程叫做市场调研。</p><h2 id="为什么要做市场调研"><a href="#为什么要做市场调研" class="headerlink" title="为什么要做市场调研"></a>为什么要做市场调研</h2><p>一般公司都有marketing部门帮助PM完成这项工作，但是这并不代表我们不需要学习它了。从原理上理解我们的工作是十分重要的，就像搞数据分析的人可以用matlab、可以用R写脚本但还是得学好基本的数学一样。</p><h2 id="做市场调研的基本方法"><a href="#做市场调研的基本方法" class="headerlink" title="做市场调研的基本方法"></a>做市场调研的基本方法</h2><p>先上个例子。cesim公司的市场调研报告的目录。</p><p><img src="https://s2.ax1x.com/2019/02/15/krJoC9.md.jpg" alt="cesim市场调研报告目录"></p><p>其中市场调研部分包括广告效应、销售预测、影响用户购买决策的产品特性、渠道投资、PDA特征喜好。那么为什么企业要调查这些指标呢？</p><ol><li><h3 id="明确目标"><a href="#明确目标" class="headerlink" title="明确目标"></a>明确目标</h3><p>做市场调研之前，首先要明确我们想搞清楚的问题是什么。一般对于to c的产品，常用5W1H法（六何分析法）。</p><h3 id="以互联网产品为例（用户导向）："><a href="#以互联网产品为例（用户导向）：" class="headerlink" title="以互联网产品为例（用户导向）："></a>以互联网产品为例（用户导向）：</h3><p>Who: <strong>目标用户</strong>是什么样的<br>When：用户使用产品的<strong>时间</strong>（行为习惯）<br>What：用户会<strong>做什么</strong><br>Where：用户使用的<strong>场景</strong><br>Why：用户<strong>需求</strong></p><p>How：用户执行任务或达到目标所使用的具体方法<br>简而言之就是，什么样的人 在什么时间 什么场景 用什么样的设备 干什么样的事情 以及是怎么干的。</p><h3 id="以传统生产行业为例（产品导向）："><a href="#以传统生产行业为例（产品导向）：" class="headerlink" title="以传统生产行业为例（产品导向）："></a>以传统生产行业为例（产品导向）：</h3></li></ol><table><thead><tr><th></th><th>现状</th><th>原因</th><th>如何改善</th></tr></thead><tbody><tr><td><strong>对象（What）</strong></td><td>现在的产品是怎样的</td><td>为什么生产这个产品</td><td>工艺改良？能不能生产别的？</td></tr><tr><td><strong>目的（Why）</strong></td><td>生产的原因</td><td>为什么是这个目的</td><td>能不能是别的目的</td></tr><tr><td><strong>场所（Where）</strong></td><td>在哪儿做</td><td>为什么在那儿干</td><td>有没有更好的场所</td></tr><tr><td><strong>时间（When）</strong></td><td>什么时候做</td><td>为什么是这个时候</td><td>有没有更好的时间</td></tr><tr><td><strong>作业员（Who）</strong></td><td>谁来做</td><td>为什么是这样的人</td><td>有没有更好的人选</td></tr><tr><td><strong>方法（How）</strong></td><td>怎么做</td><td>为什么这么做</td><td>能不能改进现有的方法</td></tr></tbody></table><p>   可见虽然两者思考的东西不同，但仍可用相同的方式思考。</p><p>   市场经济时代大家都很注重成本，于是又提出了一个How much,变成了5W2H。</p><p>   可扩为下图</p><p>   <img src="https://s2.ax1x.com/2019/02/15/kr31ts.png" alt="5W2H分析法"></p><ol start="2"><li><h3 id="设计调研方法（主要部分）"><a href="#设计调研方法（主要部分）" class="headerlink" title="设计调研方法（主要部分）"></a>设计调研方法（主要部分）</h3></li></ol><p>那么，如何去填补我们不知道的部分？就和做其他任何研究一样，这一步必须明确调研的方法。  一般有竞品分析、行业分析、需求分析、数据收集等方面。</p><ol start="3"><li><h3 id="实施"><a href="#实施" class="headerlink" title="实施"></a>实施</h3><p>根据方法目标和具体调查对象等因素，收集数据，分析数据。这些会在数据分析部分着重讨论。 </p></li><li><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>得出结果。</p></li></ol>]]></content>
       
       
       
@@ -30,11 +30,11 @@
     
     
     <entry>
-      <title>test</title>
-      <link href="/2019/02/15/test/"/>
-      <url>/2019/02/15/test/</url>
+      <title>用户与场景</title>
+      <link href="/2019/02/15/%E7%94%A8%E6%88%B7%E4%B8%8E%E5%9C%BA%E6%99%AF/"/>
+      <url>/2019/02/15/%E7%94%A8%E6%88%B7%E4%B8%8E%E5%9C%BA%E6%99%AF/</url>
       
-        <content type="html"><![CDATA[<p>Windows用户/大部分Linux用户请按右上角X，macOS用户/Ubuntu用户/自己偏要把关闭按钮挪到左面的用户请按左上角X，Android/iOS用户请按home键并把您的浏览器从多任务界面除去。Windows Phone用户（如果有的话）请把手机摔掉，并感谢我（而不是微软爸爸）给了你一个冠冕堂皇换Android/iOS设备的理由。</p><h1 id="A"><a href="#A" class="headerlink" title="A"></a>A</h1><p>如果您还没有坚定您的决心，实验七写完了吗？实验七50页的坑爹说明都看懂啦？没看懂还不赶紧把你打印出来的实验七说明撕了，回去高中找你的语文老师承认没好好学习语文的错误！</p><p>顺便补充一句把这种垃圾实验说明打印出来本身就是对树木的不尊重了，你看我知道我写的东西很垃圾，所以我从来不打印纸质版，都是放在网站上做电子版。</p><p>3</p><p>3</p><p>3</p><p>33</p><p>3</p><p>3</p><p>3</p><p>3</p><p>3</p><p>3</p><p>3</p><p>3</p><p>3</p><p>3</p><p>3</p><p>33</p><p>3</p>]]></content>
+        <content type="html"><![CDATA[<p>在分析用户需求的时候，我们首先要明确：<strong>用户与场景是紧密联系的，不同人在不同场景下的行为是不同的。</strong></p><h2 id="分析方法"><a href="#分析方法" class="headerlink" title="分析方法"></a>分析方法</h2><p>这里写的方法是基于快速迭代的思路，这里我把方法分为五步：</p><h3 id="1-寻找用户"><a href="#1-寻找用户" class="headerlink" title="1.寻找用户"></a>1.寻找用户</h3><p>这部分用户在产品起步阶段，大致的划分出的目标客户。可能是天使用户，也可能是探索者或是geek。不必太精细，因为后续步骤会将用户继续细化（真正的客户会被验证）。</p><h3 id="2-场景"><a href="#2-场景" class="headerlink" title="2.场景"></a>2.场景</h3><p>在不同场景使用产品必然有不同的需求，例如在火车站绝大部分人需要吃快餐，所以不会有西餐厅开在火车站内，在地铁上手机信号不不好，所以QQ空间现在也支持离线发说说了。</p><h3 id="3-找到问题（需求）"><a href="#3-找到问题（需求）" class="headerlink" title="3.找到问题（需求）"></a>3.找到问题（需求）</h3><p>在确定了用户和场景之后，通过排列组合，我们可以列出很多需求。并且提出<strong>假设</strong>。</p><h3 id="4-验证假设"><a href="#4-验证假设" class="headerlink" title="4.验证假设"></a>4.验证假设</h3><p>假设不一定是正确，当然我们需要去验证。错误的方向只能带来浪费。验证的方式有很多，在产品初期最低成本低风险的方案当属<strong>用户访谈</strong>（这方面后续会写）。</p><h3 id="5-解决方案"><a href="#5-解决方案" class="headerlink" title="5.解决方案"></a>5.解决方案</h3><p>在完成上述步骤后，最终我们就应该有能做出解决用户在某些场景下需求的功能或方案。最终将我们的产品推向市场，然后从步骤1继续循环，这就是<strong>迭代</strong>。这里需要注意，一个产品的生命周期是<strong>有限的</strong>，如果不能在有限的时间内<strong>迭代足够多的次数</strong>，产品就会不成熟，影响收益。就像青春是有限的，如果一个人在年轻力壮没有好好努力的话，就会老大徒伤悲。</p><h2 id="关于用户的几个要点"><a href="#关于用户的几个要点" class="headerlink" title="关于用户的几个要点"></a>关于用户的几个要点</h2><p>用户不一定能为你创造价值，但是客户一定出自用户。这里我们就应该尽可能的拓展用户数量，尽可能的提高用户转换为客户的转换率。</p><p>学会换位思考，多从用户的角度想问题，这样能提出更靠谱的假设，也可能带来一些新的灵感。</p><p>用户划分一定要足够细致，用户对产品的依赖越强，就越有可能盈利。这一条带来的就是转化率这个指标的提高。</p><p>出现问题太多，没有重点的时候，应当思考是不是用户划分不够细致，用户过于散乱。现在精准流量与泛流量的概念很好的解释了这点。精准流量的抖音账号，10W+粉打个广告也差不多10W，而泛流量的账号，100W粉才差不多这个价钱。</p>]]></content>
       
       
       
@@ -44,8 +44,8 @@
     
     <entry>
       <title>想要成为PM要怎么起步？</title>
-      <link href="/2018/07/13/%E6%83%B3%E8%A6%81%E6%88%90%E4%B8%BAPM%E8%A6%81%E6%80%8E%E4%B9%88%E8%B5%B7%E6%AD%A5%EF%BC%9F/"/>
-      <url>/2018/07/13/%E6%83%B3%E8%A6%81%E6%88%90%E4%B8%BAPM%E8%A6%81%E6%80%8E%E4%B9%88%E8%B5%B7%E6%AD%A5%EF%BC%9F/</url>
+      <link href="/2018/05/13/%E6%83%B3%E8%A6%81%E6%88%90%E4%B8%BAPM%E8%A6%81%E6%80%8E%E4%B9%88%E8%B5%B7%E6%AD%A5%EF%BC%9F/"/>
+      <url>/2018/05/13/%E6%83%B3%E8%A6%81%E6%88%90%E4%B8%BAPM%E8%A6%81%E6%80%8E%E4%B9%88%E8%B5%B7%E6%AD%A5%EF%BC%9F/</url>
       
         <content type="html"><![CDATA[<p>想要解答一个问题的方法，从小学开始老师就已经教授过了。首先我们得知道<strong>定义</strong>，然后从定义出发，发掘我们所需要的<strong>条件</strong>。</p><h2 id="什么是PM"><a href="#什么是PM" class="headerlink" title="什么是PM"></a>什么是PM</h2><blockquote><p><strong>产品经理</strong>（英文：<strong>Product manager</strong>，缩写：<strong>PM</strong>）也称<strong>产品企划</strong>，是指在公司中针对某一项或是某一类的产品进行规划和管理的人员，主要负责产品的研发、制造、营销、渠道等工作。产品经理是很难定义的一个角色，如果非要一句话定义，那么产品经理是为终端用户服务，负责产品整个生命周期的人。——维基百科</p></blockquote><h2 id="PM得技能组成"><a href="#PM得技能组成" class="headerlink" title="PM得技能组成"></a>PM得技能组成</h2><p>有产品的地方就有产品经理，就算在相同行业，对产品经理的要求也不太相同<del>（一般都是因为对应岗位没人，PM顶上）</del>。但是产品经理的核心能力是确实不变的，只是在不同行业内形式有些差别。下面我总结了一个导图，叶子节点不一定很全面，主要在于抓住上一层的<strong>核心技能</strong>。掌握核心能力，就是我们得出答案的条件。</p><p><img src="https://s2.ax1x.com/2019/02/15/kD0qVx.png" alt="PM技能树"></p><p>就像RPG游戏一样打怪升级点技能树，PM的技能树就是根据<strong>核心能力</strong>结合所处行业的不通过要求得来得叶子节点。举个例子，比如互联网PM，想要点亮<strong>运营策略</strong>这个技能，就必须先学会<strong>活动策划、提供内容、用户调研、推广渠道</strong>这几项技能。</p><h2 id="从哪里开始"><a href="#从哪里开始" class="headerlink" title="从哪里开始"></a>从哪里开始</h2><p>俗话说的好 缺什么补什么，少什么添什么（张宇语录）。首先我们应挑选一个自己最感兴趣的技能去学习，这样能减少一些挫败感多一些成就感。喜欢数据分析的就可以从数据分析入手，喜欢运营的就从运营入手。</p><p>但强调一点，作为PM得学会把握趋势，大数据时代，<strong>数据分析</strong>是大势所趋。在我看来PM更靠近决策者，PM得每项技能都有职业可以代替，数据分析有数据分析师，产品运营有运营，研发有项目经理。PM该做的事情是从市场数据中提炼出市场需求，根据需求提出一个产品。一专多强的模式是很适合PM的。这一专，便是<strong>数据分析</strong>。</p><p>即便<strong>数据分析</strong>是那么的重要，但在本博客我们从<strong>市场</strong>入手来学习如何做一个优秀的PM。当我们对市场和运营有所了解之后，对于为什么要数据分析这个问题，就可以有一个很直觉的答案了。小时候学数学，不知道为什么要学，那个痛苦啊。当你需要它的时候，相信我，它会变得可爱动人。</p>]]></content>
       
@@ -59,22 +59,22 @@
     
     
     <entry>
-      <title></title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>Categories</title>
+      <link href="/Categories/index.html"/>
+      <url>/Categories/index.html</url>
       
-        <content type="html"><![CDATA[<h1 id="关于这个博客和我"><a href="#关于这个博客和我" class="headerlink" title="关于这个博客和我"></a><strong>关于这个博客和我</strong></h1><h3 id="我为什么要写这个博客"><a href="#我为什么要写这个博客" class="headerlink" title="我为什么要写这个博客"></a>我为什么要写这个博客</h3><p>本博客记录博主的一些所思所想和学习经历，是博主整理自己脑内知识条理的一种方式，有条理的复刻自己脑内的知识体系。但碍于时间，仅记录了博主一部分的知识。希望在更远的将来，能记录下更多。</p><h3 id="我想做PM的原因"><a href="#我想做PM的原因" class="headerlink" title="我想做PM的原因"></a>我想做PM的原因</h3><p>在博主小时候，跟很多贪玩男孩一样，总是想做一些新奇的玩具。长大一点呢，觉得有技术才能做自己想要的东西，故选择了技术之路。随着慢慢对社会、工业和商业方面的了解，博主发现一般人都是帮别人做别人的东西，自己想做的东西呢，单凭自己也做不出来。那作为老板就能随便做自己想要的产品吗？那当然也不是。老板不根据市场需求来做产品，最终不能盈利的话，这个产品最后还是得凉凉。</p><p>世上没有谁是能完全随心所欲的。所以我想，我能不能根据市场需求加入一点自己的想法去做一个东西，这样我便萌生了做产品经理的想法。</p><p>​       </p>]]></content>
+        <content type="html"><![CDATA[<p>A<br>B</p>]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>Categories</title>
-      <link href="/Categories/index.html"/>
-      <url>/Categories/index.html</url>
+      <title></title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
-        <content type="html"><![CDATA[<p>A<br>B</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="关于这个博客和我"><a href="#关于这个博客和我" class="headerlink" title="关于这个博客和我"></a><strong>关于这个博客和我</strong></h1><h3 id="我为什么要写这个博客"><a href="#我为什么要写这个博客" class="headerlink" title="我为什么要写这个博客"></a>我为什么要写这个博客</h3><p>本博客记录博主的一些所思所想和学习经历，是博主整理自己脑内知识条理的一种方式，有条理的复刻自己脑内的知识体系。但碍于时间，仅记录了博主一部分的知识。希望在更远的将来，能记录下更多。</p><h3 id="我想做PM的原因"><a href="#我想做PM的原因" class="headerlink" title="我想做PM的原因"></a>我想做PM的原因</h3><p>在博主小时候，跟很多贪玩男孩一样，总是想做一些新奇的玩具。长大一点呢，觉得有技术才能做自己想要的东西，故选择了技术之路。随着慢慢对社会、工业和商业方面的了解，博主发现一般人都是帮别人做别人的东西，自己想做的东西呢，单凭自己也做不出来。那作为老板就能随便做自己想要的产品吗？那当然也不是。老板不根据市场需求来做产品，最终不能盈利的话，这个产品最后还是得凉凉。</p><p>世上没有谁是能完全随心所欲的。所以我想，我能不能根据市场需求加入一点自己的想法去做一个东西，这样我便萌生了做产品经理的想法。</p><p>​       </p>]]></content>
       
     </entry>
     

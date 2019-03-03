@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ruyululu.com/"/>
-  <updated>2019-03-02T06:50:13.379Z</updated>
+  <updated>2019-03-02T07:13:28.131Z</updated>
   <id>https://ruyululu.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://ruyululu.com/2019/01/20/Python%E5%88%86%E6%9E%90%E9%A2%84%E6%B5%8B%E8%82%A1%E4%BB%B7/"/>
     <id>https://ruyululu.com/2019/01/20/Python分析预测股价/</id>
     <published>2019-01-20T15:22:09.000Z</published>
-    <updated>2019-03-02T06:50:13.379Z</updated>
+    <updated>2019-03-02T07:13:28.131Z</updated>
     
     <summary type="html">
     
@@ -38,7 +38,66 @@
       <category term="数据分析实例" scheme="https://ruyululu.com/categories/Python/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E4%BE%8B/"/>
     
     
-      <category term="Python,数据分析,瞎折腾" scheme="https://ruyululu.com/tags/Python-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E7%9E%8E%E6%8A%98%E8%85%BE/"/>
+      <category term="Python" scheme="https://ruyululu.com/tags/Python/"/>
+    
+      <category term="数据分析" scheme="https://ruyululu.com/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>商业模式</title>
+    <link href="https://ruyululu.com/2018/09/27/%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://ruyululu.com/2018/09/27/商业模式/</id>
+    <published>2018-09-27T06:17:40.000Z</published>
+    <updated>2019-03-03T07:35:28.406Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;商业模式的定义&quot;&gt;&lt;a href=&quot;#商业模式的定义&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode题解 从排序数组中删除重复项(Python3)</title>
+    <link href="https://ruyululu.com/2018/07/12/leetcode%20%E4%BB%8E%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E9%A1%B9/"/>
+    <id>https://ruyululu.com/2018/07/12/leetcode 从排序数组中删除重复项/</id>
+    <published>2018-07-12T03:21:18.000Z</published>
+    <updated>2019-03-02T07:13:24.359Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt; &lt;strong&gt;说在前面：本题解旨在熟悉python3的基本操作和库函数的使用，仅采用最简便方法，而非时间或空间复杂度较小的方法。若读者想要学习数据结构还是推荐使用C/C++或Java。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;原题：&quot;&gt;&lt;a href=&quot;#原题：&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://ruyululu.com/categories/Python/"/>
+    
+      <category term="leetcode" scheme="https://ruyululu.com/categories/Python/leetcode/"/>
+    
+      <category term="数组" scheme="https://ruyululu.com/categories/Python/leetcode/%E6%95%B0%E7%BB%84/"/>
+    
+    
+      <category term="Python" scheme="https://ruyululu.com/tags/Python/"/>
+    
+      <category term="leetcode" scheme="https://ruyululu.com/tags/leetcode/"/>
+    
+      <category term="数组" scheme="https://ruyululu.com/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   

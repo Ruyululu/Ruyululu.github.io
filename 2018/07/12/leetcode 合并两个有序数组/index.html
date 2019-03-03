@@ -81,7 +81,7 @@
     <script defer type="text/javascript" src="/js/index.js"></script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>归档 | 苦瓜不灵's Note - 记录我的大脑</title>
+    <title>leetcode题解 合并两个有序数组(Python3) | 苦瓜不灵's Note - 记录我的大脑</title>
   </head>
   <body itemscope="" itemtype="http://schema.org/WebPage" lang="zh_CN" data-spy="scroll" data-target=".list-group">
     
@@ -123,48 +123,87 @@
         <div class="main-container">
           <div class="content">
             
-<div id="archive" class="archive page">
-  <h1 class="page-title">归档</h1>
-  <h2 class="page-counter">
-    
-    你已经写了 9 篇文章！
-    
-  </h2>
-  
-  
-  
-  
-  <h2 class="page-title">2018
+<div id="post" class="page">
   
   <article class="article post card animate" itemscope="" itemtype="http://schema.org/Article">
-    <header id="post-header" class="post-header">
-      <h1 class="post-title-simple" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/05/20/行业分析/" itemprop="url">行业发展因素分析</a>
-      </h1>
-      
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-05-20T20:51:48+08:00">05-20</time>
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://ruyululu.com/2018/07/12/leetcode 合并两个有序数组/">
+      <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="苦瓜不灵">
+       <meta itemprop="description" content="">
+       <meta itemprop="image" content="/images/avatar.jpg">
       </span>
-      
+      <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="苦瓜不灵's Note">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">leetcode题解 合并两个有序数组(Python3)</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-07-12T11:21:18+08:00">2018-07-12 11:21:18</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/leetcode/数组/" itemprop="url" rel="index"><span itemprop="name">数组</span></a></span>
+        </span>
+        
+        
+      </div>
     </header>
+    <main class="post-main" itemprop="articleBody">
+      <p> <strong>说在前面：本题解旨在熟悉python3的基本操作和库函数的使用，仅采用最简便方法，而非时间或空间复杂度较小的方法。若读者想要学习数据结构还是推荐使用C/C++或Java。</strong></p>
+<h2 id="原题："><a href="#原题：" class="headerlink" title="原题："></a>原题：</h2><p>给定两个有序整数数组 <em>nums1</em> 和 <em>nums2</em>，将 <em>nums2</em> 合并到 <em>nums1</em> 中<em>，</em>使得 <em>num1</em> 成为一个有序数组。</p>
+<p><strong>说明:</strong></p>
+<ul>
+<li>初始化 <em>nums1</em> 和 <em>nums2</em> 的元素数量分别为 <em>m</em> 和 <em>n</em>。</li>
+<li>你可以假设 <em>nums1</em> 有足够的空间（空间大小大于或等于 <em>m + n</em>）来保存 <em>nums2</em> 中的元素。</li>
+</ul>
+<p><strong>示例:</strong></p>
+<figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">nums1 = [1,2,3,0,0,0], m = 3</span><br><span class="line">nums2 = [2,5,6],       n = 3</span><br><span class="line"></span><br><span class="line">输出: [1,2,2,3,5,6]</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -&gt; None:</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        Do not return anything, modify nums1 in-place instead.</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        cnt = len(nums1)</span><br><span class="line">        for n in nums1[::-1]:</span><br><span class="line">            if(cnt==m):</span><br><span class="line">                    break</span><br><span class="line">            if n==0:</span><br><span class="line">                nums1.pop(len(nums1)-1)</span><br><span class="line">                cnt-=1</span><br><span class="line">            else:</span><br><span class="line">                break</span><br><span class="line">        nums1[:]=sorted(nums1+nums2)</span><br></pre></td></tr></table></figure>
+<h2 id="解析："><a href="#解析：" class="headerlink" title="解析："></a>解析：</h2><p><strong>for n in nums1[::-1]:</strong>从尾至头进行循环</p>
+<p><strong>num[:]</strong> 表示重新生成num函数中的函数，若仅使用num并不会改变num中的元素。<br><strong>list.pop()</strong>移除列表中的一个元素（默认最后一个元素），并且返回该元素的值</p>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/Python/" rel="tag"><i class="fas fa-tags"></i>Python</a>
+        
+        <a class="post-tag button" href="/tags/leetcode/" rel="tag"><i class="fas fa-tags"></i>leetcode</a>
+        
+        <a class="post-tag button" href="/tags/数组/" rel="tag"><i class="fas fa-tags"></i>数组</a>
+        
+      </div>
+      
+    </footer>
   </article>
   
   
-  <article class="article post card animate" itemscope="" itemtype="http://schema.org/Article">
-    <header id="post-header" class="post-header">
-      <h1 class="post-title-simple" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/05/13/想要成为PM要怎么起步？/" itemprop="url">想要成为PM要怎么起步？</a>
-      </h1>
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
       
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-05-13T13:54:20+08:00">05-13</time>
-      </span>
+      <a href="/2018/06/23/市场调研与数据分析/" rel="next" title="产品经理怎么做数据分析"><i class="fas fa-angle-left"></i><span class="nav-title">产品经理怎么做数据分析</span></a>
       
-    </header>
-  </article>
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2018/07/12/leetcode 搜索二维矩阵 II/" rel="prev" title="leetcode题解 搜索二维矩阵 II(Python3)"><span class="nav-title">leetcode题解 搜索二维矩阵 II(Python3)</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </nav>
   
   
-</h2></div>
+</div>
 
           </div>
           
@@ -221,6 +260,17 @@
 
 
   <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#原题："><span class="toc-text">原题：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#题解："><span class="toc-text">题解：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#解析："><span class="toc-text">解析：</span></a></li></ol></div>
+    </div>
+    
     
     
     <hr>

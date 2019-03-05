@@ -33,6 +33,37 @@
     
     
     <entry>
+      <title>需求的分析与管理</title>
+      <link href="/2018/10/03/%E4%BA%A7%E5%93%81%E7%9A%84%E8%AE%BE%E8%AE%A1/"/>
+      <url>/2018/10/03/%E4%BA%A7%E5%93%81%E7%9A%84%E8%AE%BE%E8%AE%A1/</url>
+      
+        <content type="html"><![CDATA[<p> 需求是产品经理每天接触最多的东西，总有要改的需求，总有新增的需求，本篇就来谈谈需求。</p><h2 id="什么是需求："><a href="#什么是需求：" class="headerlink" title="什么是需求："></a>什么是需求：</h2><h3 id="从用户的角度："><a href="#从用户的角度：" class="headerlink" title="从用户的角度："></a>从用户的角度：</h3><p>从用户的角度看，就是用户<strong>想要什么</strong>。</p><p>比如现在有个用户想要开窗。</p><h3 id="关注背景："><a href="#关注背景：" class="headerlink" title="关注背景："></a>关注背景：</h3><p>在了解了用户想要什么之后一定要关注<strong>背景</strong>，否则就容易给出<strong>治标不治本</strong>的解决方案。</p><p>比如现在这个用户的背景是在屋子里很热，汗流浃背。</p><h3 id="从产品经理的角度："><a href="#从产品经理的角度：" class="headerlink" title="从产品经理的角度："></a>从产品经理的角度：</h3><p>通过前两个角度的分析，我们发现用户的<strong>根本问题</strong>是屋子里太热了。</p><p>于是我可以选择给用户安装风扇空调，这就是解决方案。</p><a id="more"></a><h3 id="需求即用户产生问题的根本原因："><a href="#需求即用户产生问题的根本原因：" class="headerlink" title="需求即用户产生问题的根本原因："></a>需求即用户产生问题的根本原因：</h3><p>需求只于用户产生问题的<strong>根本原因</strong>有关。并不是一些<strong>表面的原因</strong>。</p><p>另一个很经典的例子：就是人跟人交流，传递信息。</p><p>解决方案的历史：喊-&gt;飞鸽传书-&gt;邮局-&gt;电报-&gt;电话-&gt;IM软件。</p><p>我们可以发现，用户的需求一直都是交流。</p><h3 id="需求与背景："><a href="#需求与背景：" class="headerlink" title="需求与背景："></a>需求与背景：</h3><p>需求必须与背景相匹配。在现在不会人人都会使用IM软件，不会有人使用飞鸽传书。</p><p>比如内燃机时代，用户说自己需要更快的马，于是我们就要去训练更好的马吗？</p><p>我们知道福特给出的方案是发明了汽车。因为用户的需求是更快的交通工具。</p><p>但是如果放到现代，一个用户家里有车，说自己需要更快的马。那么他很可能是马术爱好者，确实只是需要更好的马。</p><h3 id="需求层次理论："><a href="#需求层次理论：" class="headerlink" title="需求层次理论："></a>需求层次理论：</h3><blockquote><p>马斯洛的需求层次理论（英语：Maslow’s hierarchy of needs）是亚伯拉罕·马斯洛于1943年《心理学评论》的论文〈人类动机的理论〉（A Theory of Human Motivation）中所提出的理论[2]。马斯洛随后延伸了这个想法，包含了他对人类天生好奇心的观察。他的理论与其他人类发展心理学的理论可以并行，尤其是针对人类成长阶段的描述。马斯洛使用了“生理”、“安全”、“隶属”与“爱”、“自尊”、“自我实现”与“自我超越”等术语，描述人类动机推移的脉络。</p></blockquote><p><img src="https://s2.ax1x.com/2019/03/05/kXsomq.png" alt="马斯洛的需求层次模型"></p><p>一般来说，越是底层，需求就越大越强。产品可以在满足基本需要时，可以分析用户的马斯洛需求，进一步满足用户<strong>更高层次的需求</strong>，从而提升产品竞争力。</p><p>比如支付宝微信红包功能，红包上还能写祝福语，那么已经有转账功能了为什么还需要一个红包功能呢？</p><p>就是因为转账只能满足用户便捷和安全的需要，而红包能够更近一步的满足<strong>社交和情感化需求</strong>。</p><h2 id="如何寻找需求："><a href="#如何寻找需求：" class="headerlink" title="如何寻找需求："></a>如何寻找需求：</h2><p>用户的需求与冰山类似，我们只能看到少部分<strong>已知的需求</strong>，例如：用户热，所以我们提供空调。</p><p>一部分<strong>隐含的需求</strong>，例如：有人买奔驰，不仅仅是因为奔驰的车性能好，还隐含着他对社交的需求，对尊重的需求，还可能是炫耀，而这种需求一般不会说出来。</p><p>还有一部分<strong>未知的需求</strong>，比如要更快的马的人其实并不清楚自己要的是更快的交通工具。</p><p>所以在我们挖掘需求时，需要注重方法，尽可能的挖掘需求。</p><h3 id="需求调研："><a href="#需求调研：" class="headerlink" title="需求调研："></a>需求调研：</h3><p>需求调研大致可以总结为以下三步</p><p><strong>询问</strong>：找到关键问题，询问用户的看法。</p><p><strong>倾听</strong>：切记不要对用户的观点进行评价，评价会使用户不能真实表达，仅仅做好倾听者的角色。</p><p><strong>场景</strong>：分析用户场景，最好到用户所在场景中去调研，而不是把用户招来我们的办公室。</p><p><strong>行为</strong>：观察用户的真实行为，行为往往能更真实的反应用户的需求。</p><p>例：Sony在调研用户所喜欢的MP3的颜色，询问用户对不同颜色MP3的看法，大多数用户在谈到黑色时，</p><p>说黑色沉闷无趣。但Sony的高明之处在于，在调研活动结束时可以让被调研用户选择一个颜色的MP3带走。</p><p>这时，大部分用户却选择了黑色。再落实到场景，因为MP3是便携设备，大多数人要考虑带出去的情况，</p><p>而大和民族是一个不主张个性的民族，那么黑色就更贴合他们外出时的心理需求。</p><h3 id="找到刚需、频发的需求："><a href="#找到刚需、频发的需求：" class="headerlink" title="找到刚需、频发的需求："></a>找到刚需、频发的需求：</h3><p><strong>刚需</strong>，典型代表就是住房，高企的房价可以说明很多问题了。</p><p><strong>频发的需求</strong>，典型代表就是IM软件，我们日常需要不停的发消息，与人进行沟通。</p><p>满足这样的需求，才能带来客观的<strong>商业价值</strong>。</p><h3 id="分辨真假需求："><a href="#分辨真假需求：" class="headerlink" title="分辨真假需求："></a>分辨真假需求：</h3><p>有些功能做了绝大多数用户都不去使用，那么恭喜，你验证了一个假需求。</p><p>例如飞行航路图，绝大部分用户并不关心航线是怎样的，比起航线用户更关心时间等其他信息。</p><p>那么怎么去辨别呢？这里提供三个步骤</p><p><strong>观察需求是否普遍，分析需求发生背景，分析需求来源</strong>。</p><p>网络定票12306满足了人们出行的普遍需求。4G时代短视频APP的流行迎合了4G高速网络的背景。</p><p>以上两个例子都有深刻的需求来源，前者是出行，后者是娱乐。</p><p>这时这并不能绝对的判断是真还是假需求。</p><p>诺基亚的时代，iPhone还没出世，智能机的需求看起来并不普遍。</p><p>而在那时能推出iPhone的人，也成为了传奇。</p><h2 id="需求的管理："><a href="#需求的管理：" class="headerlink" title="需求的管理："></a>需求的管理：</h2><p>建模是思考的好方法，更能将问题抽象化。在管理需求时，我们引入卡诺模型。</p><h3 id="卡诺模型："><a href="#卡诺模型：" class="headerlink" title="卡诺模型："></a>卡诺模型：</h3><p><img src="https://s2.ax1x.com/2019/03/05/kXftRf.png" alt="卡诺模型"></p><p><strong>必备属性</strong>：基本必须功能。</p><p><strong>期望属性</strong>：用户想要的功能，产品越能提高这项属性，用户的满意度越高。</p><p><strong>魅力属性</strong>：用户没想到的功能，产品提供了令人惊喜的功能，用户满意度大幅提高。</p><p><strong>无差异特性</strong>：此特性不管做多做少，用户都不会在意。</p><p><strong>反向特性</strong>：如果产品中有此特性越多，用户越不满意。</p><p>我们可以将我们需要的功能的进行属性上的划分，以便管理。</p><p><img src="https://s2.ax1x.com/2019/03/05/kXfRQU.png" alt="卡诺模型表"></p><p>在用户满意度调查中也可以依据卡诺模型合理设置问题，得到绘制卡诺图所需要的数据。</p><h3 id="需求管理表："><a href="#需求管理表：" class="headerlink" title="需求管理表："></a>需求管理表：</h3><p>需求管理列表的几项要素：<strong>编号、优先级、商业价值、备注、状态、时间、描述、类型</strong></p><p>这里列举几个更为便捷的需求管理工具：</p><p><strong>Rational RequisitePro</strong></p><p><strong>IBM Rational DOORS</strong></p><p><strong>青铜器RDM</strong></p><h2 id="需求的规划"><a href="#需求的规划" class="headerlink" title="需求的规划"></a>需求的规划</h2><p>我们的资源是有限的，不可能同时满足所有需求。</p><p>自然我们就需要规划需求，其实这就是评估需求<strong>商业价值</strong>和<strong>优先级</strong>的过程。</p><p>一般的思路为：<strong>基础，引流，连结，筑墙，延伸</strong></p><p>基础，很好理解，一个产品，首先必须是合格的产品才能走向市场。</p><p>引流，使用现有所有资源来寻找用户，使产品尽早达到<strong>网络效应</strong>的<strong>临界点</strong></p><p>连结，将公司的其他产品或是合作公司的应用用产品或场景连结。</p><p>筑墙，构建核心竞争力。</p><p>延伸，拓展业务场景，用户或盈利模式。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 产品研发 </category>
+          
+          <category> 需求分析 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 产品 </tag>
+            
+            <tag> 需求 </tag>
+            
+            <tag> 分析 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>商业模式</title>
       <link href="/2018/09/27/%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F/"/>
       <url>/2018/09/27/%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F/</url>
@@ -51,39 +82,6 @@
       <url>/2018/07/12/leetcode%20%E4%BB%8E%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E9%A1%B9/</url>
       
         <content type="html"><![CDATA[<p> <strong>说在前面：本题解旨在熟悉python3的基本操作和库函数的使用，仅采用最简便方法，而非时间或空间复杂度较小的方法。若读者想要学习数据结构还是推荐使用C/C++或Java。</strong></p><h2 id="原题："><a href="#原题：" class="headerlink" title="原题："></a>原题：</h2><p>给定一个排序数组，你需要在<strong>原地</strong>删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。</p><p>不要使用额外的数组空间，你必须在<strong>原地修改输入数组</strong>并在使用 O(1) 额外空间的条件下完成。</p><a id="more"></a><p><strong>示例 1:</strong></p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">给定数组 nums = [1,1,2], </span><br><span class="line"></span><br><span class="line">函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。 </span><br><span class="line"></span><br><span class="line">你不需要考虑数组中超出新长度后面的元素。</span><br></pre></td></tr></table></figure><p><strong>示例 2:</strong></p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">给定 nums = [0,0,1,1,1,2,2,3,3,4],</span><br><span class="line"></span><br><span class="line">函数应该返回新的长度 5, 并且原数组 nums 的前五个元素被修改为 0, 1, 2, 3, 4。</span><br><span class="line"></span><br><span class="line">你不需要考虑数组中超出新长度后面的元素。</span><br></pre></td></tr></table></figure><p><strong>说明:</strong></p><p>为什么返回数值是整数，但输出的答案是数组呢?</p><p>请注意，输入数组是以<strong>“引用”</strong>方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。</p><p>你可以想象内部操作如下:</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// nums 是以“引用”方式传递的。也就是说，不对实参做任何拷贝</span><br><span class="line">int len = removeDuplicates(nums);</span><br><span class="line"></span><br><span class="line">// 在函数里修改输入数组对于调用者是可见的。</span><br><span class="line">// 根据你的函数返回的长度, 它会打印出数组中该长度范围内的所有元素。</span><br><span class="line">for (int i = 0; i &lt; len; i++) &#123;</span><br><span class="line">    print(nums[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def removeDuplicates(self, nums: List[int]) -&gt; int:</span><br><span class="line">        nums[:] = sorted(set(nums))</span><br><span class="line">        return len(nums)</span><br></pre></td></tr></table></figure><h2 id="解析："><a href="#解析：" class="headerlink" title="解析："></a>解析：</h2><p><strong>num[:]</strong> 表示重新生成num函数中的函数，若仅使用num并不会改变num中的元素。</p><p><strong>sorted()</strong> 函数对所有可迭代的对象进行排序操作。</p><blockquote><p><strong>sort 与 sorted 区别：</strong></p><p>sort 是应用在 list 上的方法，sorted 可以对所有可迭代的对象进行排序操作。</p><p>list 的 sort 方法返回的是对已经存在的列表进行操作，而内建函数 sorted 方法返回的是一个新的 list，而不是在原来的基础上进行的操作。</p></blockquote><p>sorted 语法：</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sorted(iterable, key=None, reverse=False)</span><br></pre></td></tr></table></figure><p>参数说明：</p><ul><li>iterable – 可迭代对象。</li><li>key – 主要是用来进行比较的元素，只有一个参数，具体的函数的参数就是取自于可迭代对象中，指定可迭代对象中的一个元素来进行排序。</li><li>reverse – 排序规则，reverse = True 降序 ， reverse = False 升序（默认）。</li></ul><p><strong>集合（set）</strong>是一个无序的不重复元素序列。</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">使用</span><br><span class="line">s = &#123;value01,value02,...&#125;</span><br><span class="line">或者</span><br><span class="line">set(value)</span><br><span class="line">创建一个集合</span><br></pre></td></tr></table></figure><p>更多集合操作可参考官方文档：</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Python </category>
-          
-          <category> leetcode </category>
-          
-          <category> 数组 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Python </tag>
-            
-            <tag> leetcode </tag>
-            
-            <tag> 数组 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>leetcode题解 搜索二维矩阵 II(Python3)</title>
-      <link href="/2018/07/12/leetcode%20%E6%90%9C%E7%B4%A2%E4%BA%8C%E7%BB%B4%E7%9F%A9%E9%98%B5%20II/"/>
-      <url>/2018/07/12/leetcode%20%E6%90%9C%E7%B4%A2%E4%BA%8C%E7%BB%B4%E7%9F%A9%E9%98%B5%20II/</url>
-      
-        <content type="html"><![CDATA[<p> <strong>说在前面：本题解旨在熟悉python3的基本操作和库函数的使用，仅采用最简便方法，而非时间或空间复杂度较小的方法。若读者想要学习数据结构还是推荐使用C/C++或Java。</strong></p><h2 id="原题："><a href="#原题：" class="headerlink" title="原题："></a>原题：</h2><p>编写一个高效的算法来搜索 <em>m</em> x <em>n</em> 矩阵 matrix 中的一个目标值 target。该矩阵具有以下特性：</p><ul><li>每行的元素从左到右升序排列。</li><li>每列的元素从上到下升序排列。</li></ul><p><strong>示例:</strong></p><p>现有矩阵 matrix 如下：</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  [1,   4,  7, 11, 15],</span><br><span class="line">  [2,   5,  8, 12, 19],</span><br><span class="line">  [3,   6,  9, 16, 22],</span><br><span class="line">  [10, 13, 14, 17, 24],</span><br><span class="line">  [18, 21, 23, 26, 30]</span><br><span class="line">]</span><br></pre></td></tr></table></figure><p>给定 target = <code>5</code>，返回 <code>true</code>。</p><p>给定 target = <code>20</code>，返回 <code>false</code>。</p><a id="more"></a><h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def searchMatrix(self, matrix, target):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type matrix: List[List[int]]</span><br><span class="line">        :type target: int</span><br><span class="line">        :rtype: bool</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        if not matrix:</span><br><span class="line">            return False</span><br><span class="line">        i = 0</span><br><span class="line">        j = len(matrix[0]) - 1</span><br><span class="line">        while i &lt; len(matrix) and j &gt;= 0:</span><br><span class="line">            if matrix[i][j] == target: </span><br><span class="line">                return True</span><br><span class="line">            elif matrix[i][j] &gt; target: </span><br><span class="line">                j -= 1</span><br><span class="line">            else: </span><br><span class="line">                i += 1</span><br><span class="line">        return False</span><br></pre></td></tr></table></figure><h2 id="解析："><a href="#解析：" class="headerlink" title="解析："></a>解析：</h2><p>很简单的从右上角开始自上而下 从右向左的搜索。</p><p>如果要更高的效率可以使用二分查找。</p>]]></content>
       
       
       <categories>
@@ -145,6 +143,65 @@
     
     
     <entry>
+      <title>leetcode题解 搜索二维矩阵 II(Python3)</title>
+      <link href="/2018/07/12/leetcode%20%E6%90%9C%E7%B4%A2%E4%BA%8C%E7%BB%B4%E7%9F%A9%E9%98%B5%20II/"/>
+      <url>/2018/07/12/leetcode%20%E6%90%9C%E7%B4%A2%E4%BA%8C%E7%BB%B4%E7%9F%A9%E9%98%B5%20II/</url>
+      
+        <content type="html"><![CDATA[<p> <strong>说在前面：本题解旨在熟悉python3的基本操作和库函数的使用，仅采用最简便方法，而非时间或空间复杂度较小的方法。若读者想要学习数据结构还是推荐使用C/C++或Java。</strong></p><h2 id="原题："><a href="#原题：" class="headerlink" title="原题："></a>原题：</h2><p>编写一个高效的算法来搜索 <em>m</em> x <em>n</em> 矩阵 matrix 中的一个目标值 target。该矩阵具有以下特性：</p><ul><li>每行的元素从左到右升序排列。</li><li>每列的元素从上到下升序排列。</li></ul><p><strong>示例:</strong></p><p>现有矩阵 matrix 如下：</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  [1,   4,  7, 11, 15],</span><br><span class="line">  [2,   5,  8, 12, 19],</span><br><span class="line">  [3,   6,  9, 16, 22],</span><br><span class="line">  [10, 13, 14, 17, 24],</span><br><span class="line">  [18, 21, 23, 26, 30]</span><br><span class="line">]</span><br></pre></td></tr></table></figure><p>给定 target = <code>5</code>，返回 <code>true</code>。</p><p>给定 target = <code>20</code>，返回 <code>false</code>。</p><a id="more"></a><h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def searchMatrix(self, matrix, target):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type matrix: List[List[int]]</span><br><span class="line">        :type target: int</span><br><span class="line">        :rtype: bool</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        if not matrix:</span><br><span class="line">            return False</span><br><span class="line">        i = 0</span><br><span class="line">        j = len(matrix[0]) - 1</span><br><span class="line">        while i &lt; len(matrix) and j &gt;= 0:</span><br><span class="line">            if matrix[i][j] == target: </span><br><span class="line">                return True</span><br><span class="line">            elif matrix[i][j] &gt; target: </span><br><span class="line">                j -= 1</span><br><span class="line">            else: </span><br><span class="line">                i += 1</span><br><span class="line">        return False</span><br></pre></td></tr></table></figure><h2 id="解析："><a href="#解析：" class="headerlink" title="解析："></a>解析：</h2><p>很简单的从右上角开始自上而下 从右向左的搜索。</p><p>如果要更高的效率可以使用二分查找。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+          <category> leetcode </category>
+          
+          <category> 数组 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> 数组 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>产品经理怎么做数据分析</title>
+      <link href="/2018/06/23/%E7%AB%9E%E5%93%81%E5%88%86%E6%9E%90/"/>
+      <url>/2018/06/23/%E7%AB%9E%E5%93%81%E5%88%86%E6%9E%90/</url>
+      
+        <content type="html"><![CDATA[<p>PM需要分析的数据，一般都是市场数据，所以大家一般也把这个过程叫做市场调研。</p><h2 id="为什么要做市场调研"><a href="#为什么要做市场调研" class="headerlink" title="为什么要做市场调研"></a>为什么要做市场调研</h2><p>一般公司都有marketing部门帮助PM完成这项工作，但是这并不代表我们不需要学习它了。从原理上理解我们的工作是十分重要的，就像搞数据分析的人可以用matlab、可以用R写脚本但还是得学好基本的数学一样。</p><a id="more"></a>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>互联网产品几个规律及特点</title>
+      <link href="/2018/06/23/%E4%BA%92%E8%81%94%E7%BD%91%E8%A1%8C%E4%B8%9A%E7%89%B9%E7%82%B9/"/>
+      <url>/2018/06/23/%E4%BA%92%E8%81%94%E7%BD%91%E8%A1%8C%E4%B8%9A%E7%89%B9%E7%82%B9/</url>
+      
+        <content type="html"><![CDATA[<h2 id="联网产品的几个规律"><a href="#联网产品的几个规律" class="headerlink" title="联网产品的几个规律"></a>联网产品的几个规律</h2><p><strong>产品价值守恒：</strong>长期来看，产品的使用价值与产品所带来的商业价值相等。</p><p><strong>产品复杂度守恒：</strong>用户交互越复杂，开发工作量越小，用户交互越简单，开发工作量越大。</p><p><strong>互联网产品的商业模式：</strong><br>    低者为王：金字塔结构，赚的大多是三低人群的钱。（娱乐 低龄 低收入）<br>    用户体验低门槛为王：对用户要求低，谁都能用，有效提高用户数量、<br>    印钞机式赚钱：吃软饭，赚硬钱（随着用户增加，利润明显增加，但成本增加不大）etc.世纪佳缘 获得信息，真爱网 需要红娘，属于劳动密集型产业</p><p><strong>诺威格定律：</strong>当公司市场占有率达到50%以上时，市场占有率就无法再翻番了。 所以大公司往往扩展其他业务提升利润。<br><strong>越成功的公司越难拐弯：</strong>在某一领域特别成功的公司，其公司文化、商业模式、管理机制等已经被优化的极度适应当前领域。若想要进入新的市场就会变得难以适应。因此现在<br>一些大公司都会有独立子公司或者独立工作室来减小这种影响。<br><strong>顺势而为：</strong>行业分析。</p><a id="more"></a><h2 id="联网产品的几个特点"><a href="#联网产品的几个特点" class="headerlink" title="联网产品的几个特点"></a>联网产品的几个特点</h2><p><strong>互联网产品的交互性：</strong><br>凯文凯利曾举过一个例子来描述这个特性，他说蜜蜂要觉得去哪儿采蜜时所做的决策并不是由蜂后来决定的，而是由无数的蜜蜂去探索之后，将好的坏的情况的信息带回，然后再由一波蜜蜂去验证，如此循环之后，就可以做出一个不错的决定。这就是典型的信息交互。互联网产品与传统产品最大的不同点就在于信息的交互。当产品上线之后，产品经理可以得到非常快速的及时的<strong>信息反馈</strong>。<br><strong>高固定成本，低边际成本：</strong><br>吃软饭，赚硬钱（随着用户增加，利润明显增加，但成本增加不大）<br><strong>网络效应：</strong><br>用户量可以提升产品本身的价值量，用户也是产品的一部分。IM产品尤为明显（QQ，微信，随着用户群体增加，产品的<strong>商业价值</strong>快速上升）。价值量提升基于用户数量和和产品<strong>规则设计</strong>，同样的用户数量，良好的规则设计可以带来更多的价值提升。因此，应当尽快增<strong>加用户数量</strong>，设计产品使产品的网络效应的<strong>临界点</strong>更小，并且尽快先于对手达到<strong>临界点</strong>。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>产品经理怎么做数据分析</title>
       <link href="/2018/06/23/%E5%B8%82%E5%9C%BA%E8%B0%83%E7%A0%94%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
       <url>/2018/06/23/%E5%B8%82%E5%9C%BA%E8%B0%83%E7%A0%94%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</url>
@@ -175,7 +232,7 @@
       <link href="/2018/05/20/%E8%A1%8C%E4%B8%9A%E5%88%86%E6%9E%90/"/>
       <url>/2018/05/20/%E8%A1%8C%E4%B8%9A%E5%88%86%E6%9E%90/</url>
       
-        <content type="html"><![CDATA[<p>进入一个行业，或是做一个产品，都要考虑这个行业整体的状况。爬楼梯再努力，也没坐电梯的快，一个简单的选择的问题。下面粗略罗列了一些影响行业分析的因素，以供参考。</p><a id="more"></a><h2 id="行业发展因素分析"><a href="#行业发展因素分析" class="headerlink" title="行业发展因素分析"></a>行业发展因素分析</h2><h3 id="行业发展因素分析的内容："><a href="#行业发展因素分析的内容：" class="headerlink" title="行业发展因素分析的内容："></a>行业发展因素分析的内容：</h3><p>1、行业在社会经济中的地位分析。行业在社会经济中的地位，主要表现在三个方面：</p><p>　　（1）行业的产值（净产值和总产值）、利税额及吸收劳动力的数量，在全国工业产值、财政收入和就业总量中所占的比重；</p><p>　　（2）行业的现状和未来对整个社会经济及其他行业发展的影响程度；</p><p>　　（3）行业在国际市场上的竞争、创汇能力分析。行业的产品收入弹性也能说明行业在社会经济中的地位。其公式如下：</p><p>　　某行业的产品收入弹性系数=某行业产品的需求增长率/人均国民收入的增长率若弹性系数大于1，说明这种行业在产业结构中能够占有更大的份额，有更广阔的发展余地。</p><p>　　在分析行业社会经济地位时，确定行业是否是社会经济发展的主导行业是非常重要的。</p><p>　　2、行业特性分析。</p><p>　　行业特性是由于各行业由于其使命，发展条件以及产品和生产过程方面的不同而使各行业具有的不同性质。行业特性分析有助于把握行业的特点，了解行业环境。行业特性分析可以从以下几个方面入手：</p><p>　　（1）从行业分工来确定行业的特性。行业内存在着的纵横的分工关系界定了每个企业在本行业中的经营范围，决定了每个企业与其他企业的分工关系。</p><p>　　（2）从行业在工业生产中的位置来分析行业的性质。</p><p>　　（3）从行业所使用的资源和技术来分析，可分为劳动密集型行业、资金密集型行业和技术密集型行业。</p><p>　　（4）从行业所需资源的可靠性和及时性来进行分析，比如说行业依靠的是农产品则行业的变化将受到天气变化的影响。</p><p>　　（5）从行业技术发展趋势及前景、技术进步状况进行分析。</p><p>　　3、行业规模结构分析。</p><p>　　一类是悬殊型，即一个行业内大企业处于领导地位，小企业和大企业在规模和实力上相差很大，行业内竞争不甚激烈；</p><p>　　第二类是均衡型，行业内各企业之间势均力敌，竞争十分激烈。在进行行业规模结构分析的时候，一定要分析行业内几家大企业的经营状况，因为他们的行动会对行业的发展及利润起主导作用，分析他们的经营思想、经营战略、产品特色、技术水平、竞争能力及市场占有率及其优劣势等因素，对行业的环境分析具有十分重要的意义。</p><p>　　4、行业数量结构分析。</p><p>　　一般来讲，市场规模大，企业数量就多，行业内集中程度低，大企业少。反之，市场规模小，企业数量就少，行业集中程度高，大企业就多。</p><p>　　5、行业组织结构分析。</p><p>　　应对行业内企业联合的状况进行分析，对联合与竞争的趋势进行估计和<a href="https://wiki.mbalib.com/wiki/%E9%A2%84%E6%B5%8B" target="_blank" rel="noopener">预测</a>。</p><p>　　6、行业市场结构分析。</p><p>　　从行业供求关系来看，基本上可以分为三类，即供不应求、供求平衡和供大于求。若供大于求，则企业间的竞争激烈，可能导致价格下跌和高额的销售费用支出，有的企业可能会发生亏损；若供小于求，则各企业产品都可以找到合适的市场，价格相对稳定，新企业会大量涌入本行业。同时，还应对行业市场的需求分布状态、对行业产品需求变动的频繁性进行分析。</p><p>　　7、行业社会环境方面的限制分析。</p><p>　　行业发展过程中，应当防止对空气、森林、水源、地貌等自然环境的污染，这些因素将会对行业的发展起限制作用。</p><p>　　以上讨论的七个因素都是相互联系的，每个方面的变化都会引起其它方面的变化，因此在分析行业发展变化时，必须注意抓好关键信息，以便企业领导人能及时恰当的作出反应。</p><p>　　行业社会环境方面的限制分析。行业发展过程中，应当防止对空气、森林、水源、地貌等自然环境的污染，这些因素将会对行业的发展起限制作用。以上讨论的七个因素都是相互联系的，每个方面的变化都会引起其它方面的变化，因此在分析行业发展变化时，必须注意抓好关键信息，以便企业领导人能及时恰当的作出反应。</p>]]></content>
+        <content type="html"><![CDATA[<p>进入一个行业，或是做一个产品，都要考虑这个行业整体的状况。爬楼梯再努力，也没坐电梯的快，一个简单的选择的问题。行业端是高于市场端的，宏观的行业分析正确，可以包容微观执行的不利。下面粗略罗列了一些影响行业分析的因素，以供参考。</p><a id="more"></a><h2 id="行业发展因素分析"><a href="#行业发展因素分析" class="headerlink" title="行业发展因素分析"></a>行业发展因素分析</h2><h3 id="行业发展因素分析的内容："><a href="#行业发展因素分析的内容：" class="headerlink" title="行业发展因素分析的内容："></a>行业发展因素分析的内容：</h3><p>1、行业在社会经济中的地位分析。行业在社会经济中的地位，主要表现在三个方面：</p><p>　　（1）行业的产值（净产值和总产值）、利税额及吸收劳动力的数量，在全国工业产值、财政收入和就业总量中所占的比重；</p><p>　　（2）行业的现状和未来对整个社会经济及其他行业发展的影响程度；</p><p>　　（3）行业在国际市场上的竞争、创汇能力分析。行业的产品收入弹性也能说明行业在社会经济中的地位。其公式如下：</p><p>　　某行业的产品收入弹性系数=某行业产品的需求增长率/人均国民收入的增长率若弹性系数大于1，说明这种行业在产业结构中能够占有更大的份额，有更广阔的发展余地。</p><p>　　在分析行业社会经济地位时，确定行业是否是社会经济发展的主导行业是非常重要的。</p><p>　　2、行业特性分析。</p><p>　　行业特性是由于各行业由于其使命，发展条件以及产品和生产过程方面的不同而使各行业具有的不同性质。行业特性分析有助于把握行业的特点，了解行业环境。行业特性分析可以从以下几个方面入手：</p><p>　　（1）从行业分工来确定行业的特性。行业内存在着的纵横的分工关系界定了每个企业在本行业中的经营范围，决定了每个企业与其他企业的分工关系。</p><p>　　（2）从行业在工业生产中的位置来分析行业的性质。</p><p>　　（3）从行业所使用的资源和技术来分析，可分为劳动密集型行业、资金密集型行业和技术密集型行业。</p><p>　　（4）从行业所需资源的可靠性和及时性来进行分析，比如说行业依靠的是农产品则行业的变化将受到天气变化的影响。</p><p>　　（5）从行业技术发展趋势及前景、技术进步状况进行分析。</p><p>　　3、行业规模结构分析。</p><p>　　一类是悬殊型，即一个行业内大企业处于领导地位，小企业和大企业在规模和实力上相差很大，行业内竞争不甚激烈；</p><p>　　第二类是均衡型，行业内各企业之间势均力敌，竞争十分激烈。在进行行业规模结构分析的时候，一定要分析行业内几家大企业的经营状况，因为他们的行动会对行业的发展及利润起主导作用，分析他们的经营思想、经营战略、产品特色、技术水平、竞争能力及市场占有率及其优劣势等因素，对行业的环境分析具有十分重要的意义。</p><p>　　4、行业数量结构分析。</p><p>　　一般来讲，市场规模大，企业数量就多，行业内集中程度低，大企业少。反之，市场规模小，企业数量就少，行业集中程度高，大企业就多。</p><p>　　5、行业组织结构分析。</p><p>　　应对行业内企业联合的状况进行分析，对联合与竞争的趋势进行估计和<a href="https://wiki.mbalib.com/wiki/%E9%A2%84%E6%B5%8B" target="_blank" rel="noopener">预测</a>。</p><p>　　6、行业市场结构分析。</p><p>　　从行业供求关系来看，基本上可以分为三类，即供不应求、供求平衡和供大于求。若供大于求，则企业间的竞争激烈，可能导致价格下跌和高额的销售费用支出，有的企业可能会发生亏损；若供小于求，则各企业产品都可以找到合适的市场，价格相对稳定，新企业会大量涌入本行业。同时，还应对行业市场的需求分布状态、对行业产品需求变动的频繁性进行分析。</p><p>　　7、行业社会环境方面的限制分析。</p><p>　　行业发展过程中，应当防止对空气、森林、水源、地貌等自然环境的污染，这些因素将会对行业的发展起限制作用。</p><p>　　以上讨论的七个因素都是相互联系的，每个方面的变化都会引起其它方面的变化，因此在分析行业发展变化时，必须注意抓好关键信息，以便企业领导人能及时恰当的作出反应。</p><p>　　行业社会环境方面的限制分析。行业发展过程中，应当防止对空气、森林、水源、地貌等自然环境的污染，这些因素将会对行业的发展起限制作用。以上讨论的七个因素都是相互联系的，每个方面的变化都会引起其它方面的变化，因此在分析行业发展变化时，必须注意抓好关键信息，以便企业领导人能及时恰当的作出反应。</p>]]></content>
       
       
       

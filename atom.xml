@@ -45,6 +45,38 @@
   </entry>
   
   <entry>
+    <title>需求的分析与管理</title>
+    <link href="https://ruyululu.com/2018/10/03/%E4%BA%A7%E5%93%81%E7%9A%84%E8%AE%BE%E8%AE%A1/"/>
+    <id>https://ruyululu.com/2018/10/03/产品的设计/</id>
+    <published>2018-10-03T11:46:07.000Z</published>
+    <updated>2019-03-05T05:12:53.540Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt; 需求是产品经理每天接触最多的东西，总有要改的需求，总有新增的需求，本篇就来谈谈需求。&lt;/p&gt;
+&lt;h2 id=&quot;什么是需求：&quot;&gt;&lt;a href=&quot;#什么是需求：&quot; class=&quot;headerlink&quot; title=&quot;什么是需求：&quot;&gt;&lt;/a&gt;什么是需求：&lt;/h2&gt;&lt;h3 id=&quot;从用户的角度：&quot;&gt;&lt;a href=&quot;#从用户的角度：&quot; class=&quot;headerlink&quot; title=&quot;从用户的角度：&quot;&gt;&lt;/a&gt;从用户的角度：&lt;/h3&gt;&lt;p&gt;从用户的角度看，就是用户&lt;strong&gt;想要什么&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;比如现在有个用户想要开窗。&lt;/p&gt;
+&lt;h3 id=&quot;关注背景：&quot;&gt;&lt;a href=&quot;#关注背景：&quot; class=&quot;headerlink&quot; title=&quot;关注背景：&quot;&gt;&lt;/a&gt;关注背景：&lt;/h3&gt;&lt;p&gt;在了解了用户想要什么之后一定要关注&lt;strong&gt;背景&lt;/strong&gt;，否则就容易给出&lt;strong&gt;治标不治本&lt;/strong&gt;的解决方案。&lt;/p&gt;
+&lt;p&gt;比如现在这个用户的背景是在屋子里很热，汗流浃背。&lt;/p&gt;
+&lt;h3 id=&quot;从产品经理的角度：&quot;&gt;&lt;a href=&quot;#从产品经理的角度：&quot; class=&quot;headerlink&quot; title=&quot;从产品经理的角度：&quot;&gt;&lt;/a&gt;从产品经理的角度：&lt;/h3&gt;&lt;p&gt;通过前两个角度的分析，我们发现用户的&lt;strong&gt;根本问题&lt;/strong&gt;是屋子里太热了。&lt;/p&gt;
+&lt;p&gt;于是我可以选择给用户安装风扇空调，这就是解决方案。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="产品研发" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81%E7%A0%94%E5%8F%91/"/>
+    
+      <category term="需求分析" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81%E7%A0%94%E5%8F%91/%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90/"/>
+    
+    
+      <category term="产品" scheme="https://ruyululu.com/tags/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="需求" scheme="https://ruyululu.com/tags/%E9%9C%80%E6%B1%82/"/>
+    
+      <category term="分析" scheme="https://ruyululu.com/tags/%E5%88%86%E6%9E%90/"/>
+    
+  </entry>
+  
+  <entry>
     <title>商业模式</title>
     <link href="https://ruyululu.com/2018/09/27/%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F/"/>
     <id>https://ruyululu.com/2018/09/27/商业模式/</id>
@@ -78,6 +110,42 @@
       &lt;p&gt; &lt;strong&gt;说在前面：本题解旨在熟悉python3的基本操作和库函数的使用，仅采用最简便方法，而非时间或空间复杂度较小的方法。若读者想要学习数据结构还是推荐使用C/C++或Java。&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&quot;原题：&quot;&gt;&lt;a href=&quot;#原题：&quot; class=&quot;headerlink&quot; title=&quot;原题：&quot;&gt;&lt;/a&gt;原题：&lt;/h2&gt;&lt;p&gt;给定一个排序数组，你需要在&lt;strong&gt;原地&lt;/strong&gt;删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。&lt;/p&gt;
 &lt;p&gt;不要使用额外的数组空间，你必须在&lt;strong&gt;原地修改输入数组&lt;/strong&gt;并在使用 O(1) 额外空间的条件下完成。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="https://ruyululu.com/categories/Python/"/>
+    
+      <category term="leetcode" scheme="https://ruyululu.com/categories/Python/leetcode/"/>
+    
+      <category term="数组" scheme="https://ruyululu.com/categories/Python/leetcode/%E6%95%B0%E7%BB%84/"/>
+    
+    
+      <category term="Python" scheme="https://ruyululu.com/tags/Python/"/>
+    
+      <category term="leetcode" scheme="https://ruyululu.com/tags/leetcode/"/>
+    
+      <category term="数组" scheme="https://ruyululu.com/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode题解 合并两个有序数组(Python3)</title>
+    <link href="https://ruyululu.com/2018/07/12/leetcode%20%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/"/>
+    <id>https://ruyululu.com/2018/07/12/leetcode 合并两个有序数组/</id>
+    <published>2018-07-12T03:21:18.000Z</published>
+    <updated>2019-03-03T08:56:25.093Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt; &lt;strong&gt;说在前面：本题解旨在熟悉python3的基本操作和库函数的使用，仅采用最简便方法，而非时间或空间复杂度较小的方法。若读者想要学习数据结构还是推荐使用C/C++或Java。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;原题：&quot;&gt;&lt;a href=&quot;#原题：&quot; class=&quot;headerlink&quot; title=&quot;原题：&quot;&gt;&lt;/a&gt;原题：&lt;/h2&gt;&lt;p&gt;给定两个有序整数数组 &lt;em&gt;nums1&lt;/em&gt; 和 &lt;em&gt;nums2&lt;/em&gt;，将 &lt;em&gt;nums2&lt;/em&gt; 合并到 &lt;em&gt;nums1&lt;/em&gt; 中&lt;em&gt;，&lt;/em&gt;使得 &lt;em&gt;num1&lt;/em&gt; 成为一个有序数组。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;说明:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;初始化 &lt;em&gt;nums1&lt;/em&gt; 和 &lt;em&gt;nums2&lt;/em&gt; 的元素数量分别为 &lt;em&gt;m&lt;/em&gt; 和 &lt;em&gt;n&lt;/em&gt;。&lt;/li&gt;
+&lt;li&gt;你可以假设 &lt;em&gt;nums1&lt;/em&gt; 有足够的空间（空间大小大于或等于 &lt;em&gt;m + n&lt;/em&gt;）来保存 &lt;em&gt;nums2&lt;/em&gt; 中的元素。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;示例:&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;hljs highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;输入:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;nums1 = [1,2,3,0,0,0], m = 3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;nums2 = [2,5,6],       n = 3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;输出: [1,2,2,3,5,6]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -135,38 +203,38 @@
   </entry>
   
   <entry>
-    <title>leetcode题解 合并两个有序数组(Python3)</title>
-    <link href="https://ruyululu.com/2018/07/12/leetcode%20%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/"/>
-    <id>https://ruyululu.com/2018/07/12/leetcode 合并两个有序数组/</id>
-    <published>2018-07-12T03:21:18.000Z</published>
-    <updated>2019-03-03T08:56:25.093Z</updated>
+    <title>产品经理怎么做数据分析</title>
+    <link href="https://ruyululu.com/2018/06/23/%E7%AB%9E%E5%93%81%E5%88%86%E6%9E%90/"/>
+    <id>https://ruyululu.com/2018/06/23/竞品分析/</id>
+    <published>2018-06-23T08:34:02.000Z</published>
+    <updated>2019-03-04T07:00:58.917Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt; &lt;strong&gt;说在前面：本题解旨在熟悉python3的基本操作和库函数的使用，仅采用最简便方法，而非时间或空间复杂度较小的方法。若读者想要学习数据结构还是推荐使用C/C++或Java。&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&quot;原题：&quot;&gt;&lt;a href=&quot;#原题：&quot; class=&quot;headerlink&quot; title=&quot;原题：&quot;&gt;&lt;/a&gt;原题：&lt;/h2&gt;&lt;p&gt;给定两个有序整数数组 &lt;em&gt;nums1&lt;/em&gt; 和 &lt;em&gt;nums2&lt;/em&gt;，将 &lt;em&gt;nums2&lt;/em&gt; 合并到 &lt;em&gt;nums1&lt;/em&gt; 中&lt;em&gt;，&lt;/em&gt;使得 &lt;em&gt;num1&lt;/em&gt; 成为一个有序数组。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;说明:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;初始化 &lt;em&gt;nums1&lt;/em&gt; 和 &lt;em&gt;nums2&lt;/em&gt; 的元素数量分别为 &lt;em&gt;m&lt;/em&gt; 和 &lt;em&gt;n&lt;/em&gt;。&lt;/li&gt;
-&lt;li&gt;你可以假设 &lt;em&gt;nums1&lt;/em&gt; 有足够的空间（空间大小大于或等于 &lt;em&gt;m + n&lt;/em&gt;）来保存 &lt;em&gt;nums2&lt;/em&gt; 中的元素。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;示例:&lt;/strong&gt;&lt;/p&gt;
-&lt;figure class=&quot;hljs highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;输入:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;nums1 = [1,2,3,0,0,0], m = 3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;nums2 = [2,5,6],       n = 3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;输出: [1,2,2,3,5,6]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      &lt;p&gt;PM需要分析的数据，一般都是市场数据，所以大家一般也把这个过程叫做市场调研。&lt;/p&gt;
+&lt;h2 id=&quot;为什么要做市场调研&quot;&gt;&lt;a href=&quot;#为什么要做市场调研&quot; class=&quot;headerlink&quot; title=&quot;为什么要做市场调研&quot;&gt;&lt;/a&gt;为什么要做市场调研&lt;/h2&gt;&lt;p&gt;一般公司都有marketing部门帮助PM完成这项工作，但是这并不代表我们不需要学习它了。从原理上理解我们的工作是十分重要的，就像搞数据分析的人可以用matlab、可以用R写脚本但还是得学好基本的数学一样。&lt;/p&gt;
     
     </summary>
     
-      <category term="Python" scheme="https://ruyululu.com/categories/Python/"/>
     
-      <category term="leetcode" scheme="https://ruyululu.com/categories/Python/leetcode/"/>
+  </entry>
+  
+  <entry>
+    <title>互联网产品几个规律及特点</title>
+    <link href="https://ruyululu.com/2018/06/23/%E4%BA%92%E8%81%94%E7%BD%91%E8%A1%8C%E4%B8%9A%E7%89%B9%E7%82%B9/"/>
+    <id>https://ruyululu.com/2018/06/23/互联网行业特点/</id>
+    <published>2018-06-23T08:34:02.000Z</published>
+    <updated>2019-03-05T01:03:20.928Z</updated>
     
-      <category term="数组" scheme="https://ruyululu.com/categories/Python/leetcode/%E6%95%B0%E7%BB%84/"/>
+    <summary type="html">
     
+      &lt;h2 id=&quot;联网产品的几个规律&quot;&gt;&lt;a href=&quot;#联网产品的几个规律&quot; class=&quot;headerlink&quot; title=&quot;联网产品的几个规律&quot;&gt;&lt;/a&gt;联网产品的几个规律&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;产品价值守恒：&lt;/strong&gt;长期来看，产品的使用价值与产品所带来的商业价值相等。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;产品复杂度守恒：&lt;/strong&gt;用户交互越复杂，开发工作量越小，用户交互越简单，开发工作量越大。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;互联网产品的商业模式：&lt;/strong&gt;&lt;br&gt;    低者为王：金字塔结构，赚的大多是三低人群的钱。（娱乐 低龄 低收入）&lt;br&gt;    用户体验低门槛为王：对用户要求低，谁都能用，有效提高用户数量、&lt;br&gt;    印钞机式赚钱：吃软饭，赚硬钱（随着用户增加，利润明显增加，但成本增加不大）etc.世纪佳缘 获得信息，真爱网 需要红娘，属于劳动密集型产业&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;诺威格定律：&lt;/strong&gt;当公司市场占有率达到50%以上时，市场占有率就无法再翻番了。 所以大公司往往扩展其他业务提升利润。&lt;br&gt;&lt;strong&gt;越成功的公司越难拐弯：&lt;/strong&gt;在某一领域特别成功的公司，其公司文化、商业模式、管理机制等已经被优化的极度适应当前领域。若想要进入新的市场就会变得难以适应。因此现在&lt;br&gt;一些大公司都会有独立子公司或者独立工作室来减小这种影响。&lt;br&gt;&lt;strong&gt;顺势而为：&lt;/strong&gt;行业分析。&lt;/p&gt;
     
-      <category term="Python" scheme="https://ruyululu.com/tags/Python/"/>
+    </summary>
     
-      <category term="leetcode" scheme="https://ruyululu.com/tags/leetcode/"/>
-    
-      <category term="数组" scheme="https://ruyululu.com/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
@@ -209,11 +277,11 @@
     <link href="https://ruyululu.com/2018/05/20/%E8%A1%8C%E4%B8%9A%E5%88%86%E6%9E%90/"/>
     <id>https://ruyululu.com/2018/05/20/行业分析/</id>
     <published>2018-05-20T12:51:48.000Z</published>
-    <updated>2019-03-02T06:54:39.378Z</updated>
+    <updated>2019-03-04T06:59:13.133Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;进入一个行业，或是做一个产品，都要考虑这个行业整体的状况。爬楼梯再努力，也没坐电梯的快，一个简单的选择的问题。下面粗略罗列了一些影响行业分析的因素，以供参考。&lt;/p&gt;
+      &lt;p&gt;进入一个行业，或是做一个产品，都要考虑这个行业整体的状况。爬楼梯再努力，也没坐电梯的快，一个简单的选择的问题。行业端是高于市场端的，宏观的行业分析正确，可以包容微观执行的不利。下面粗略罗列了一些影响行业分析的因素，以供参考。&lt;/p&gt;
     
     </summary>
     

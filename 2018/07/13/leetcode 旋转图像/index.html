@@ -81,7 +81,7 @@
     <script defer type="text/javascript" src="/js/index.js"></script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>产品经理怎么做数据分析 | 苦瓜不灵's Note - 记录我的大脑</title>
+    <title>leetcode题解 旋转图像(Python3) | 苦瓜不灵's Note - 记录我的大脑</title>
   </head>
   <body itemscope="" itemtype="http://schema.org/WebPage" lang="zh_CN" data-spy="scroll" data-target=".list-group">
     
@@ -127,7 +127,7 @@
   
   <article class="article post card animate" itemscope="" itemtype="http://schema.org/Article">
     <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="https://ruyululu.com/2018/06/23/市场调研与数据分析/">
+      <link itemprop="mainEntityOfPage" href="https://ruyululu.com/2018/07/13/leetcode 旋转图像/">
       <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
        <meta itemprop="name" content="苦瓜不灵">
        <meta itemprop="description" content="">
@@ -138,95 +138,64 @@
       </span>
     </div>
     <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">产品经理怎么做数据分析</h1>
+      <h1 class="post-title" itemprop="name headline">leetcode题解 旋转图像(Python3)</h1>
       <div class="post-meta">
         
         <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-06-23T16:34:02+08:00">2018-06-23 16:34:02</time></span>
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-07-13T21:07:31+08:00">2018-07-13 21:07:31</time></span>
         </span>
         
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/leetcode/数组/" itemprop="url" rel="index"><span itemprop="name">数组</span></a></span>
+        </span>
         
         
       </div>
     </header>
     <main class="post-main" itemprop="articleBody">
-      <p>PM需要分析的数据，一般都是市场数据，所以大家一般也把这个过程叫做市场调研。</p>
-<h2 id="为什么要做市场调研"><a href="#为什么要做市场调研" class="headerlink" title="为什么要做市场调研"></a>为什么要做市场调研</h2><p>一般公司都有marketing部门帮助PM完成这项工作，但是这并不代表我们不需要学习它了。从原理上理解我们的工作是十分重要的，就像搞数据分析的人可以用matlab、可以用R写脚本但还是得学好基本的数学一样。</p>
+      <p> <strong>说在前面：本题解旨在熟悉python3的基本操作和库函数的使用，仅采用最简便方法，而非时间或空间复杂度较小的方法。若读者想要学习数据结构还是推荐使用C/C++或Java。</strong></p>
+<h2 id="原题："><a href="#原题：" class="headerlink" title="原题："></a>原题：</h2><p>给定一个 <em>n</em> × <em>n</em> 的二维矩阵表示一个图像。</p>
+<p>将图像顺时针旋转 90 度。</p>
+<p><strong>说明：</strong></p>
+<p>你必须在<strong>原地</strong>旋转图像，这意味着你需要直接修改输入的二维矩阵。<strong>请不要</strong>使用另一个矩阵来旋转图像。</p>
 <a id="more"></a>
-<h2 id="做市场调研的基本方法"><a href="#做市场调研的基本方法" class="headerlink" title="做市场调研的基本方法"></a>做市场调研的基本方法</h2><p>先上个例子。cesim公司的市场调研报告的目录。</p>
-<p><img src="https://s2.ax1x.com/2019/02/15/krJoC9.md.jpg" alt="cesim市场调研报告目录"></p>
-<p>其中市场调研部分包括广告效应、销售预测、影响用户购买决策的产品特性、渠道投资、PDA特征喜好。那么为什么企业要调查这些指标呢？</p>
-<ol>
-<li><h3 id="明确目标"><a href="#明确目标" class="headerlink" title="明确目标"></a>明确目标</h3><p>做市场调研之前，首先要明确我们想搞清楚的问题是什么。一般对于to c的产品，常用5W1H法（六何分析法）。</p>
-<h3 id="以互联网产品为例（用户导向）："><a href="#以互联网产品为例（用户导向）：" class="headerlink" title="以互联网产品为例（用户导向）："></a>以互联网产品为例（用户导向）：</h3><p>Who: <strong>目标用户</strong>是什么样的<br>When：用户使用产品的<strong>时间</strong>（行为习惯）<br>What：用户会<strong>做什么</strong><br>Where：用户使用的<strong>场景</strong><br>Why：用户<strong>需求</strong></p>
-<p>How：用户执行任务或达到目标所使用的具体方法<br>简而言之就是，什么样的人 在什么时间 什么场景 用什么样的设备 干什么样的事情 以及是怎么干的。</p>
-<h3 id="以传统生产行业为例（产品导向）："><a href="#以传统生产行业为例（产品导向）：" class="headerlink" title="以传统生产行业为例（产品导向）："></a>以传统生产行业为例（产品导向）：</h3></li>
-</ol>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>现状</th>
-<th>原因</th>
-<th>如何改善</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>对象（What）</strong></td>
-<td>现在的产品是怎样的</td>
-<td>为什么生产这个产品</td>
-<td>工艺改良？能不能生产别的？</td>
-</tr>
-<tr>
-<td><strong>目的（Why）</strong></td>
-<td>生产的原因</td>
-<td>为什么是这个目的</td>
-<td>能不能是别的目的</td>
-</tr>
-<tr>
-<td><strong>场所（Where）</strong></td>
-<td>在哪儿做</td>
-<td>为什么在那儿干</td>
-<td>有没有更好的场所</td>
-</tr>
-<tr>
-<td><strong>时间（When）</strong></td>
-<td>什么时候做</td>
-<td>为什么是这个时候</td>
-<td>有没有更好的时间</td>
-</tr>
-<tr>
-<td><strong>作业员（Who）</strong></td>
-<td>谁来做</td>
-<td>为什么是这样的人</td>
-<td>有没有更好的人选</td>
-</tr>
-<tr>
-<td><strong>方法（How）</strong></td>
-<td>怎么做</td>
-<td>为什么这么做</td>
-<td>能不能改进现有的方法</td>
-</tr>
-</tbody>
-</table>
-<p>   可见虽然两者思考的东西不同，但仍可用相同的方式思考。</p>
-<p>   市场经济时代大家都很注重成本，于是又提出了一个How much,变成了5W2H。</p>
-<p>   可扩为下图</p>
-<p>   <img src="https://s2.ax1x.com/2019/02/15/kr31ts.png" alt="5W2H分析法"></p>
-<ol start="2">
-<li><h3 id="设计调研方法（主要部分）"><a href="#设计调研方法（主要部分）" class="headerlink" title="设计调研方法（主要部分）"></a>设计调研方法（主要部分）</h3></li>
-</ol>
-<p>那么，如何去填补我们不知道的部分？就和做其他任何研究一样，这一步必须明确调研的方法。  一般有竞品分析、行业分析、需求分析、数据收集等方面。</p>
-<ol start="3">
-<li><h3 id="实施"><a href="#实施" class="headerlink" title="实施"></a>实施</h3><p>根据方法目标和具体调查对象等因素，收集数据，分析数据。这些会在数据分析部分着重讨论。 </p>
-</li>
-<li><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>得出结果。</p>
-</li>
-</ol>
+<p><strong>示例 1:</strong></p>
+<figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">给定 matrix = </span><br><span class="line">[</span><br><span class="line">  [1,2,3],</span><br><span class="line">  [4,5,6],</span><br><span class="line">  [7,8,9]</span><br><span class="line">],</span><br><span class="line"></span><br><span class="line">原地旋转输入矩阵，使其变为:</span><br><span class="line">[</span><br><span class="line">  [7,4,1],</span><br><span class="line">  [8,5,2],</span><br><span class="line">  [9,6,3]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2:</strong></p>
+<figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">给定 matrix =</span><br><span class="line">[</span><br><span class="line">  [ 5, 1, 9,11],</span><br><span class="line">  [ 2, 4, 8,10],</span><br><span class="line">  [13, 3, 6, 7],</span><br><span class="line">  [15,14,12,16]</span><br><span class="line">], </span><br><span class="line"></span><br><span class="line">原地旋转输入矩阵，使其变为:</span><br><span class="line">[</span><br><span class="line">  [15,13, 2, 5],</span><br><span class="line">  [14, 3, 4, 1],</span><br><span class="line">  [12, 6, 8, 9],</span><br><span class="line">  [16, 7,10,11]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def rotate(self, matrix: List[List[int]]) -&gt; None:</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        Do not return anything, modify matrix in-place instead.</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        matrix[:]=map(list,zip(*matrix[::-1]))</span><br></pre></td></tr></table></figure>
+<h2 id="解析："><a href="#解析：" class="headerlink" title="解析："></a>解析：</h2><p><strong>matrix[:]</strong> 表示重新生成matrix中的元素，若仅使用matrix并不会改变matrix中的元素。</p>
+<p><strong>map</strong></p>
+<blockquote>
+<p><code>map()</code>函数接收两个参数，一个是函数，一个是<code>Iterable</code>，<code>map</code>将传入的函数依次作用到序列的每个元素，并把结果作为新的<code>Iterator</code>返回。</p>
+<p>举例说明，比如我们有一个函数f(x)=x2，要把这个函数作用在一个list <code>[1, 2, 3, 4, 5, 6, 7, 8, 9]</code>上，就可以用<code>map()</code>实现如下：</p>
+<figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&gt;             f(x) = x * x</span><br><span class="line">&gt; </span><br><span class="line">&gt;                   │</span><br><span class="line">&gt;                   │</span><br><span class="line">&gt;   ┌───┬───┬───┬───┼───┬───┬───┬───┐</span><br><span class="line">&gt;   │   │   │   │   │   │   │   │   │</span><br><span class="line">&gt;   ▼   ▼   ▼   ▼   ▼   ▼   ▼   ▼   ▼</span><br><span class="line">&gt; </span><br><span class="line">&gt; [ 1   2   3   4   5   6   7   8   9 ]</span><br><span class="line">&gt; </span><br><span class="line">&gt;   │   │   │   │   │   │   │   │   │</span><br><span class="line">&gt;   │   │   │   │   │   │   │   │   │</span><br><span class="line">&gt;   ▼   ▼   ▼   ▼   ▼   ▼   ▼   ▼   ▼</span><br><span class="line">&gt; </span><br><span class="line">&gt; [ 1   4   9  16  25  36  49  64  81 ]</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><strong>zip</strong></p>
+<blockquote>
+<p><strong>zip()</strong> 函数用于将可迭代的对象作为参数，将对象中对应的元素打包成一个个元组，然后返回由这些元组组成的对象，这样做的好处是节约了不少的内存。</p>
+<p>我们可以使用 list() 转换来输出列表。</p>
+<p>如果各个迭代器的元素个数不一致，则返回列表长度与最短的对象相同，利用 <strong>*</strong> 号操作符，可以将元组解压为列表。</p>
+</blockquote>
+<p>关于zip更多详细信息和实例：<a href="https://www.programiz.com/python-programming/methods/built-in/zip" target="_blank" rel="noopener">https://www.programiz.com/python-programming/methods/built-in/zip</a></p>
 
     </main>
     <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/Python/" rel="tag"><i class="fas fa-tags"></i>Python</a>
+        
+        <a class="post-tag button" href="/tags/leetcode/" rel="tag"><i class="fas fa-tags"></i>leetcode</a>
+        
+        <a class="post-tag button" href="/tags/数组/" rel="tag"><i class="fas fa-tags"></i>数组</a>
+        
+      </div>
       
     </footer>
   </article>
@@ -235,12 +204,12 @@
   <nav class="page-nav">
     <div class="page-nav-next page-nav-item">
       
-      <a href="/2018/06/23/竞品分析/" rel="next" title="产品经理怎么做数据分析"><i class="fas fa-angle-left"></i><span class="nav-title">产品经理怎么做数据分析</span></a>
+      <a href="/2018/07/12/leetcode 搜索二维矩阵 II/" rel="next" title="leetcode题解 搜索二维矩阵 II(Python3)"><i class="fas fa-angle-left"></i><span class="nav-title">leetcode题解 搜索二维矩阵 II(Python3)</span></a>
       
     </div>
     <div class="page-nav-prev page-nav-item">
       
-      <a href="/2018/06/23/互联网行业特点/" rel="prev" title="互联网产品几个规律及特点"><span class="nav-title">互联网产品几个规律及特点</span><i class="fas fa-angle-right"></i></a>
+      <a href="/2018/07/17/leetcode 反转字符串/" rel="prev" title="leetcode题解 反转字符串(Python3)"><span class="nav-title">leetcode题解 反转字符串(Python3)</span><i class="fas fa-angle-right"></i></a>
       
     </div>
   </nav>
@@ -311,7 +280,7 @@
     <hr>
     <div class="post-toc sidebar-item" id="toc-div">
       <div><i class="fas fa-list-ol"></i>文章目录</div>
-      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#为什么要做市场调研"><span class="toc-text">为什么要做市场调研</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#做市场调研的基本方法"><span class="toc-text">做市场调研的基本方法</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#明确目标"><span class="toc-text">明确目标</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#以互联网产品为例（用户导向）："><span class="toc-text">以互联网产品为例（用户导向）：</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#以传统生产行业为例（产品导向）："><span class="toc-text">以传统生产行业为例（产品导向）：</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#设计调研方法（主要部分）"><span class="toc-text">设计调研方法（主要部分）</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#实施"><span class="toc-text">实施</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#总结"><span class="toc-text">总结</span></a></li></ol></li></ol></div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#原题："><span class="toc-text">原题：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#题解："><span class="toc-text">题解：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#解析："><span class="toc-text">解析：</span></a></li></ol></div>
     </div>
     
     

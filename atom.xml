@@ -45,9 +45,40 @@
   </entry>
   
   <entry>
+    <title>怎么制作产品流程图</title>
+    <link href="https://ruyululu.com/2018/11/08/%E4%BA%A7%E5%93%81%E6%B5%81%E7%A8%8B%E5%9B%BE/"/>
+    <id>https://ruyululu.com/2018/11/08/产品流程图/</id>
+    <published>2018-11-08T15:38:09.000Z</published>
+    <updated>2019-03-07T11:26:50.852Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt; 工欲善其事必先利其器，方向都没搞清楚就开车，绕的路就越远。本篇我们就来介绍产品的方向盘——产品流程图。&lt;/p&gt;
+&lt;h2 id=&quot;什么是流程图：&quot;&gt;&lt;a href=&quot;#什么是流程图：&quot; class=&quot;headerlink&quot; title=&quot;什么是流程图：&quot;&gt;&lt;/a&gt;什么是流程图：&lt;/h2&gt;&lt;p&gt;流程图就是将&lt;strong&gt;逻辑关系&lt;/strong&gt;用&lt;strong&gt;图形&lt;/strong&gt;表现出来，图形直观，可读性强，也便于之后修改。&lt;/p&gt;
+&lt;h2 id=&quot;为什么要画流程图：&quot;&gt;&lt;a href=&quot;#为什么要画流程图：&quot; class=&quot;headerlink&quot; title=&quot;为什么要画流程图：&quot;&gt;&lt;/a&gt;为什么要画流程图：&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;1、帮助梳理逻辑&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;大脑的记忆能力并不是很强，你一定有想问题的时候想到后面忘了前面的体验。同样我们上来就画原型就有可能做很多无用功，而流程图就可以帮助我们理清楚思路。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2、便于修改&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;国家政策都改个不停，更不用说我们的产品了，市场瞬息万变。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3、便于宣讲和传播&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;产品经理需要跟很多人对接，如果有一张清晰的流程图，可以帮助你更容易的说明业务逻辑，也便于其他人理解这个项目。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="产品" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="产品流程图" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/%E4%BA%A7%E5%93%81%E6%B5%81%E7%A8%8B%E5%9B%BE/"/>
+    
+    
+      <category term="产品" scheme="https://ruyululu.com/tags/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="产品流程图" scheme="https://ruyululu.com/tags/%E4%BA%A7%E5%93%81%E6%B5%81%E7%A8%8B%E5%9B%BE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>需求的分析与管理</title>
-    <link href="https://ruyululu.com/2018/10/03/%E4%BA%A7%E5%93%81%E7%9A%84%E8%AE%BE%E8%AE%A1/"/>
-    <id>https://ruyululu.com/2018/10/03/产品的设计/</id>
+    <link href="https://ruyululu.com/2018/10/03/%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%92%8C%E7%AE%A1%E7%90%86/"/>
+    <id>https://ruyululu.com/2018/10/03/产品需求分析和管理/</id>
     <published>2018-10-03T11:46:07.000Z</published>
     <updated>2019-03-05T05:12:53.540Z</updated>
     
@@ -81,7 +112,7 @@
     <link href="https://ruyululu.com/2018/09/27/%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F/"/>
     <id>https://ruyululu.com/2018/09/27/商业模式/</id>
     <published>2018-09-27T06:17:40.000Z</published>
-    <updated>2019-03-03T07:38:58.033Z</updated>
+    <updated>2019-03-07T07:06:46.129Z</updated>
     
     <summary type="html">
     
@@ -95,6 +126,48 @@
     
     </summary>
     
+      <category term="产品" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="商业模式" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="产品" scheme="https://ruyululu.com/tags/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="商业模式" scheme="https://ruyululu.com/tags/%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode题解 验证回文串(Python3)</title>
+    <link href="https://ruyululu.com/2018/07/20/leetcode%20%E9%AA%8C%E8%AF%81%E5%9B%9E%E6%96%87%E4%B8%B2/"/>
+    <id>https://ruyululu.com/2018/07/20/leetcode 验证回文串/</id>
+    <published>2018-07-20T11:31:25.000Z</published>
+    <updated>2019-03-07T06:37:43.218Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt; &lt;strong&gt;说在前面：本题解旨在熟悉python3的基本操作和库函数的使用，仅采用最简便方法，而非时间或空间复杂度较小的方法。若读者想要学习数据结构还是推荐使用C/C++或Java。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;原题：&quot;&gt;&lt;a href=&quot;#原题：&quot; class=&quot;headerlink&quot; title=&quot;原题：&quot;&gt;&lt;/a&gt;原题：&lt;/h2&gt;&lt;p&gt;给定一个字符串，验证它是否是回文串，只考虑字母和数字字符，可以忽略字母的大小写。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;说明：&lt;/strong&gt;本题中，我们将空字符串定义为有效的回文串。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;hljs highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;输入: &amp;quot;A man, a plan, a canal: Panama&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;输出: true&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;示例 2:&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;hljs highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;输入: &amp;quot;race a car&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;输出: false&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="https://ruyululu.com/categories/Python/"/>
+    
+      <category term="leetcode" scheme="https://ruyululu.com/categories/Python/leetcode/"/>
+    
+      <category term="字符串" scheme="https://ruyululu.com/categories/Python/leetcode/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+    
+      <category term="Python" scheme="https://ruyululu.com/tags/Python/"/>
+    
+      <category term="leetcode" scheme="https://ruyululu.com/tags/leetcode/"/>
+    
+      <category term="字符串" scheme="https://ruyululu.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
   </entry>
   
@@ -194,23 +267,17 @@
   </entry>
   
   <entry>
-    <title>leetcode题解 合并两个有序数组(Python3)</title>
-    <link href="https://ruyululu.com/2018/07/12/leetcode%20%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/"/>
-    <id>https://ruyululu.com/2018/07/12/leetcode 合并两个有序数组/</id>
+    <title>leetcode题解 从排序数组中删除重复项(Python3)</title>
+    <link href="https://ruyululu.com/2018/07/12/leetcode%20%E4%BB%8E%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E9%A1%B9/"/>
+    <id>https://ruyululu.com/2018/07/12/leetcode 从排序数组中删除重复项/</id>
     <published>2018-07-12T03:21:18.000Z</published>
-    <updated>2019-03-03T08:56:25.093Z</updated>
+    <updated>2019-03-03T07:38:44.478Z</updated>
     
     <summary type="html">
     
       &lt;p&gt; &lt;strong&gt;说在前面：本题解旨在熟悉python3的基本操作和库函数的使用，仅采用最简便方法，而非时间或空间复杂度较小的方法。若读者想要学习数据结构还是推荐使用C/C++或Java。&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&quot;原题：&quot;&gt;&lt;a href=&quot;#原题：&quot; class=&quot;headerlink&quot; title=&quot;原题：&quot;&gt;&lt;/a&gt;原题：&lt;/h2&gt;&lt;p&gt;给定两个有序整数数组 &lt;em&gt;nums1&lt;/em&gt; 和 &lt;em&gt;nums2&lt;/em&gt;，将 &lt;em&gt;nums2&lt;/em&gt; 合并到 &lt;em&gt;nums1&lt;/em&gt; 中&lt;em&gt;，&lt;/em&gt;使得 &lt;em&gt;num1&lt;/em&gt; 成为一个有序数组。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;说明:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;初始化 &lt;em&gt;nums1&lt;/em&gt; 和 &lt;em&gt;nums2&lt;/em&gt; 的元素数量分别为 &lt;em&gt;m&lt;/em&gt; 和 &lt;em&gt;n&lt;/em&gt;。&lt;/li&gt;
-&lt;li&gt;你可以假设 &lt;em&gt;nums1&lt;/em&gt; 有足够的空间（空间大小大于或等于 &lt;em&gt;m + n&lt;/em&gt;）来保存 &lt;em&gt;nums2&lt;/em&gt; 中的元素。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;示例:&lt;/strong&gt;&lt;/p&gt;
-&lt;figure class=&quot;hljs highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;输入:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;nums1 = [1,2,3,0,0,0], m = 3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;nums2 = [2,5,6],       n = 3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;输出: [1,2,2,3,5,6]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;原题：&quot;&gt;&lt;a href=&quot;#原题：&quot; class=&quot;headerlink&quot; title=&quot;原题：&quot;&gt;&lt;/a&gt;原题：&lt;/h2&gt;&lt;p&gt;给定一个排序数组，你需要在&lt;strong&gt;原地&lt;/strong&gt;删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。&lt;/p&gt;
+&lt;p&gt;不要使用额外的数组空间，你必须在&lt;strong&gt;原地修改输入数组&lt;/strong&gt;并在使用 O(1) 额外空间的条件下完成。&lt;/p&gt;
     
     </summary>
     
@@ -268,17 +335,23 @@
   </entry>
   
   <entry>
-    <title>leetcode题解 从排序数组中删除重复项(Python3)</title>
-    <link href="https://ruyululu.com/2018/07/12/leetcode%20%E4%BB%8E%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E9%A1%B9/"/>
-    <id>https://ruyululu.com/2018/07/12/leetcode 从排序数组中删除重复项/</id>
+    <title>leetcode题解 合并两个有序数组(Python3)</title>
+    <link href="https://ruyululu.com/2018/07/12/leetcode%20%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/"/>
+    <id>https://ruyululu.com/2018/07/12/leetcode 合并两个有序数组/</id>
     <published>2018-07-12T03:21:18.000Z</published>
-    <updated>2019-03-03T07:38:44.478Z</updated>
+    <updated>2019-03-03T08:56:25.093Z</updated>
     
     <summary type="html">
     
       &lt;p&gt; &lt;strong&gt;说在前面：本题解旨在熟悉python3的基本操作和库函数的使用，仅采用最简便方法，而非时间或空间复杂度较小的方法。若读者想要学习数据结构还是推荐使用C/C++或Java。&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&quot;原题：&quot;&gt;&lt;a href=&quot;#原题：&quot; class=&quot;headerlink&quot; title=&quot;原题：&quot;&gt;&lt;/a&gt;原题：&lt;/h2&gt;&lt;p&gt;给定一个排序数组，你需要在&lt;strong&gt;原地&lt;/strong&gt;删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。&lt;/p&gt;
-&lt;p&gt;不要使用额外的数组空间，你必须在&lt;strong&gt;原地修改输入数组&lt;/strong&gt;并在使用 O(1) 额外空间的条件下完成。&lt;/p&gt;
+&lt;h2 id=&quot;原题：&quot;&gt;&lt;a href=&quot;#原题：&quot; class=&quot;headerlink&quot; title=&quot;原题：&quot;&gt;&lt;/a&gt;原题：&lt;/h2&gt;&lt;p&gt;给定两个有序整数数组 &lt;em&gt;nums1&lt;/em&gt; 和 &lt;em&gt;nums2&lt;/em&gt;，将 &lt;em&gt;nums2&lt;/em&gt; 合并到 &lt;em&gt;nums1&lt;/em&gt; 中&lt;em&gt;，&lt;/em&gt;使得 &lt;em&gt;num1&lt;/em&gt; 成为一个有序数组。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;说明:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;初始化 &lt;em&gt;nums1&lt;/em&gt; 和 &lt;em&gt;nums2&lt;/em&gt; 的元素数量分别为 &lt;em&gt;m&lt;/em&gt; 和 &lt;em&gt;n&lt;/em&gt;。&lt;/li&gt;
+&lt;li&gt;你可以假设 &lt;em&gt;nums1&lt;/em&gt; 有足够的空间（空间大小大于或等于 &lt;em&gt;m + n&lt;/em&gt;）来保存 &lt;em&gt;nums2&lt;/em&gt; 中的元素。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;示例:&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;hljs highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;输入:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;nums1 = [1,2,3,0,0,0], m = 3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;nums2 = [2,5,6],       n = 3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;输出: [1,2,2,3,5,6]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -298,11 +371,38 @@
   </entry>
   
   <entry>
+    <title>产品经理怎么做市场调研</title>
+    <link href="https://ruyululu.com/2018/06/23/%E5%B8%82%E5%9C%BA%E8%B0%83%E7%A0%94%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    <id>https://ruyululu.com/2018/06/23/市场调研与数据分析/</id>
+    <published>2018-06-23T08:34:02.000Z</published>
+    <updated>2019-03-07T07:05:04.995Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;PM需要分析的数据，一般都是市场数据，所以大家一般也把这个过程叫做市场调研。&lt;/p&gt;
+&lt;h2 id=&quot;为什么要做市场调研&quot;&gt;&lt;a href=&quot;#为什么要做市场调研&quot; class=&quot;headerlink&quot; title=&quot;为什么要做市场调研&quot;&gt;&lt;/a&gt;为什么要做市场调研&lt;/h2&gt;&lt;p&gt;一般公司都有marketing部门帮助PM完成这项工作，但是这并不代表我们不需要学习它了。从原理上理解我们的工作是十分重要的，就像搞数据分析的人可以用matlab、可以用R写脚本但还是得学好基本的数学一样。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="产品" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="数据分析" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+      <category term="市场调研" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E5%B8%82%E5%9C%BA%E8%B0%83%E7%A0%94/"/>
+    
+    
+      <category term="数据分析" scheme="https://ruyululu.com/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+      <category term="市场调研" scheme="https://ruyululu.com/tags/%E5%B8%82%E5%9C%BA%E8%B0%83%E7%A0%94/"/>
+    
+  </entry>
+  
+  <entry>
     <title>互联网产品几个规律及特点</title>
     <link href="https://ruyululu.com/2018/06/23/%E4%BA%92%E8%81%94%E7%BD%91%E8%A1%8C%E4%B8%9A%E7%89%B9%E7%82%B9/"/>
     <id>https://ruyululu.com/2018/06/23/互联网行业特点/</id>
     <published>2018-06-23T08:34:02.000Z</published>
-    <updated>2019-03-05T01:03:20.928Z</updated>
+    <updated>2019-03-07T07:07:13.979Z</updated>
     
     <summary type="html">
     
@@ -313,6 +413,12 @@
     
     </summary>
     
+      <category term="互联网" scheme="https://ruyululu.com/categories/%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    
+      <category term="特点" scheme="https://ruyululu.com/categories/%E4%BA%92%E8%81%94%E7%BD%91/%E7%89%B9%E7%82%B9/"/>
+    
+    
+      <category term="互联网" scheme="https://ruyululu.com/tags/%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
   </entry>
   
@@ -334,28 +440,11 @@
   </entry>
   
   <entry>
-    <title>产品经理怎么做数据分析</title>
-    <link href="https://ruyululu.com/2018/06/23/%E5%B8%82%E5%9C%BA%E8%B0%83%E7%A0%94%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
-    <id>https://ruyululu.com/2018/06/23/市场调研与数据分析/</id>
-    <published>2018-06-23T08:34:02.000Z</published>
-    <updated>2019-03-02T06:54:54.144Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;PM需要分析的数据，一般都是市场数据，所以大家一般也把这个过程叫做市场调研。&lt;/p&gt;
-&lt;h2 id=&quot;为什么要做市场调研&quot;&gt;&lt;a href=&quot;#为什么要做市场调研&quot; class=&quot;headerlink&quot; title=&quot;为什么要做市场调研&quot;&gt;&lt;/a&gt;为什么要做市场调研&lt;/h2&gt;&lt;p&gt;一般公司都有marketing部门帮助PM完成这项工作，但是这并不代表我们不需要学习它了。从原理上理解我们的工作是十分重要的，就像搞数据分析的人可以用matlab、可以用R写脚本但还是得学好基本的数学一样。&lt;/p&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>用户与场景</title>
     <link href="https://ruyululu.com/2018/06/02/%E7%94%A8%E6%88%B7%E4%B8%8E%E5%9C%BA%E6%99%AF/"/>
     <id>https://ruyululu.com/2018/06/02/用户与场景/</id>
     <published>2018-06-02T12:21:34.000Z</published>
-    <updated>2019-03-02T06:55:30.942Z</updated>
+    <updated>2019-03-07T07:03:18.264Z</updated>
     
     <summary type="html">
     
@@ -364,6 +453,16 @@
     
     </summary>
     
+      <category term="产品" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="用户与场景" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/%E7%94%A8%E6%88%B7%E4%B8%8E%E5%9C%BA%E6%99%AF/"/>
+    
+    
+      <category term="产品" scheme="https://ruyululu.com/tags/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="用户" scheme="https://ruyululu.com/tags/%E7%94%A8%E6%88%B7/"/>
+    
+      <category term="场景" scheme="https://ruyululu.com/tags/%E5%9C%BA%E6%99%AF/"/>
     
   </entry>
   
@@ -372,7 +471,7 @@
     <link href="https://ruyululu.com/2018/05/20/%E8%A1%8C%E4%B8%9A%E5%88%86%E6%9E%90/"/>
     <id>https://ruyululu.com/2018/05/20/行业分析/</id>
     <published>2018-05-20T12:51:48.000Z</published>
-    <updated>2019-03-04T06:59:13.133Z</updated>
+    <updated>2019-03-07T07:07:43.538Z</updated>
     
     <summary type="html">
     
@@ -380,6 +479,14 @@
     
     </summary>
     
+      <category term="产品" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="行业分析" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/%E8%A1%8C%E4%B8%9A%E5%88%86%E6%9E%90/"/>
+    
+    
+      <category term="产品" scheme="https://ruyululu.com/tags/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="行业分析" scheme="https://ruyululu.com/tags/%E8%A1%8C%E4%B8%9A%E5%88%86%E6%9E%90/"/>
     
   </entry>
   
@@ -388,7 +495,7 @@
     <link href="https://ruyululu.com/2018/05/13/%E6%83%B3%E8%A6%81%E6%88%90%E4%B8%BAPM%E8%A6%81%E6%80%8E%E4%B9%88%E8%B5%B7%E6%AD%A5%EF%BC%9F/"/>
     <id>https://ruyululu.com/2018/05/13/想要成为PM要怎么起步？/</id>
     <published>2018-05-13T05:54:20.000Z</published>
-    <updated>2019-03-02T06:55:09.021Z</updated>
+    <updated>2019-03-07T07:03:47.556Z</updated>
     
     <summary type="html">
     
@@ -399,6 +506,12 @@
     
     </summary>
     
+      <category term="产品" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/"/>
+    
+    
+      <category term="产品" scheme="https://ruyululu.com/tags/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="产品经理" scheme="https://ruyululu.com/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/"/>
     
   </entry>
   

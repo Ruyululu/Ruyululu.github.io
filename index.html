@@ -459,6 +459,68 @@
   
   <article class="article post card animate" itemscope="" itemtype="http://schema.org/Article">
     <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://ruyululu.com/2018/07/12/leetcode 合并两个有序数组/">
+      <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="苦瓜不灵">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="苦瓜不灵's Note">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2018/07/12/leetcode 合并两个有序数组/" itemprop="url">leetcode题解 合并两个有序数组(Python3)</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-07-12T11:21:18+08:00">2018-07-12 11:21:18</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/leetcode/数组/" itemprop="url" rel="index"><span itemprop="name">数组</span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      <p> <strong>说在前面：本题解旨在熟悉python3的基本操作和库函数的使用，仅采用最简便方法，而非时间或空间复杂度较小的方法。若读者想要学习数据结构还是推荐使用C/C++或Java。</strong></p>
+<h2 id="原题："><a href="#原题：" class="headerlink" title="原题："></a>原题：</h2><p>给定两个有序整数数组 <em>nums1</em> 和 <em>nums2</em>，将 <em>nums2</em> 合并到 <em>nums1</em> 中<em>，</em>使得 <em>num1</em> 成为一个有序数组。</p>
+<p><strong>说明:</strong></p>
+<ul>
+<li>初始化 <em>nums1</em> 和 <em>nums2</em> 的元素数量分别为 <em>m</em> 和 <em>n</em>。</li>
+<li>你可以假设 <em>nums1</em> 有足够的空间（空间大小大于或等于 <em>m + n</em>）来保存 <em>nums2</em> 中的元素。</li>
+</ul>
+<p><strong>示例:</strong></p>
+<figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">nums1 = [1,2,3,0,0,0], m = 3</span><br><span class="line">nums2 = [2,5,6],       n = 3</span><br><span class="line"></span><br><span class="line">输出: [1,2,2,3,5,6]</span><br></pre></td></tr></table></figure>
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/Python/" rel="tag"><i class="fas fa-tags"></i>Python</a>
+        
+        <a class="post-tag button" href="/tags/leetcode/" rel="tag"><i class="fas fa-tags"></i>leetcode</a>
+        
+        <a class="post-tag button" href="/tags/数组/" rel="tag"><i class="fas fa-tags"></i>数组</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card animate" itemscope="" itemtype="http://schema.org/Article">
+    <div class="post-block">
       <link itemprop="mainEntityOfPage" href="https://ruyululu.com/2018/07/12/leetcode 搜索二维矩阵 II/">
       <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
         <meta itemprop="name" content="苦瓜不灵">
@@ -504,68 +566,6 @@
 <figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  [1,   4,  7, 11, 15],</span><br><span class="line">  [2,   5,  8, 12, 19],</span><br><span class="line">  [3,   6,  9, 16, 22],</span><br><span class="line">  [10, 13, 14, 17, 24],</span><br><span class="line">  [18, 21, 23, 26, 30]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 <p>给定 target = <code>5</code>，返回 <code>true</code>。</p>
 <p>给定 target = <code>20</code>，返回 <code>false</code>。</p>
-      
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        <a class="post-tag button" href="/tags/Python/" rel="tag"><i class="fas fa-tags"></i>Python</a>
-        
-        <a class="post-tag button" href="/tags/leetcode/" rel="tag"><i class="fas fa-tags"></i>leetcode</a>
-        
-        <a class="post-tag button" href="/tags/数组/" rel="tag"><i class="fas fa-tags"></i>数组</a>
-        
-      </div>
-      
-    </footer>
-  </article>
-  
-  <article class="article post card animate" itemscope="" itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="https://ruyululu.com/2018/07/12/leetcode 合并两个有序数组/">
-      <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="苦瓜不灵">
-        <meta itemprop="description" content="">
-        <meta itemprop="image" content="/images/avatar.jpg">
-      </span>
-      <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="苦瓜不灵's Note">
-      </span>
-    </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/07/12/leetcode 合并两个有序数组/" itemprop="url">leetcode题解 合并两个有序数组(Python3)</a>
-      </h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-07-12T11:21:18+08:00">2018-07-12 11:21:18</time></span>
-        </span>
-        
-        
-        
-        <span class="post-meta-divider divider">|</span>
-        
-        <span class="post-categories">
-          
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/leetcode/数组/" itemprop="url" rel="index"><span itemprop="name">数组</span></a></span>
-        </span>
-        
-        
-      </div>
-    </header>
-    <main class="post-main" itemprop="articleBody">
-      
-      <p> <strong>说在前面：本题解旨在熟悉python3的基本操作和库函数的使用，仅采用最简便方法，而非时间或空间复杂度较小的方法。若读者想要学习数据结构还是推荐使用C/C++或Java。</strong></p>
-<h2 id="原题："><a href="#原题：" class="headerlink" title="原题："></a>原题：</h2><p>给定两个有序整数数组 <em>nums1</em> 和 <em>nums2</em>，将 <em>nums2</em> 合并到 <em>nums1</em> 中<em>，</em>使得 <em>num1</em> 成为一个有序数组。</p>
-<p><strong>说明:</strong></p>
-<ul>
-<li>初始化 <em>nums1</em> 和 <em>nums2</em> 的元素数量分别为 <em>m</em> 和 <em>n</em>。</li>
-<li>你可以假设 <em>nums1</em> 有足够的空间（空间大小大于或等于 <em>m + n</em>）来保存 <em>nums2</em> 中的元素。</li>
-</ul>
-<p><strong>示例:</strong></p>
-<figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">nums1 = [1,2,3,0,0,0], m = 3</span><br><span class="line">nums2 = [2,5,6],       n = 3</span><br><span class="line"></span><br><span class="line">输出: [1,2,2,3,5,6]</span><br></pre></td></tr></table></figure>
       
     </main>
     <footer class="post-footer">
@@ -787,7 +787,7 @@
     <div class="footer-container">
       <div class="footer-left">
         <div class="copyright">
-          <span class="author">苦瓜不灵</span><span class="year"><i class="far fa-copyright"></i>2017 - 2019 - 2019</span>
+          <span class="author">苦瓜不灵</span><span class="year"><i class="far fa-copyright"></i>2017 - 2019</span>
         </div>
         
         <div class="busuanzi">

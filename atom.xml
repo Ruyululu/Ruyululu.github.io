@@ -46,6 +46,62 @@
   
   <entry>
     <title>怎么制作产品流程图</title>
+    <link href="https://ruyululu.com/2018/11/14/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%E4%B8%AD%E7%9A%84%E5%BF%83%E6%99%BA%E6%A8%A1%E5%9E%8B/"/>
+    <id>https://ruyululu.com/2018/11/14/产品设计中的心智模型/</id>
+    <published>2018-11-14T14:05:28.000Z</published>
+    <updated>2019-03-09T12:48:44.585Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt; 一个成功的产品，必然是要抓住用户的心滴~&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;心智模型&lt;/em&gt;的理论是基于一个试图对某事做出合理解释的个人会发展可行的方法的假设，在有限的领域知识和有限的信息处理能力上，产生合理的解释。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="产品" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="产品设计" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
+    
+      <category term="心智模型" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/%E5%BF%83%E6%99%BA%E6%A8%A1%E5%9E%8B/"/>
+    
+    
+      <category term="产品" scheme="https://ruyululu.com/tags/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="产品设计" scheme="https://ruyululu.com/tags/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
+    
+      <category term="心智模型" scheme="https://ruyululu.com/tags/%E5%BF%83%E6%99%BA%E6%A8%A1%E5%9E%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>产品设计的方法，你知道了吗？</title>
+    <link href="https://ruyululu.com/2018/11/14/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
+    <id>https://ruyululu.com/2018/11/14/产品设计/</id>
+    <published>2018-11-14T07:24:57.000Z</published>
+    <updated>2019-03-09T08:20:20.791Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;产品的目标：&quot;&gt;&lt;a href=&quot;#产品的目标：&quot; class=&quot;headerlink&quot; title=&quot;产品的目标：&quot;&gt;&lt;/a&gt;产品的目标：&lt;/h2&gt;&lt;p&gt;产品由5大要素组成，如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/03/09/ASrD9f.jpg&quot; alt=&quot;用户体验要锁&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="产品" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="产品设计" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="产品" scheme="https://ruyululu.com/tags/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="产品设计" scheme="https://ruyululu.com/tags/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>怎么制作产品流程图</title>
     <link href="https://ruyululu.com/2018/11/08/%E4%BA%A7%E5%93%81%E6%B5%81%E7%A8%8B%E5%9B%BE/"/>
     <id>https://ruyululu.com/2018/11/08/产品流程图/</id>
     <published>2018-11-08T15:38:09.000Z</published>
@@ -267,17 +323,23 @@
   </entry>
   
   <entry>
-    <title>leetcode题解 从排序数组中删除重复项(Python3)</title>
-    <link href="https://ruyululu.com/2018/07/12/leetcode%20%E4%BB%8E%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E9%A1%B9/"/>
-    <id>https://ruyululu.com/2018/07/12/leetcode 从排序数组中删除重复项/</id>
+    <title>leetcode题解 合并两个有序数组(Python3)</title>
+    <link href="https://ruyululu.com/2018/07/12/leetcode%20%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/"/>
+    <id>https://ruyululu.com/2018/07/12/leetcode 合并两个有序数组/</id>
     <published>2018-07-12T03:21:18.000Z</published>
-    <updated>2019-03-03T07:38:44.478Z</updated>
+    <updated>2019-03-03T08:56:25.093Z</updated>
     
     <summary type="html">
     
       &lt;p&gt; &lt;strong&gt;说在前面：本题解旨在熟悉python3的基本操作和库函数的使用，仅采用最简便方法，而非时间或空间复杂度较小的方法。若读者想要学习数据结构还是推荐使用C/C++或Java。&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&quot;原题：&quot;&gt;&lt;a href=&quot;#原题：&quot; class=&quot;headerlink&quot; title=&quot;原题：&quot;&gt;&lt;/a&gt;原题：&lt;/h2&gt;&lt;p&gt;给定一个排序数组，你需要在&lt;strong&gt;原地&lt;/strong&gt;删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。&lt;/p&gt;
-&lt;p&gt;不要使用额外的数组空间，你必须在&lt;strong&gt;原地修改输入数组&lt;/strong&gt;并在使用 O(1) 额外空间的条件下完成。&lt;/p&gt;
+&lt;h2 id=&quot;原题：&quot;&gt;&lt;a href=&quot;#原题：&quot; class=&quot;headerlink&quot; title=&quot;原题：&quot;&gt;&lt;/a&gt;原题：&lt;/h2&gt;&lt;p&gt;给定两个有序整数数组 &lt;em&gt;nums1&lt;/em&gt; 和 &lt;em&gt;nums2&lt;/em&gt;，将 &lt;em&gt;nums2&lt;/em&gt; 合并到 &lt;em&gt;nums1&lt;/em&gt; 中&lt;em&gt;，&lt;/em&gt;使得 &lt;em&gt;num1&lt;/em&gt; 成为一个有序数组。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;说明:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;初始化 &lt;em&gt;nums1&lt;/em&gt; 和 &lt;em&gt;nums2&lt;/em&gt; 的元素数量分别为 &lt;em&gt;m&lt;/em&gt; 和 &lt;em&gt;n&lt;/em&gt;。&lt;/li&gt;
+&lt;li&gt;你可以假设 &lt;em&gt;nums1&lt;/em&gt; 有足够的空间（空间大小大于或等于 &lt;em&gt;m + n&lt;/em&gt;）来保存 &lt;em&gt;nums2&lt;/em&gt; 中的元素。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;示例:&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;hljs highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;输入:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;nums1 = [1,2,3,0,0,0], m = 3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;nums2 = [2,5,6],       n = 3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;输出: [1,2,2,3,5,6]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -335,23 +397,17 @@
   </entry>
   
   <entry>
-    <title>leetcode题解 合并两个有序数组(Python3)</title>
-    <link href="https://ruyululu.com/2018/07/12/leetcode%20%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/"/>
-    <id>https://ruyululu.com/2018/07/12/leetcode 合并两个有序数组/</id>
+    <title>leetcode题解 从排序数组中删除重复项(Python3)</title>
+    <link href="https://ruyululu.com/2018/07/12/leetcode%20%E4%BB%8E%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E9%A1%B9/"/>
+    <id>https://ruyululu.com/2018/07/12/leetcode 从排序数组中删除重复项/</id>
     <published>2018-07-12T03:21:18.000Z</published>
-    <updated>2019-03-03T08:56:25.093Z</updated>
+    <updated>2019-03-03T07:38:44.478Z</updated>
     
     <summary type="html">
     
       &lt;p&gt; &lt;strong&gt;说在前面：本题解旨在熟悉python3的基本操作和库函数的使用，仅采用最简便方法，而非时间或空间复杂度较小的方法。若读者想要学习数据结构还是推荐使用C/C++或Java。&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&quot;原题：&quot;&gt;&lt;a href=&quot;#原题：&quot; class=&quot;headerlink&quot; title=&quot;原题：&quot;&gt;&lt;/a&gt;原题：&lt;/h2&gt;&lt;p&gt;给定两个有序整数数组 &lt;em&gt;nums1&lt;/em&gt; 和 &lt;em&gt;nums2&lt;/em&gt;，将 &lt;em&gt;nums2&lt;/em&gt; 合并到 &lt;em&gt;nums1&lt;/em&gt; 中&lt;em&gt;，&lt;/em&gt;使得 &lt;em&gt;num1&lt;/em&gt; 成为一个有序数组。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;说明:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;初始化 &lt;em&gt;nums1&lt;/em&gt; 和 &lt;em&gt;nums2&lt;/em&gt; 的元素数量分别为 &lt;em&gt;m&lt;/em&gt; 和 &lt;em&gt;n&lt;/em&gt;。&lt;/li&gt;
-&lt;li&gt;你可以假设 &lt;em&gt;nums1&lt;/em&gt; 有足够的空间（空间大小大于或等于 &lt;em&gt;m + n&lt;/em&gt;）来保存 &lt;em&gt;nums2&lt;/em&gt; 中的元素。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;示例:&lt;/strong&gt;&lt;/p&gt;
-&lt;figure class=&quot;hljs highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;输入:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;nums1 = [1,2,3,0,0,0], m = 3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;nums2 = [2,5,6],       n = 3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;输出: [1,2,2,3,5,6]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;原题：&quot;&gt;&lt;a href=&quot;#原题：&quot; class=&quot;headerlink&quot; title=&quot;原题：&quot;&gt;&lt;/a&gt;原题：&lt;/h2&gt;&lt;p&gt;给定一个排序数组，你需要在&lt;strong&gt;原地&lt;/strong&gt;删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。&lt;/p&gt;
+&lt;p&gt;不要使用额外的数组空间，你必须在&lt;strong&gt;原地修改输入数组&lt;/strong&gt;并在使用 O(1) 额外空间的条件下完成。&lt;/p&gt;
     
     </summary>
     
@@ -371,11 +427,11 @@
   </entry>
   
   <entry>
-    <title>产品经理怎么做市场调研</title>
-    <link href="https://ruyululu.com/2018/06/23/%E5%B8%82%E5%9C%BA%E8%B0%83%E7%A0%94%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
-    <id>https://ruyululu.com/2018/06/23/市场调研与数据分析/</id>
+    <title>产品经理怎么做数据分析</title>
+    <link href="https://ruyululu.com/2018/06/23/%E7%AB%9E%E5%93%81%E5%88%86%E6%9E%90/"/>
+    <id>https://ruyululu.com/2018/06/23/竞品分析/</id>
     <published>2018-06-23T08:34:02.000Z</published>
-    <updated>2019-03-07T07:05:04.995Z</updated>
+    <updated>2019-03-04T07:00:58.917Z</updated>
     
     <summary type="html">
     
@@ -384,16 +440,6 @@
     
     </summary>
     
-      <category term="产品" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/"/>
-    
-      <category term="数据分析" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
-    
-      <category term="市场调研" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E5%B8%82%E5%9C%BA%E8%B0%83%E7%A0%94/"/>
-    
-    
-      <category term="数据分析" scheme="https://ruyululu.com/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
-    
-      <category term="市场调研" scheme="https://ruyululu.com/tags/%E5%B8%82%E5%9C%BA%E8%B0%83%E7%A0%94/"/>
     
   </entry>
   
@@ -423,11 +469,11 @@
   </entry>
   
   <entry>
-    <title>产品经理怎么做数据分析</title>
-    <link href="https://ruyululu.com/2018/06/23/%E7%AB%9E%E5%93%81%E5%88%86%E6%9E%90/"/>
-    <id>https://ruyululu.com/2018/06/23/竞品分析/</id>
+    <title>产品经理怎么做市场调研</title>
+    <link href="https://ruyululu.com/2018/06/23/%E5%B8%82%E5%9C%BA%E8%B0%83%E7%A0%94%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    <id>https://ruyululu.com/2018/06/23/市场调研与数据分析/</id>
     <published>2018-06-23T08:34:02.000Z</published>
-    <updated>2019-03-04T07:00:58.917Z</updated>
+    <updated>2019-03-07T07:05:04.995Z</updated>
     
     <summary type="html">
     
@@ -436,6 +482,16 @@
     
     </summary>
     
+      <category term="产品" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="数据分析" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+      <category term="市场调研" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E5%B8%82%E5%9C%BA%E8%B0%83%E7%A0%94/"/>
+    
+    
+      <category term="数据分析" scheme="https://ruyululu.com/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+      <category term="市场调研" scheme="https://ruyululu.com/tags/%E5%B8%82%E5%9C%BA%E8%B0%83%E7%A0%94/"/>
     
   </entry>
   

@@ -46,14 +46,45 @@
   
   <entry>
     <title>怎么制作产品流程图</title>
-    <link href="https://ruyululu.com/2018/11/14/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%E4%B8%AD%E7%9A%84%E5%BF%83%E6%99%BA%E6%A8%A1%E5%9E%8B/"/>
-    <id>https://ruyululu.com/2018/11/14/产品设计中的心智模型/</id>
-    <published>2018-11-14T14:05:28.000Z</published>
-    <updated>2019-03-09T12:48:44.585Z</updated>
+    <link href="https://ruyululu.com/2018/11/20/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/"/>
+    <id>https://ruyululu.com/2018/11/20/用户体验/</id>
+    <published>2018-11-20T12:12:44.000Z</published>
+    <updated>2019-03-10T05:09:36.667Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt; 一个成功的产品，必然是要抓住用户的心滴~&lt;/p&gt;
+      &lt;p&gt;个矛盾的集合体，每个用户都不太一样。让用户觉得简单是一件很直觉的事情，不必多费笔墨。&lt;/p&gt;
+&lt;p&gt;但用户又不喜欢过于简单的交互过程，会让人觉得简陋。那么用户到底喜欢什么样的体验呢？&lt;/p&gt;
+&lt;p&gt;本篇并不能给出答案，千人千面，不可能面面俱到。因此本篇还是以避免踩坑为主。&lt;/p&gt;
+&lt;p&gt;下面内容，其实在前面一些文章中都提到过，但是还是单独拎出来，便于思考。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="产品" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="产品设计" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
+    
+      <category term="用户体验" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/"/>
+    
+    
+      <category term="产品" scheme="https://ruyululu.com/tags/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="产品设计" scheme="https://ruyululu.com/tags/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
+    
+      <category term="用户体验" scheme="https://ruyululu.com/tags/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>产品设计中的心智模型</title>
+    <link href="https://ruyululu.com/2018/11/14/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%E4%B8%AD%E7%9A%84%E5%BF%83%E6%99%BA%E6%A8%A1%E5%9E%8B/"/>
+    <id>https://ruyululu.com/2018/11/14/产品设计中的心智模型/</id>
+    <published>2018-11-14T14:05:28.000Z</published>
+    <updated>2019-03-10T05:16:36.879Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一个成功的产品，必然是要抓住用户的心滴~&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;心智模型&lt;/em&gt;的理论是基于一个试图对某事做出合理解释的个人会发展可行的方法的假设，在有限的领域知识和有限的信息处理能力上，产生合理的解释。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -190,6 +221,58 @@
       <category term="产品" scheme="https://ruyululu.com/tags/%E4%BA%A7%E5%93%81/"/>
     
       <category term="商业模式" scheme="https://ruyululu.com/tags/%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>产品经理怎么做市场调研</title>
+    <link href="https://ruyululu.com/2018/09/23/%E5%B8%82%E5%9C%BA%E8%B0%83%E7%A0%94%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    <id>https://ruyululu.com/2018/09/23/市场调研与数据分析/</id>
+    <published>2018-09-23T08:34:02.000Z</published>
+    <updated>2019-03-10T05:17:27.681Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;PM需要分析的数据，一般都是市场数据，所以大家一般也把这个过程叫做市场调研。&lt;/p&gt;
+&lt;h2 id=&quot;为什么要做市场调研&quot;&gt;&lt;a href=&quot;#为什么要做市场调研&quot; class=&quot;headerlink&quot; title=&quot;为什么要做市场调研&quot;&gt;&lt;/a&gt;为什么要做市场调研&lt;/h2&gt;&lt;p&gt;一般公司都有marketing部门帮助PM完成这项工作，但是这并不代表我们不需要学习它了。从原理上理解我们的工作是十分重要的，就像搞数据分析的人可以用matlab、可以用R写脚本但还是得学好基本的数学一样。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="产品" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="数据分析" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+      <category term="市场调研" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E5%B8%82%E5%9C%BA%E8%B0%83%E7%A0%94/"/>
+    
+    
+      <category term="数据分析" scheme="https://ruyululu.com/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+      <category term="市场调研" scheme="https://ruyululu.com/tags/%E5%B8%82%E5%9C%BA%E8%B0%83%E7%A0%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>想要成为PM要怎么起步？</title>
+    <link href="https://ruyululu.com/2018/09/13/%E6%83%B3%E8%A6%81%E6%88%90%E4%B8%BAPM%E8%A6%81%E6%80%8E%E4%B9%88%E8%B5%B7%E6%AD%A5%EF%BC%9F/"/>
+    <id>https://ruyululu.com/2018/09/13/想要成为PM要怎么起步？/</id>
+    <published>2018-09-13T05:54:20.000Z</published>
+    <updated>2019-03-10T05:17:13.314Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;想要解答一个问题的方法，从小学开始老师就已经教授过了。首先我们得知道&lt;strong&gt;定义&lt;/strong&gt;，然后从定义出发，发掘我们所需要的&lt;strong&gt;条件&lt;/strong&gt;。&lt;/p&gt;
+&lt;h2 id=&quot;什么是PM&quot;&gt;&lt;a href=&quot;#什么是PM&quot; class=&quot;headerlink&quot; title=&quot;什么是PM&quot;&gt;&lt;/a&gt;什么是PM&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;产品经理&lt;/strong&gt;（英文：&lt;strong&gt;Product manager&lt;/strong&gt;，缩写：&lt;strong&gt;PM&lt;/strong&gt;）也称&lt;strong&gt;产品企划&lt;/strong&gt;，是指在公司中针对某一项或是某一类的产品进行规划和管理的人员，主要负责产品的研发、制造、营销、渠道等工作。产品经理是很难定义的一个角色，如果非要一句话定义，那么产品经理是为终端用户服务，负责产品整个生命周期的人。——维基百科&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="产品" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/"/>
+    
+    
+      <category term="产品" scheme="https://ruyululu.com/tags/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="产品经理" scheme="https://ruyululu.com/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/"/>
     
   </entry>
   
@@ -359,6 +442,36 @@
   </entry>
   
   <entry>
+    <title>leetcode题解 从排序数组中删除重复项(Python3)</title>
+    <link href="https://ruyululu.com/2018/07/12/leetcode%20%E4%BB%8E%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E9%A1%B9/"/>
+    <id>https://ruyululu.com/2018/07/12/leetcode 从排序数组中删除重复项/</id>
+    <published>2018-07-12T03:21:18.000Z</published>
+    <updated>2019-03-03T07:38:44.478Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt; &lt;strong&gt;说在前面：本题解旨在熟悉python3的基本操作和库函数的使用，仅采用最简便方法，而非时间或空间复杂度较小的方法。若读者想要学习数据结构还是推荐使用C/C++或Java。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;原题：&quot;&gt;&lt;a href=&quot;#原题：&quot; class=&quot;headerlink&quot; title=&quot;原题：&quot;&gt;&lt;/a&gt;原题：&lt;/h2&gt;&lt;p&gt;给定一个排序数组，你需要在&lt;strong&gt;原地&lt;/strong&gt;删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。&lt;/p&gt;
+&lt;p&gt;不要使用额外的数组空间，你必须在&lt;strong&gt;原地修改输入数组&lt;/strong&gt;并在使用 O(1) 额外空间的条件下完成。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="https://ruyululu.com/categories/Python/"/>
+    
+      <category term="leetcode" scheme="https://ruyululu.com/categories/Python/leetcode/"/>
+    
+      <category term="数组" scheme="https://ruyululu.com/categories/Python/leetcode/%E6%95%B0%E7%BB%84/"/>
+    
+    
+      <category term="Python" scheme="https://ruyululu.com/tags/Python/"/>
+    
+      <category term="leetcode" scheme="https://ruyululu.com/tags/leetcode/"/>
+    
+      <category term="数组" scheme="https://ruyululu.com/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
+  
+  <entry>
     <title>leetcode题解 搜索二维矩阵 II(Python3)</title>
     <link href="https://ruyululu.com/2018/07/12/leetcode%20%E6%90%9C%E7%B4%A2%E4%BA%8C%E7%BB%B4%E7%9F%A9%E9%98%B5%20II/"/>
     <id>https://ruyululu.com/2018/07/12/leetcode 搜索二维矩阵 II/</id>
@@ -397,53 +510,6 @@
   </entry>
   
   <entry>
-    <title>leetcode题解 从排序数组中删除重复项(Python3)</title>
-    <link href="https://ruyululu.com/2018/07/12/leetcode%20%E4%BB%8E%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E9%A1%B9/"/>
-    <id>https://ruyululu.com/2018/07/12/leetcode 从排序数组中删除重复项/</id>
-    <published>2018-07-12T03:21:18.000Z</published>
-    <updated>2019-03-03T07:38:44.478Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt; &lt;strong&gt;说在前面：本题解旨在熟悉python3的基本操作和库函数的使用，仅采用最简便方法，而非时间或空间复杂度较小的方法。若读者想要学习数据结构还是推荐使用C/C++或Java。&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&quot;原题：&quot;&gt;&lt;a href=&quot;#原题：&quot; class=&quot;headerlink&quot; title=&quot;原题：&quot;&gt;&lt;/a&gt;原题：&lt;/h2&gt;&lt;p&gt;给定一个排序数组，你需要在&lt;strong&gt;原地&lt;/strong&gt;删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。&lt;/p&gt;
-&lt;p&gt;不要使用额外的数组空间，你必须在&lt;strong&gt;原地修改输入数组&lt;/strong&gt;并在使用 O(1) 额外空间的条件下完成。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Python" scheme="https://ruyululu.com/categories/Python/"/>
-    
-      <category term="leetcode" scheme="https://ruyululu.com/categories/Python/leetcode/"/>
-    
-      <category term="数组" scheme="https://ruyululu.com/categories/Python/leetcode/%E6%95%B0%E7%BB%84/"/>
-    
-    
-      <category term="Python" scheme="https://ruyululu.com/tags/Python/"/>
-    
-      <category term="leetcode" scheme="https://ruyululu.com/tags/leetcode/"/>
-    
-      <category term="数组" scheme="https://ruyululu.com/tags/%E6%95%B0%E7%BB%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>产品经理怎么做数据分析</title>
-    <link href="https://ruyululu.com/2018/06/23/%E7%AB%9E%E5%93%81%E5%88%86%E6%9E%90/"/>
-    <id>https://ruyululu.com/2018/06/23/竞品分析/</id>
-    <published>2018-06-23T08:34:02.000Z</published>
-    <updated>2019-03-04T07:00:58.917Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;PM需要分析的数据，一般都是市场数据，所以大家一般也把这个过程叫做市场调研。&lt;/p&gt;
-&lt;h2 id=&quot;为什么要做市场调研&quot;&gt;&lt;a href=&quot;#为什么要做市场调研&quot; class=&quot;headerlink&quot; title=&quot;为什么要做市场调研&quot;&gt;&lt;/a&gt;为什么要做市场调研&lt;/h2&gt;&lt;p&gt;一般公司都有marketing部门帮助PM完成这项工作，但是这并不代表我们不需要学习它了。从原理上理解我们的工作是十分重要的，就像搞数据分析的人可以用matlab、可以用R写脚本但还是得学好基本的数学一样。&lt;/p&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>互联网产品几个规律及特点</title>
     <link href="https://ruyululu.com/2018/06/23/%E4%BA%92%E8%81%94%E7%BD%91%E8%A1%8C%E4%B8%9A%E7%89%B9%E7%82%B9/"/>
     <id>https://ruyululu.com/2018/06/23/互联网行业特点/</id>
@@ -469,11 +535,11 @@
   </entry>
   
   <entry>
-    <title>产品经理怎么做市场调研</title>
-    <link href="https://ruyululu.com/2018/06/23/%E5%B8%82%E5%9C%BA%E8%B0%83%E7%A0%94%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
-    <id>https://ruyululu.com/2018/06/23/市场调研与数据分析/</id>
+    <title>产品经理怎么做数据分析</title>
+    <link href="https://ruyululu.com/2018/06/23/%E7%AB%9E%E5%93%81%E5%88%86%E6%9E%90/"/>
+    <id>https://ruyululu.com/2018/06/23/竞品分析/</id>
     <published>2018-06-23T08:34:02.000Z</published>
-    <updated>2019-03-07T07:05:04.995Z</updated>
+    <updated>2019-03-04T07:00:58.917Z</updated>
     
     <summary type="html">
     
@@ -482,16 +548,6 @@
     
     </summary>
     
-      <category term="产品" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/"/>
-    
-      <category term="数据分析" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
-    
-      <category term="市场调研" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E5%B8%82%E5%9C%BA%E8%B0%83%E7%A0%94/"/>
-    
-    
-      <category term="数据分析" scheme="https://ruyululu.com/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
-    
-      <category term="市场调研" scheme="https://ruyululu.com/tags/%E5%B8%82%E5%9C%BA%E8%B0%83%E7%A0%94/"/>
     
   </entry>
   
@@ -543,31 +599,6 @@
       <category term="产品" scheme="https://ruyululu.com/tags/%E4%BA%A7%E5%93%81/"/>
     
       <category term="行业分析" scheme="https://ruyululu.com/tags/%E8%A1%8C%E4%B8%9A%E5%88%86%E6%9E%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>想要成为PM要怎么起步？</title>
-    <link href="https://ruyululu.com/2018/05/13/%E6%83%B3%E8%A6%81%E6%88%90%E4%B8%BAPM%E8%A6%81%E6%80%8E%E4%B9%88%E8%B5%B7%E6%AD%A5%EF%BC%9F/"/>
-    <id>https://ruyululu.com/2018/05/13/想要成为PM要怎么起步？/</id>
-    <published>2018-05-13T05:54:20.000Z</published>
-    <updated>2019-03-07T07:03:47.556Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;想要解答一个问题的方法，从小学开始老师就已经教授过了。首先我们得知道&lt;strong&gt;定义&lt;/strong&gt;，然后从定义出发，发掘我们所需要的&lt;strong&gt;条件&lt;/strong&gt;。&lt;/p&gt;
-&lt;h2 id=&quot;什么是PM&quot;&gt;&lt;a href=&quot;#什么是PM&quot; class=&quot;headerlink&quot; title=&quot;什么是PM&quot;&gt;&lt;/a&gt;什么是PM&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;产品经理&lt;/strong&gt;（英文：&lt;strong&gt;Product manager&lt;/strong&gt;，缩写：&lt;strong&gt;PM&lt;/strong&gt;）也称&lt;strong&gt;产品企划&lt;/strong&gt;，是指在公司中针对某一项或是某一类的产品进行规划和管理的人员，主要负责产品的研发、制造、营销、渠道等工作。产品经理是很难定义的一个角色，如果非要一句话定义，那么产品经理是为终端用户服务，负责产品整个生命周期的人。——维基百科&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="产品" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/"/>
-    
-    
-      <category term="产品" scheme="https://ruyululu.com/tags/%E4%BA%A7%E5%93%81/"/>
-    
-      <category term="产品经理" scheme="https://ruyululu.com/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/"/>
     
   </entry>
   

@@ -34,10 +34,43 @@
     
     <entry>
       <title>怎么制作产品流程图</title>
+      <link href="/2018/11/20/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/"/>
+      <url>/2018/11/20/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/</url>
+      
+        <content type="html"><![CDATA[<p>个矛盾的集合体，每个用户都不太一样。让用户觉得简单是一件很直觉的事情，不必多费笔墨。</p><p>但用户又不喜欢过于简单的交互过程，会让人觉得简陋。那么用户到底喜欢什么样的体验呢？</p><p>本篇并不能给出答案，千人千面，不可能面面俱到。因此本篇还是以避免踩坑为主。</p><p>下面内容，其实在前面一些文章中都提到过，但是还是单独拎出来，便于思考。</p><a id="more"></a><h2 id="不要让用户等："><a href="#不要让用户等：" class="headerlink" title="不要让用户等："></a>不要让用户等：</h2><p>用户的<strong>耐心</strong>有限</p><p><strong>响应速度</strong>必须达到平均水准以上，响应慢让人血压升高的体验相信大家都有</p><h2 id="不要让用户想："><a href="#不要让用户想：" class="headerlink" title="不要让用户想："></a>不要让用户想：</h2><p>不要让用户思考了才能明白某个功能或组件，最好让用户只停留在<strong>本能直觉</strong>层面上</p><p>关注用户需要的操作，给出明确清晰的<strong>指引</strong>。用户耐心有限，指引尽可能<strong>简明扼要</strong></p><p>尽可能降低用户<strong>学习成本</strong></p><h2 id="不要让用户烦："><a href="#不要让用户烦：" class="headerlink" title="不要让用户烦："></a>不要让用户烦：</h2><p>不告诉用户错误，且帮用户<strong>处理错误</strong>。<strong>频繁提示</strong>用户错误会使用户失去耐心。</p><p>不过多重复性操作。</p><p>能做到以上3点，一个产品在用户体验上至少算是到及格线了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 产品 </category>
+          
+          <category> 产品设计 </category>
+          
+          <category> 用户体验 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 产品 </tag>
+            
+            <tag> 产品设计 </tag>
+            
+            <tag> 用户体验 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>产品设计中的心智模型</title>
       <link href="/2018/11/14/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%E4%B8%AD%E7%9A%84%E5%BF%83%E6%99%BA%E6%A8%A1%E5%9E%8B/"/>
       <url>/2018/11/14/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%E4%B8%AD%E7%9A%84%E5%BF%83%E6%99%BA%E6%A8%A1%E5%9E%8B/</url>
       
-        <content type="html"><![CDATA[<p> 一个成功的产品，必然是要抓住用户的心滴~</p><blockquote><p><em>心智模型</em>的理论是基于一个试图对某事做出合理解释的个人会发展可行的方法的假设，在有限的领域知识和有限的信息处理能力上，产生合理的解释。</p></blockquote><a id="more"></a><h2 id="心智模型："><a href="#心智模型：" class="headerlink" title="心智模型："></a>心智模型：</h2><h3 id="一、关于心理价值和固有价值"><a href="#一、关于心理价值和固有价值" class="headerlink" title="一、关于心理价值和固有价值"></a>一、关于心理价值和固有价值</h3><ol><li><p><strong>禀赋效应</strong></p><pre><code> 这个理论，是指当个人一旦拥有某项物品，那么他对该物品价值的评价要比未拥有之前大大增加——百度百科当需要获得某样东西时，它的价值就会降低。比如，当你想要卖掉一桶冰淇淋时，你可能觉得它应该值5美元，但是当你自己想买它的时候，你又希望它能便宜一点，你或许只想出3美元来买它。</code></pre></li><li><p><strong>现状偏差</strong></p><pre><code>现状偏差是情绪性地倾向于维持现状的一种认知偏差。当现状客观上优于其它选项或者在信息不完善时，做出维持现状的决定是一种理性的行为，但现状偏差与此不同。在现状偏差的情况下，现状被当成是基准，任何改变都被视为一种损失。大量证据表明人的决策经常会受到现状偏差的影响。——维基百科 一种称为「默认」或「惯性」的奇特方式。在物理学中，惯性是物体改变其速度状态的阻力。当作用在物体上的外力为零时，惯性表现为物体保持其运动状态不变，即保持静止或匀速直线运动；当作用在物体上的外力不为零时，惯性表现为外力改变物体运动状态的难易程度。当我们表现出对保持事物初始状态和接受默认状态的偏好时，我们就会以现状偏差的形式表现出同样的特征。</code></pre></li></ol><h3 id="二、关于创新"><a href="#二、关于创新" class="headerlink" title="二、关于创新"></a>二、关于创新</h3><ol><li><strong>功能固着</strong></li></ol><p>​      功能固着是指人们把某种功能赋予某种物体的倾向，认定原有的行为就不会再去考虑其他方面的作用。功能固着的产生原因包括心理因素和行为习惯两个方面。功能固着对于我们创造性地解决问题有消极影响，因此应该采用各种方法消除负面影响。——百度百科</p><p>​     这是一种认知偏差，人们无法用新颖的方式想象产品或体验。创新被所谓的「知识诅咒」所扼杀，在这种「知识诅咒」中，人们对某种东西太熟悉了，以至于无法忘记它的一些传统属性，无法以一种新鲜，未经训练的眼光来看待它。丹尼尔·卡内曼（Daniel Kahneman）将这种认知方法称为「快速思考」——一种简单的思维模式，以至于刻板印象在无意识中形成，没有创造空间。  亚当·格兰特（Adam Grant ）在他的《离经叛道，不按常理出牌的人如何改变世界》一书中写道：  「原创」的起点是好奇心。我们面对一些熟悉的事情，如果使用一些新的视角去看待它，就使我们能够对旧的问题有新的见解。</p><p>​      随着时间的推移，功能固着强化了这一规律。在产品中，重要的是需要认识到，遵循「有效」的传统决策与「新常态」的创新机会。</p><ol start="2"><li><strong>第一性原理</strong></li></ol><p>​     避免功能固着的一种方法是抽象问题并以基本原则进行思考。第一原则中的推理意味着将复杂的场景分解为基本的事实，并从头开始构建一个解决方案。亚里士多德早在2000多年前就提出了这个概念，并将其定义为「认识事物的第一基础」。</p><p>​     我倾向于从物理框架来研究问题。物理学教会你从基本原理出发而不是通过类比来进行推理。所以我说让我们验证第一原则。火箭是由什么组成的？航空级铝合金，外加钛，铜和碳纤维。然后我问，这些材料在商品市场上的价值是多少？结果证明，火箭的材料成本大约只相当于大型机械产品价格的2%，这是一个不可思议的比例。（译者注：这个案例可能是想说明，如果按照类比性推理，可能会觉得火箭的材料成本特别贵，而其实不然。）</p><h3 id="三、担心错过"><a href="#三、担心错过" class="headerlink" title="三、担心错过"></a>三、担心错过</h3><ol><li><strong>厌恶损失</strong></li></ol><p>​       没有人想有损失，但更有趣的是，人们宁愿避免失去某些东西，也不愿意获得同等的东西。在行为心理学中，厌恶损失是「预期理论」的基础：人们认为损失的痛苦是获得快乐的两倍，因此他们会冒着额外的风险，以避免任何潜在的损失。</p><ol start="2"><li><strong>社会认同</strong></li></ol><p>​    社会认同是指在自己的未知领域，人们会倾向于通过观察过来人的行为来帮助自己做决定。比如你叫外卖时，想尝试一家新的店铺，这时你一定会看看已经吃过这家店的人对这家店的评价，再做决定。在产品设计中，可以通过喜欢（赞同）数量、访问数量、评论数量、正向的追评、回访，或者展示其他用户的行为动作来利用社会认同现象。</p><h3 id="四、关于用户的重要性"><a href="#四、关于用户的重要性" class="headerlink" title="四、关于用户的重要性"></a>四、关于用户的重要性</h3><ol><li><strong>网络效应</strong></li></ol><p>​    网络效应指在经济学或商业中，消费者选用某项商品或服务，其所获得的效用与「使用该商品或服务的其他用户人数」具有相关性时，此商品或服务即被称为具有网上外部性。 最常见的例子是电话或社交网络服务：采用某一种社交媒体的用户人数越多，每一位用户获得越高的使用价值。——维基百科</p><ol start="2"><li><strong>群聚效应</strong></li></ol><p>​    群聚效应（Critical mass）是一个社会动力学的名词，用来描述在一个社会系统里，某件事情的存在已达至一个足够的动量，使它能够自我维持，并为往后的成长提供动力。——维基百科</p><h3 id="五、关于资料的介绍"><a href="#五、关于资料的介绍" class="headerlink" title="五、关于资料的介绍"></a>五、关于资料的介绍</h3><ol><li><strong>锚定效应</strong></li></ol><p>​    人类在进行决策时，会过度偏重先前取得的资讯（这称为锚点），即使这个资讯与这项决定无关。在进行决策时，人类倾向于利用此片断资讯（锚点），快速做出决定。在接下来的决定中，再以第一个决定为基准，逐步修正。但是人类容易过度利用锚点，来对其他资讯与决定做出诠释，当锚点与实际上的事实之间的有很大出入，就会出现当局者迷的情况。——维基百科</p><ol start="2"><li><strong>框架效应</strong></li></ol><p>​    框架效应指人们对一个客观上相同问题的不同描述导致了不同的决策判断。框架效应的概念由 Tversky 和 Kahneman 于1981年首次提出。——百度百科</p><p>转载：<a href="https://www.uisdc.com/10-basic-mental-models" target="_blank" rel="noopener">https://www.uisdc.com/10-basic-mental-models</a></p><h2 id="心智模型在产品设计中的应用："><a href="#心智模型在产品设计中的应用：" class="headerlink" title="心智模型在产品设计中的应用："></a>心智模型在产品设计中的应用：</h2><p>1.由于<strong>现状偏差</strong>的存在，我们就应当尽可能的在产品设计中给与用户充分的引导，大小用户的顾虑。</p><p>2.由于<strong>功能固着</strong>效应，在我们做同类App的时候，应当尽量照顾用户原有使用该类App的习惯。</p><p>另外我们也可以培养用户的习惯，增强用户对产品的依赖性。</p><p>3.<strong>第一性原理</strong>告诉我们尽量把交互逻辑和业务逻辑清晰地或者由着重地展现给用户。</p><p>4.<strong>社会认同</strong>就是我们常说的排队效应，用户就是我们产品最好的广告。</p><p>5.当用户达到一定量级之后就会触发<strong>网络效应</strong>和<strong>群聚效应</strong>，使我们的产品脱颖而出并具有强自我维持能力。</p><p>6.<strong>锚定效应</strong>一般用于调节客户期望，比如64g/128g/256g iPhone的定价，就会让人忽略自己的需求，</p><p>产生越大容量iPhone越划算的感觉。</p><p>7.<strong>框架效应</strong>其实就是看一个事物角度的问题。<strong>屡战屡败</strong>跟<strong>屡败屡战</strong>，相同的事实，都是失败，但后者显得更为积极。这告诉我们有时候重要的并不是内容，而是如何呈现内容。现在进某写app前，一般都会播放个3秒的光广告，而传统广告浮在App上，需要我们手动关闭，可以思考一下，为什么同样的广告，呈现方式不同效果就不同。</p>]]></content>
+        <content type="html"><![CDATA[<p>一个成功的产品，必然是要抓住用户的心滴~</p><blockquote><p><em>心智模型</em>的理论是基于一个试图对某事做出合理解释的个人会发展可行的方法的假设，在有限的领域知识和有限的信息处理能力上，产生合理的解释。</p></blockquote><a id="more"></a><h2 id="心智模型："><a href="#心智模型：" class="headerlink" title="心智模型："></a>心智模型：</h2><h3 id="一、关于心理价值和固有价值"><a href="#一、关于心理价值和固有价值" class="headerlink" title="一、关于心理价值和固有价值"></a>一、关于心理价值和固有价值</h3><ol><li><p><strong>禀赋效应</strong></p><p>这个理论，是指当个人一旦拥有某项物品，那么他对该物品价值的评价要比未拥有之前大大增加——百度百科<br>当需要获得某样东西时，它的价值就会降低。比如，当你想要卖掉一桶冰淇淋时，你可能觉得它应该值5美元，但是当你自己想买它的时候，你又希望它能便宜一点，你或许只想出3美元来买它。</p></li><li><p><strong>现状偏差</strong></p><p>现状偏差是情绪性地倾向于维持现状的一种认知偏差。当现状客观上优于其它选项或者在信息不完善时，做出维持现状的决定是一种理性的行为，但现状偏差与此不同。在现状偏差的情况下，现状被当成是基准，任何改变都被视为一种损失。大量证据表明人的决策经常会受到现状偏差的影响。——维基百科<br> 一种称为「默认」或「惯性」的奇特方式。在物理学中，惯性是物体改变其速度状态的阻力。当作用在物体上的外力为零时，惯性表现为物体保持其运动状态不变，即保持静止或匀速直线运动；当作用在物体上的外力不为零时，惯性表现为外力改变物体运动状态的难易程度。当我们表现出对保持事物初始状态和接受默认状态的偏好时，我们就会以现状偏差的形式表现出同样的特征。</p></li></ol><h3 id="二、关于创新"><a href="#二、关于创新" class="headerlink" title="二、关于创新"></a>二、关于创新</h3><ol><li><p><strong>功能固着</strong></p><p>功能固着是指人们把某种功能赋予某种物体的倾向，认定原有的行为就不会再去考虑其他方面的作用。功能固着的产生原因包括心理因素和行为习惯两个方面。功能固着对于我们创造性地解决问题有消极影响，因此应该采用各种方法消除负面影响。——百度百科</p><p>这是一种认知偏差，人们无法用新颖的方式想象产品或体验。创新被所谓的「知识诅咒」所扼杀，在这种「知识诅咒」中，人们对某种东西太熟悉了，以至于无法忘记它的一些传统属性，无法以一种新鲜，未经训练的眼光来看待它。丹尼尔·卡内曼（Daniel Kahneman）将这种认知方法称为「快速思考」——一种简单的思维模式，以至于刻板印象在无意识中形成，没有创造空间。 亚当·格兰特（Adam Grant ）在他的《离经叛道，不按常理出牌的人如何改变世界》一书中写道： 「原创」的起点是好奇心。我们面对一些熟悉的事情，如果使用一些新的视角去看待它，就使我们能够对旧的问题有新的见解。</p><p>随着时间的推移，功能固着强化了这一规律。在产品中，重要的是需要认识到，遵循「有效」的传统决策与「新常态」的创新机会。</p></li><li><p><strong>第一性原理</strong></p><p>避免功能固着的一种方法是抽象问题并以基本原则进行思考。第一原则中的推理意味着将复杂的场景分解为基本的事实，并从头开始构建一个解决方案。亚里士多德早在2000多年前就提出了这个概念，并将其定义为「认识事物的第一基础」。</p><p>我倾向于从物理框架来研究问题。物理学教会你从基本原理出发而不是通过类比来进行推理。所以我说让我们验证第一原则。火箭是由什么组成的？航空级铝合金，外加钛，铜和碳纤维。然后我问，这些材料在商品市场上的价值是多少？结果证明，火箭的材料成本大约只相当于大型机械产品价格的2%，这是一个不可思议的比例。（译者注：这个案例可能是想说明，如果按照类比性推理，可能会觉得火箭的材料成本特别贵，而其实不然。）</p></li></ol><h3 id="三、担心错过"><a href="#三、担心错过" class="headerlink" title="三、担心错过"></a>三、担心错过</h3><ol><li><p><strong>厌恶损失</strong></p><p>没有人想有损失，但更有趣的是，人们宁愿避免失去某些东西，也不愿意获得同等的东西。在行为心理学中，厌恶损失是「预期理论」的基础：人们认为损失的痛苦是获得快乐的两倍，因此他们会冒着额外的风险，以避免任何潜在的损失。</p></li><li><p><strong>社会认同</strong></p><p>社会认同是指在自己的未知领域，人们会倾向于通过观察过来人的行为来帮助自己做决定。比如你叫外卖时，想尝试一家新的店铺，这时你一定会看看已经吃过这家店的人对这家店的评价，再做决定。在产品设计中，可以通过喜欢（赞同）数量、访问数量、评论数量、正向的追评、回访，或者展示其他用户的行为动作来利用社会认同现象。</p></li></ol><h3 id="四、关于用户的重要性"><a href="#四、关于用户的重要性" class="headerlink" title="四、关于用户的重要性"></a>四、关于用户的重要性</h3><ol><li><p><strong>网络效应</strong></p><p>网络效应指在经济学或商业中，消费者选用某项商品或服务，其所获得的效用与「使用该商品或服务的其他用户人数」具有相关性时，此商品或服务即被称为具有网上外部性。 最常见的例子是电话或社交网络服务：采用某一种社交媒体的用户人数越多，每一位用户获得越高的使用价值。——维基百科</p></li><li><p><strong>群聚效应</strong></p><p>群聚效应（Critical mass）是一个社会动力学的名词，用来描述在一个社会系统里，某件事情的存在已达至一个足够的动量，使它能够自我维持，并为往后的成长提供动力。——维基百科</p></li></ol><h3 id="五、关于资料的介绍"><a href="#五、关于资料的介绍" class="headerlink" title="五、关于资料的介绍"></a>五、关于资料的介绍</h3><ol><li><p><strong>锚定效应</strong></p><p>人类在进行决策时，会过度偏重先前取得的资讯（这称为锚点），即使这个资讯与这项决定无关。在进行决策时，人类倾向于利用此片断资讯（锚点），快速做出决定。在接下来的决定中，再以第一个决定为基准，逐步修正。但是人类容易过度利用锚点，来对其他资讯与决定做出诠释，当锚点与实际上的事实之间的有很大出入，就会出现当局者迷的情况。——维基百科</p></li><li><p><strong>框架效应</strong></p><p>框架效应指人们对一个客观上相同问题的不同描述导致了不同的决策判断。框架效应的概念由 Tversky 和 Kahneman 于1981年首次提出。——百度百科</p></li></ol><p>转载：<a href="https://www.uisdc.com/10-basic-mental-models" target="_blank" rel="noopener">https://www.uisdc.com/10-basic-mental-models</a></p><h2 id="心智模型在产品设计中的应用："><a href="#心智模型在产品设计中的应用：" class="headerlink" title="心智模型在产品设计中的应用："></a>心智模型在产品设计中的应用：</h2><p>1.由于<strong>现状偏差</strong>的存在，我们就应当尽可能的在产品设计中给与用户充分的引导，大小用户的顾虑。</p><p>2.由于<strong>功能固着</strong>效应，在我们做同类App的时候，应当尽量照顾用户原有使用该类App的习惯。</p><p>另外我们也可以培养用户的习惯，增强用户对产品的依赖性。</p><p>3.<strong>第一性原理</strong>告诉我们尽量把交互逻辑和业务逻辑清晰地或者由着重地展现给用户。</p><p>4.<strong>社会认同</strong>就是我们常说的排队效应，用户就是我们产品最好的广告。</p><p>5.当用户达到一定量级之后就会触发<strong>网络效应</strong>和<strong>群聚效应</strong>，使我们的产品脱颖而出并具有强自我维持能力。</p><p>6.<strong>锚定效应</strong>一般用于调节客户期望，比如64g/128g/256g iPhone的定价，就会让人忽略自己的需求，</p><p>产生越大容量iPhone越划算的感觉。</p><p>7.<strong>框架效应</strong>其实就是看一个事物角度的问题。<strong>屡战屡败</strong>跟<strong>屡败屡战</strong>，相同的事实，都是失败，但后者显得更为积极。这告诉我们有时候重要的并不是内容，而是如何呈现内容。现在进某写app前，一般都会播放个3秒的光广告，而传统广告浮在App上，需要我们手动关闭，可以思考一下，为什么同样的广告，呈现方式不同效果就不同。</p>]]></content>
       
       
       <categories>
@@ -176,6 +209,64 @@
             <tag> 产品 </tag>
             
             <tag> 商业模式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>产品经理怎么做市场调研</title>
+      <link href="/2018/09/23/%E5%B8%82%E5%9C%BA%E8%B0%83%E7%A0%94%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+      <url>/2018/09/23/%E5%B8%82%E5%9C%BA%E8%B0%83%E7%A0%94%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</url>
+      
+        <content type="html"><![CDATA[<p>PM需要分析的数据，一般都是市场数据，所以大家一般也把这个过程叫做市场调研。</p><h2 id="为什么要做市场调研"><a href="#为什么要做市场调研" class="headerlink" title="为什么要做市场调研"></a>为什么要做市场调研</h2><p>一般公司都有marketing部门帮助PM完成这项工作，但是这并不代表我们不需要学习它了。从原理上理解我们的工作是十分重要的，就像搞数据分析的人可以用matlab、可以用R写脚本但还是得学好基本的数学一样。</p><a id="more"></a><h2 id="做市场调研的基本方法"><a href="#做市场调研的基本方法" class="headerlink" title="做市场调研的基本方法"></a>做市场调研的基本方法</h2><p>先上个例子。cesim公司的市场调研报告的目录。</p><p><img src="https://s2.ax1x.com/2019/02/15/krJoC9.md.jpg" alt="cesim市场调研报告目录"></p><p>其中市场调研部分包括广告效应、销售预测、影响用户购买决策的产品特性、渠道投资、PDA特征喜好。那么为什么企业要调查这些指标呢？</p><ol><li><h3 id="明确目标"><a href="#明确目标" class="headerlink" title="明确目标"></a>明确目标</h3><p>做市场调研之前，首先要明确我们想搞清楚的问题是什么。一般对于to c的产品，常用5W1H法（六何分析法）。</p><h3 id="以互联网产品为例（用户导向）："><a href="#以互联网产品为例（用户导向）：" class="headerlink" title="以互联网产品为例（用户导向）："></a>以互联网产品为例（用户导向）：</h3><p>Who: <strong>目标用户</strong>是什么样的<br>When：用户使用产品的<strong>时间</strong>（行为习惯）<br>What：用户会<strong>做什么</strong><br>Where：用户使用的<strong>场景</strong><br>Why：用户<strong>需求</strong></p><p>How：用户执行任务或达到目标所使用的具体方法<br>简而言之就是，什么样的人 在什么时间 什么场景 用什么样的设备 干什么样的事情 以及是怎么干的。</p><h3 id="以传统生产行业为例（产品导向）："><a href="#以传统生产行业为例（产品导向）：" class="headerlink" title="以传统生产行业为例（产品导向）："></a>以传统生产行业为例（产品导向）：</h3></li></ol><table><thead><tr><th></th><th>现状</th><th>原因</th><th>如何改善</th></tr></thead><tbody><tr><td><strong>对象（What）</strong></td><td>现在的产品是怎样的</td><td>为什么生产这个产品</td><td>工艺改良？能不能生产别的？</td></tr><tr><td><strong>目的（Why）</strong></td><td>生产的原因</td><td>为什么是这个目的</td><td>能不能是别的目的</td></tr><tr><td><strong>场所（Where）</strong></td><td>在哪儿做</td><td>为什么在那儿干</td><td>有没有更好的场所</td></tr><tr><td><strong>时间（When）</strong></td><td>什么时候做</td><td>为什么是这个时候</td><td>有没有更好的时间</td></tr><tr><td><strong>作业员（Who）</strong></td><td>谁来做</td><td>为什么是这样的人</td><td>有没有更好的人选</td></tr><tr><td><strong>方法（How）</strong></td><td>怎么做</td><td>为什么这么做</td><td>能不能改进现有的方法</td></tr></tbody></table><p>   可见虽然两者思考的东西不同，但仍可用相同的方式思考。</p><p>   市场经济时代大家都很注重成本，于是又提出了一个How much,变成了5W2H。</p><p>   可扩为下图</p><p>   <img src="https://s2.ax1x.com/2019/02/15/kr31ts.png" alt="5W2H分析法"></p><ol start="2"><li><h3 id="设计调研方法（主要部分）"><a href="#设计调研方法（主要部分）" class="headerlink" title="设计调研方法（主要部分）"></a>设计调研方法（主要部分）</h3></li></ol><p>那么，如何去填补我们不知道的部分？就和做其他任何研究一样，这一步必须明确调研的方法。  一般有竞品分析、行业分析、需求分析、数据收集等方面。</p><ol start="3"><li><h3 id="实施"><a href="#实施" class="headerlink" title="实施"></a>实施</h3><p>根据方法目标和具体调查对象等因素，收集数据，分析数据。这些会在数据分析部分着重讨论。 </p></li><li><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>得出结果。</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 产品 </category>
+          
+          <category> 数据分析 </category>
+          
+          <category> 市场调研 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据分析 </tag>
+            
+            <tag> 市场调研 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>想要成为PM要怎么起步？</title>
+      <link href="/2018/09/13/%E6%83%B3%E8%A6%81%E6%88%90%E4%B8%BAPM%E8%A6%81%E6%80%8E%E4%B9%88%E8%B5%B7%E6%AD%A5%EF%BC%9F/"/>
+      <url>/2018/09/13/%E6%83%B3%E8%A6%81%E6%88%90%E4%B8%BAPM%E8%A6%81%E6%80%8E%E4%B9%88%E8%B5%B7%E6%AD%A5%EF%BC%9F/</url>
+      
+        <content type="html"><![CDATA[<p>想要解答一个问题的方法，从小学开始老师就已经教授过了。首先我们得知道<strong>定义</strong>，然后从定义出发，发掘我们所需要的<strong>条件</strong>。</p><h2 id="什么是PM"><a href="#什么是PM" class="headerlink" title="什么是PM"></a>什么是PM</h2><blockquote><p><strong>产品经理</strong>（英文：<strong>Product manager</strong>，缩写：<strong>PM</strong>）也称<strong>产品企划</strong>，是指在公司中针对某一项或是某一类的产品进行规划和管理的人员，主要负责产品的研发、制造、营销、渠道等工作。产品经理是很难定义的一个角色，如果非要一句话定义，那么产品经理是为终端用户服务，负责产品整个生命周期的人。——维基百科</p></blockquote><a id="more"></a><h2 id="PM得技能组成"><a href="#PM得技能组成" class="headerlink" title="PM得技能组成"></a>PM得技能组成</h2><p>有产品的地方就有产品经理，就算在相同行业，对产品经理的要求也不太相同<del>（一般都是因为对应岗位没人，PM顶上）</del>。但是产品经理的核心能力是确实不变的，只是在不同行业内形式有些差别。下面我总结了一个导图，叶子节点不一定很全面，主要在于抓住上一层的<strong>核心技能</strong>。掌握核心能力，就是我们得出答案的条件。</p><p><img src="https://s2.ax1x.com/2019/02/15/kD0qVx.png" alt="PM技能树"></p><p>就像RPG游戏一样打怪升级点技能树，PM的技能树就是根据<strong>核心能力</strong>结合所处行业的不通过要求得来得叶子节点。举个例子，比如互联网PM，想要点亮<strong>运营策略</strong>这个技能，就必须先学会<strong>活动策划、提供内容、用户调研、推广渠道</strong>这几项技能。</p><h2 id="从哪里开始"><a href="#从哪里开始" class="headerlink" title="从哪里开始"></a>从哪里开始</h2><p>俗话说的好 缺什么补什么，少什么添什么（张宇语录）。首先我们应挑选一个自己最感兴趣的技能去学习，这样能减少一些挫败感多一些成就感。喜欢数据分析的就可以从数据分析入手，喜欢运营的就从运营入手。</p><p>但强调一点，作为PM得学会把握趋势，大数据时代，<strong>数据分析</strong>是大势所趋。在我看来PM更靠近决策者，PM得每项技能都有职业可以代替，数据分析有数据分析师，产品运营有运营，研发有项目经理。PM该做的事情是从市场数据中提炼出市场需求，根据需求提出一个产品。一专多强的模式是很适合PM的。这一专，便是<strong>数据分析</strong>。</p><p>即便<strong>数据分析</strong>是那么的重要，但在本博客我们从<strong>市场</strong>入手来学习如何做一个优秀的PM。当我们对市场和运营有所了解之后，对于为什么要数据分析这个问题，就可以有一个很直觉的答案了。小时候学数学，不知道为什么要学，那个痛苦啊。当你需要它的时候，相信我，它会变得可爱动人。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 产品 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 产品 </tag>
+            
+            <tag> 产品经理 </tag>
             
         </tags>
       
@@ -349,39 +440,6 @@
     
     
     <entry>
-      <title>leetcode题解 搜索二维矩阵 II(Python3)</title>
-      <link href="/2018/07/12/leetcode%20%E6%90%9C%E7%B4%A2%E4%BA%8C%E7%BB%B4%E7%9F%A9%E9%98%B5%20II/"/>
-      <url>/2018/07/12/leetcode%20%E6%90%9C%E7%B4%A2%E4%BA%8C%E7%BB%B4%E7%9F%A9%E9%98%B5%20II/</url>
-      
-        <content type="html"><![CDATA[<p> <strong>说在前面：本题解旨在熟悉python3的基本操作和库函数的使用，仅采用最简便方法，而非时间或空间复杂度较小的方法。若读者想要学习数据结构还是推荐使用C/C++或Java。</strong></p><h2 id="原题："><a href="#原题：" class="headerlink" title="原题："></a>原题：</h2><p>编写一个高效的算法来搜索 <em>m</em> x <em>n</em> 矩阵 matrix 中的一个目标值 target。该矩阵具有以下特性：</p><ul><li>每行的元素从左到右升序排列。</li><li>每列的元素从上到下升序排列。</li></ul><p><strong>示例:</strong></p><p>现有矩阵 matrix 如下：</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  [1,   4,  7, 11, 15],</span><br><span class="line">  [2,   5,  8, 12, 19],</span><br><span class="line">  [3,   6,  9, 16, 22],</span><br><span class="line">  [10, 13, 14, 17, 24],</span><br><span class="line">  [18, 21, 23, 26, 30]</span><br><span class="line">]</span><br></pre></td></tr></table></figure><p>给定 target = <code>5</code>，返回 <code>true</code>。</p><p>给定 target = <code>20</code>，返回 <code>false</code>。</p><a id="more"></a><h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def searchMatrix(self, matrix, target):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type matrix: List[List[int]]</span><br><span class="line">        :type target: int</span><br><span class="line">        :rtype: bool</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        if not matrix:</span><br><span class="line">            return False</span><br><span class="line">        i = 0</span><br><span class="line">        j = len(matrix[0]) - 1</span><br><span class="line">        while i &lt; len(matrix) and j &gt;= 0:</span><br><span class="line">            if matrix[i][j] == target: </span><br><span class="line">                return True</span><br><span class="line">            elif matrix[i][j] &gt; target: </span><br><span class="line">                j -= 1</span><br><span class="line">            else: </span><br><span class="line">                i += 1</span><br><span class="line">        return False</span><br></pre></td></tr></table></figure><h2 id="解析："><a href="#解析：" class="headerlink" title="解析："></a>解析：</h2><p>很简单的从右上角开始自上而下 从右向左的搜索。</p><p>如果要更高的效率可以使用二分查找。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Python </category>
-          
-          <category> leetcode </category>
-          
-          <category> 数组 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Python </tag>
-            
-            <tag> leetcode </tag>
-            
-            <tag> 数组 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>leetcode题解 从排序数组中删除重复项(Python3)</title>
       <link href="/2018/07/12/leetcode%20%E4%BB%8E%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E9%A1%B9/"/>
       <url>/2018/07/12/leetcode%20%E4%BB%8E%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E9%A1%B9/</url>
@@ -415,13 +473,33 @@
     
     
     <entry>
-      <title>产品经理怎么做数据分析</title>
-      <link href="/2018/06/23/%E7%AB%9E%E5%93%81%E5%88%86%E6%9E%90/"/>
-      <url>/2018/06/23/%E7%AB%9E%E5%93%81%E5%88%86%E6%9E%90/</url>
+      <title>leetcode题解 搜索二维矩阵 II(Python3)</title>
+      <link href="/2018/07/12/leetcode%20%E6%90%9C%E7%B4%A2%E4%BA%8C%E7%BB%B4%E7%9F%A9%E9%98%B5%20II/"/>
+      <url>/2018/07/12/leetcode%20%E6%90%9C%E7%B4%A2%E4%BA%8C%E7%BB%B4%E7%9F%A9%E9%98%B5%20II/</url>
       
-        <content type="html"><![CDATA[<p>PM需要分析的数据，一般都是市场数据，所以大家一般也把这个过程叫做市场调研。</p><h2 id="为什么要做市场调研"><a href="#为什么要做市场调研" class="headerlink" title="为什么要做市场调研"></a>为什么要做市场调研</h2><p>一般公司都有marketing部门帮助PM完成这项工作，但是这并不代表我们不需要学习它了。从原理上理解我们的工作是十分重要的，就像搞数据分析的人可以用matlab、可以用R写脚本但还是得学好基本的数学一样。</p><a id="more"></a>]]></content>
+        <content type="html"><![CDATA[<p> <strong>说在前面：本题解旨在熟悉python3的基本操作和库函数的使用，仅采用最简便方法，而非时间或空间复杂度较小的方法。若读者想要学习数据结构还是推荐使用C/C++或Java。</strong></p><h2 id="原题："><a href="#原题：" class="headerlink" title="原题："></a>原题：</h2><p>编写一个高效的算法来搜索 <em>m</em> x <em>n</em> 矩阵 matrix 中的一个目标值 target。该矩阵具有以下特性：</p><ul><li>每行的元素从左到右升序排列。</li><li>每列的元素从上到下升序排列。</li></ul><p><strong>示例:</strong></p><p>现有矩阵 matrix 如下：</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  [1,   4,  7, 11, 15],</span><br><span class="line">  [2,   5,  8, 12, 19],</span><br><span class="line">  [3,   6,  9, 16, 22],</span><br><span class="line">  [10, 13, 14, 17, 24],</span><br><span class="line">  [18, 21, 23, 26, 30]</span><br><span class="line">]</span><br></pre></td></tr></table></figure><p>给定 target = <code>5</code>，返回 <code>true</code>。</p><p>给定 target = <code>20</code>，返回 <code>false</code>。</p><a id="more"></a><h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def searchMatrix(self, matrix, target):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type matrix: List[List[int]]</span><br><span class="line">        :type target: int</span><br><span class="line">        :rtype: bool</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        if not matrix:</span><br><span class="line">            return False</span><br><span class="line">        i = 0</span><br><span class="line">        j = len(matrix[0]) - 1</span><br><span class="line">        while i &lt; len(matrix) and j &gt;= 0:</span><br><span class="line">            if matrix[i][j] == target: </span><br><span class="line">                return True</span><br><span class="line">            elif matrix[i][j] &gt; target: </span><br><span class="line">                j -= 1</span><br><span class="line">            else: </span><br><span class="line">                i += 1</span><br><span class="line">        return False</span><br></pre></td></tr></table></figure><h2 id="解析："><a href="#解析：" class="headerlink" title="解析："></a>解析：</h2><p>很简单的从右上角开始自上而下 从右向左的搜索。</p><p>如果要更高的效率可以使用二分查找。</p>]]></content>
       
       
+      <categories>
+          
+          <category> Python </category>
+          
+          <category> leetcode </category>
+          
+          <category> 数组 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> 数组 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -455,31 +533,13 @@
     
     
     <entry>
-      <title>产品经理怎么做市场调研</title>
-      <link href="/2018/06/23/%E5%B8%82%E5%9C%BA%E8%B0%83%E7%A0%94%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
-      <url>/2018/06/23/%E5%B8%82%E5%9C%BA%E8%B0%83%E7%A0%94%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</url>
+      <title>产品经理怎么做数据分析</title>
+      <link href="/2018/06/23/%E7%AB%9E%E5%93%81%E5%88%86%E6%9E%90/"/>
+      <url>/2018/06/23/%E7%AB%9E%E5%93%81%E5%88%86%E6%9E%90/</url>
       
-        <content type="html"><![CDATA[<p>PM需要分析的数据，一般都是市场数据，所以大家一般也把这个过程叫做市场调研。</p><h2 id="为什么要做市场调研"><a href="#为什么要做市场调研" class="headerlink" title="为什么要做市场调研"></a>为什么要做市场调研</h2><p>一般公司都有marketing部门帮助PM完成这项工作，但是这并不代表我们不需要学习它了。从原理上理解我们的工作是十分重要的，就像搞数据分析的人可以用matlab、可以用R写脚本但还是得学好基本的数学一样。</p><a id="more"></a><h2 id="做市场调研的基本方法"><a href="#做市场调研的基本方法" class="headerlink" title="做市场调研的基本方法"></a>做市场调研的基本方法</h2><p>先上个例子。cesim公司的市场调研报告的目录。</p><p><img src="https://s2.ax1x.com/2019/02/15/krJoC9.md.jpg" alt="cesim市场调研报告目录"></p><p>其中市场调研部分包括广告效应、销售预测、影响用户购买决策的产品特性、渠道投资、PDA特征喜好。那么为什么企业要调查这些指标呢？</p><ol><li><h3 id="明确目标"><a href="#明确目标" class="headerlink" title="明确目标"></a>明确目标</h3><p>做市场调研之前，首先要明确我们想搞清楚的问题是什么。一般对于to c的产品，常用5W1H法（六何分析法）。</p><h3 id="以互联网产品为例（用户导向）："><a href="#以互联网产品为例（用户导向）：" class="headerlink" title="以互联网产品为例（用户导向）："></a>以互联网产品为例（用户导向）：</h3><p>Who: <strong>目标用户</strong>是什么样的<br>When：用户使用产品的<strong>时间</strong>（行为习惯）<br>What：用户会<strong>做什么</strong><br>Where：用户使用的<strong>场景</strong><br>Why：用户<strong>需求</strong></p><p>How：用户执行任务或达到目标所使用的具体方法<br>简而言之就是，什么样的人 在什么时间 什么场景 用什么样的设备 干什么样的事情 以及是怎么干的。</p><h3 id="以传统生产行业为例（产品导向）："><a href="#以传统生产行业为例（产品导向）：" class="headerlink" title="以传统生产行业为例（产品导向）："></a>以传统生产行业为例（产品导向）：</h3></li></ol><table><thead><tr><th></th><th>现状</th><th>原因</th><th>如何改善</th></tr></thead><tbody><tr><td><strong>对象（What）</strong></td><td>现在的产品是怎样的</td><td>为什么生产这个产品</td><td>工艺改良？能不能生产别的？</td></tr><tr><td><strong>目的（Why）</strong></td><td>生产的原因</td><td>为什么是这个目的</td><td>能不能是别的目的</td></tr><tr><td><strong>场所（Where）</strong></td><td>在哪儿做</td><td>为什么在那儿干</td><td>有没有更好的场所</td></tr><tr><td><strong>时间（When）</strong></td><td>什么时候做</td><td>为什么是这个时候</td><td>有没有更好的时间</td></tr><tr><td><strong>作业员（Who）</strong></td><td>谁来做</td><td>为什么是这样的人</td><td>有没有更好的人选</td></tr><tr><td><strong>方法（How）</strong></td><td>怎么做</td><td>为什么这么做</td><td>能不能改进现有的方法</td></tr></tbody></table><p>   可见虽然两者思考的东西不同，但仍可用相同的方式思考。</p><p>   市场经济时代大家都很注重成本，于是又提出了一个How much,变成了5W2H。</p><p>   可扩为下图</p><p>   <img src="https://s2.ax1x.com/2019/02/15/kr31ts.png" alt="5W2H分析法"></p><ol start="2"><li><h3 id="设计调研方法（主要部分）"><a href="#设计调研方法（主要部分）" class="headerlink" title="设计调研方法（主要部分）"></a>设计调研方法（主要部分）</h3></li></ol><p>那么，如何去填补我们不知道的部分？就和做其他任何研究一样，这一步必须明确调研的方法。  一般有竞品分析、行业分析、需求分析、数据收集等方面。</p><ol start="3"><li><h3 id="实施"><a href="#实施" class="headerlink" title="实施"></a>实施</h3><p>根据方法目标和具体调查对象等因素，收集数据，分析数据。这些会在数据分析部分着重讨论。 </p></li><li><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>得出结果。</p></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> 产品 </category>
-          
-          <category> 数据分析 </category>
-          
-          <category> 市场调研 </category>
-          
-      </categories>
+        <content type="html"><![CDATA[<p>PM需要分析的数据，一般都是市场数据，所以大家一般也把这个过程叫做市场调研。</p><h2 id="为什么要做市场调研"><a href="#为什么要做市场调研" class="headerlink" title="为什么要做市场调研"></a>为什么要做市场调研</h2><p>一般公司都有marketing部门帮助PM完成这项工作，但是这并不代表我们不需要学习它了。从原理上理解我们的工作是十分重要的，就像搞数据分析的人可以用matlab、可以用R写脚本但还是得学好基本的数学一样。</p><a id="more"></a>]]></content>
       
       
-        <tags>
-            
-            <tag> 数据分析 </tag>
-            
-            <tag> 市场调研 </tag>
-            
-        </tags>
       
     </entry>
     
@@ -538,33 +598,6 @@
             <tag> 产品 </tag>
             
             <tag> 行业分析 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>想要成为PM要怎么起步？</title>
-      <link href="/2018/05/13/%E6%83%B3%E8%A6%81%E6%88%90%E4%B8%BAPM%E8%A6%81%E6%80%8E%E4%B9%88%E8%B5%B7%E6%AD%A5%EF%BC%9F/"/>
-      <url>/2018/05/13/%E6%83%B3%E8%A6%81%E6%88%90%E4%B8%BAPM%E8%A6%81%E6%80%8E%E4%B9%88%E8%B5%B7%E6%AD%A5%EF%BC%9F/</url>
-      
-        <content type="html"><![CDATA[<p>想要解答一个问题的方法，从小学开始老师就已经教授过了。首先我们得知道<strong>定义</strong>，然后从定义出发，发掘我们所需要的<strong>条件</strong>。</p><h2 id="什么是PM"><a href="#什么是PM" class="headerlink" title="什么是PM"></a>什么是PM</h2><blockquote><p><strong>产品经理</strong>（英文：<strong>Product manager</strong>，缩写：<strong>PM</strong>）也称<strong>产品企划</strong>，是指在公司中针对某一项或是某一类的产品进行规划和管理的人员，主要负责产品的研发、制造、营销、渠道等工作。产品经理是很难定义的一个角色，如果非要一句话定义，那么产品经理是为终端用户服务，负责产品整个生命周期的人。——维基百科</p></blockquote><a id="more"></a><h2 id="PM得技能组成"><a href="#PM得技能组成" class="headerlink" title="PM得技能组成"></a>PM得技能组成</h2><p>有产品的地方就有产品经理，就算在相同行业，对产品经理的要求也不太相同<del>（一般都是因为对应岗位没人，PM顶上）</del>。但是产品经理的核心能力是确实不变的，只是在不同行业内形式有些差别。下面我总结了一个导图，叶子节点不一定很全面，主要在于抓住上一层的<strong>核心技能</strong>。掌握核心能力，就是我们得出答案的条件。</p><p><img src="https://s2.ax1x.com/2019/02/15/kD0qVx.png" alt="PM技能树"></p><p>就像RPG游戏一样打怪升级点技能树，PM的技能树就是根据<strong>核心能力</strong>结合所处行业的不通过要求得来得叶子节点。举个例子，比如互联网PM，想要点亮<strong>运营策略</strong>这个技能，就必须先学会<strong>活动策划、提供内容、用户调研、推广渠道</strong>这几项技能。</p><h2 id="从哪里开始"><a href="#从哪里开始" class="headerlink" title="从哪里开始"></a>从哪里开始</h2><p>俗话说的好 缺什么补什么，少什么添什么（张宇语录）。首先我们应挑选一个自己最感兴趣的技能去学习，这样能减少一些挫败感多一些成就感。喜欢数据分析的就可以从数据分析入手，喜欢运营的就从运营入手。</p><p>但强调一点，作为PM得学会把握趋势，大数据时代，<strong>数据分析</strong>是大势所趋。在我看来PM更靠近决策者，PM得每项技能都有职业可以代替，数据分析有数据分析师，产品运营有运营，研发有项目经理。PM该做的事情是从市场数据中提炼出市场需求，根据需求提出一个产品。一专多强的模式是很适合PM的。这一专，便是<strong>数据分析</strong>。</p><p>即便<strong>数据分析</strong>是那么的重要，但在本博客我们从<strong>市场</strong>入手来学习如何做一个优秀的PM。当我们对市场和运营有所了解之后，对于为什么要数据分析这个问题，就可以有一个很直觉的答案了。小时候学数学，不知道为什么要学，那个痛苦啊。当你需要它的时候，相信我，它会变得可爱动人。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 产品 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 产品 </tag>
-            
-            <tag> 产品经理 </tag>
             
         </tags>
       

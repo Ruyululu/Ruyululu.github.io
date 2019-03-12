@@ -81,7 +81,7 @@
     <script defer type="text/javascript" src="/js/index.js"></script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>标签: leetcode | 苦瓜不灵's Note - 记录我的大脑</title>
+    <title>leetcode 删除重复的电子邮箱(SQL) | 苦瓜不灵's Note - 记录我的大脑</title>
   </head>
   <body itemscope="" itemtype="http://schema.org/WebPage" lang="zh_CN" data-spy="scroll" data-target=".list-group">
     
@@ -123,143 +123,81 @@
         <div class="main-container">
           <div class="content">
             
-<div id="tag" class="tag page">
-  <h1 class="page-title">leetcode</h1>
+<div id="post" class="page">
   
   <article class="article post card animate" itemscope="" itemtype="http://schema.org/Article">
-    <header id="post-header" class="post-header">
-      <h1 class="post-title-simple" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/10/23/leetcode sql 删除重复的电子邮箱/" itemprop="url">leetcode 删除重复的电子邮箱(SQL)</a>
-      </h1>
-      
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-10-23T19:52:09+08:00">10-23</time>
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://ruyululu.com/2018/10/23/leetcode sql 删除重复的电子邮箱/">
+      <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="苦瓜不灵">
+       <meta itemprop="description" content="">
+       <meta itemprop="image" content="/images/avatar.jpg">
       </span>
-      
-    </header>
-  </article>
-  
-  <article class="article post card animate" itemscope="" itemtype="http://schema.org/Article">
-    <header id="post-header" class="post-header">
-      <h1 class="post-title-simple" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/10/20/leetcode sql 超过经理收入的员工/" itemprop="url">leetcode 超过经理收入的员工(SQL)</a>
-      </h1>
-      
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-10-20T19:28:12+08:00">10-20</time>
+      <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="苦瓜不灵's Note">
       </span>
-      
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">leetcode 删除重复的电子邮箱(SQL)</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-10-23T19:52:09+08:00">2018-10-23 19:52:09</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/leetcode/SQL/" itemprop="url" rel="index"><span itemprop="name">SQL</span></a></span>
+        </span>
+        
+        
+      </div>
     </header>
-  </article>
-  
-  <article class="article post card animate" itemscope="" itemtype="http://schema.org/Article">
-    <header id="post-header" class="post-header">
-      <h1 class="post-title-simple" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/10/18/leetcode sql 超过5名学生的课/" itemprop="url">leetcode 有趣的电影(SQL)</a>
-      </h1>
+    <main class="post-main" itemprop="articleBody">
+      <h2 id="原题："><a href="#原题：" class="headerlink" title="原题："></a>原题：</h2><p>编写一个 SQL 查询，来删除 <code>Person</code> 表中所有重复的电子邮箱，重复的邮箱里只保留 <strong>Id</strong> <em>最小</em> 的那个。</p>
+<figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">+----+------------------+</span><br><span class="line">| Id | Email            |</span><br><span class="line">+----+------------------+</span><br><span class="line">| 1  | john@example.com |</span><br><span class="line">| 2  | bob@example.com  |</span><br><span class="line">| 3  | john@example.com |</span><br><span class="line">+----+------------------+</span><br><span class="line">Id 是这个表的主键。</span><br></pre></td></tr></table></figure>
+<p>例如，在运行你的查询语句之后，上面的 <code>Person</code> 表应返回以下几行:</p>
+<figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">+----+------------------+</span><br><span class="line">| Id | Email            |</span><br><span class="line">+----+------------------+</span><br><span class="line">| 1  | john@example.com |</span><br><span class="line">| 2  | bob@example.com  |</span><br><span class="line">+----+------------------+</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">delete p1</span><br><span class="line">from Person p1, Person p2</span><br><span class="line">where p1.email = p2.email</span><br><span class="line">and p1.id&gt;p2.id;</span><br></pre></td></tr></table></figure>
+<h2 id="解析："><a href="#解析：" class="headerlink" title="解析："></a>解析：</h2><p>DELETE：DELETE FROM 表名称 WHERE 列名称 = 值,删除符合目标的值</p>
+<p>WHERE：设置筛选条件</p>
+<p>FROM：from后用’，’连接，其效果相当于join(内连)</p>
+
+    </main>
+    <footer class="post-footer">
       
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-10-18T20:23:45+08:00">10-18</time>
-      </span>
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/Python/" rel="tag"><i class="fas fa-tags"></i>Python</a>
+        
+        <a class="post-tag button" href="/tags/leetcode/" rel="tag"><i class="fas fa-tags"></i>leetcode</a>
+        
+        <a class="post-tag button" href="/tags/SQL/" rel="tag"><i class="fas fa-tags"></i>SQL</a>
+        
+      </div>
       
-    </header>
-  </article>
-  
-  <article class="article post card animate" itemscope="" itemtype="http://schema.org/Article">
-    <header id="post-header" class="post-header">
-      <h1 class="post-title-simple" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/10/15/leetcode sql 有趣的电影/" itemprop="url">leetcode 有趣的电影(SQL)</a>
-      </h1>
-      
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-10-15T21:00:34+08:00">10-15</time>
-      </span>
-      
-    </header>
-  </article>
-  
-  <article class="article post card animate" itemscope="" itemtype="http://schema.org/Article">
-    <header id="post-header" class="post-header">
-      <h1 class="post-title-simple" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/10/12/leetcode sql 交换工资/" itemprop="url">leetcode 有趣的电影(SQL)</a>
-      </h1>
-      
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-10-12T18:27:04+08:00">10-12</time>
-      </span>
-      
-    </header>
-  </article>
-  
-  <article class="article post card animate" itemscope="" itemtype="http://schema.org/Article">
-    <header id="post-header" class="post-header">
-      <h1 class="post-title-simple" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/08/19/leetcode sql 上升的温度/" itemprop="url">leetcode题解 第二高的薪水(SQL)</a>
-      </h1>
-      
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-08-19T13:48:43+08:00">08-19</time>
-      </span>
-      
-    </header>
-  </article>
-  
-  <article class="article post card animate" itemscope="" itemtype="http://schema.org/Article">
-    <header id="post-header" class="post-header">
-      <h1 class="post-title-simple" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/08/18/leetcode sql 第二高的薪水/" itemprop="url">leetcode题解 第二高的薪水(SQL)</a>
-      </h1>
-      
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-08-18T16:04:35+08:00">08-18</time>
-      </span>
-      
-    </header>
-  </article>
-  
-  <article class="article post card animate" itemscope="" itemtype="http://schema.org/Article">
-    <header id="post-header" class="post-header">
-      <h1 class="post-title-simple" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/08/18/leetcode sql 组合两表/" itemprop="url">leetcode题解 组合两表(SQL)</a>
-      </h1>
-      
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-08-18T15:28:07+08:00">08-18</time>
-      </span>
-      
-    </header>
-  </article>
-  
-  <article class="article post card animate" itemscope="" itemtype="http://schema.org/Article">
-    <header id="post-header" class="post-header">
-      <h1 class="post-title-simple" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/07/20/leetcode 验证回文串/" itemprop="url">leetcode题解 验证回文串(Python3)</a>
-      </h1>
-      
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-07-20T19:31:25+08:00">07-20</time>
-      </span>
-      
-    </header>
-  </article>
-  
-  <article class="article post card animate" itemscope="" itemtype="http://schema.org/Article">
-    <header id="post-header" class="post-header">
-      <h1 class="post-title-simple" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/07/19/leetcode 字符串中的第一个唯一字符/" itemprop="url">leetcode题解 反转字符串(Python3)</a>
-      </h1>
-      
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-07-19T17:26:36+08:00">07-19</time>
-      </span>
-      
-    </header>
+    </footer>
   </article>
   
   
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/tags/leetcode/page/2/">2</a><a class="extend next" rel="next" href="/tags/leetcode/page/2/"><i class="fas fa-angle-right" aria-label="下一页"></i></a>
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="/2018/10/20/leetcode sql 超过经理收入的员工/" rel="next" title="leetcode 超过经理收入的员工(SQL)"><i class="fas fa-angle-left"></i><span class="nav-title">leetcode 超过经理收入的员工(SQL)</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="/2018/11/08/产品流程图/" rel="prev" title="怎么制作产品流程图"><span class="nav-title">怎么制作产品流程图</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
   </nav>
+  
   
 </div>
 
@@ -318,6 +256,17 @@
 
 
   <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><i class="fas fa-list-ol"></i>文章目录</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#原题："><span class="toc-text">原题：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#题解："><span class="toc-text">题解：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#解析："><span class="toc-text">解析：</span></a></li></ol></div>
+    </div>
+    
     
     
     <hr>

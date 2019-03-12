@@ -884,11 +884,11 @@
     
     
     <entry>
-      <title>Categories</title>
-      <link href="/Categories/index.html"/>
-      <url>/Categories/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
-        <content type="html"><![CDATA[<p>A<br>B</p>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     

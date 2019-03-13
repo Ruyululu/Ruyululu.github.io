@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Python分析预测股价</title>
+      <link href="/2019/01/20/Python%E5%88%86%E6%9E%90%E9%A2%84%E6%B5%8B%E8%82%A1%E4%BB%B7/"/>
+      <url>/2019/01/20/Python%E5%88%86%E6%9E%90%E9%A2%84%E6%B5%8B%E8%82%A1%E4%BB%B7/</url>
+      
+        <content type="html"><![CDATA[<p>提示：本文中使用Linear Regression模型，股票数据来自Quandl库，需要安装。(预测不靠谱仅仅是作为一个练手项目，切勿用于实际操作)</p><p>Quandl可以免费使用，但是下载数据或一天调用超过50次需要身份认证。要想获得认证，需要在<a href="http://link.zhihu.com/?target=https%3A//www.quandl.com/" target="_blank" rel="noopener">官网</a>注册账号，获得API key，在使用中加入如下代码：</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">quandl.ApiConfig.api_key = &quot;YOURAPIKEY&quot; #YOURAPIKEY替换成你的API key(在官网个人信息中)</span><br></pre></td></tr></table></figure><p>Quandl的详细使用说明请参考官方文档：</p><p>[<a href="https://docs.quandl.com/docs/python]" target="_blank" rel="noopener">https://docs.quandl.com/docs/python]</a>: </p><a id="more"></a><h2 id="查询并显示历史股价信息"><a href="#查询并显示历史股价信息" class="headerlink" title="查询并显示历史股价信息"></a>查询并显示历史股价信息</h2><p>以苹果公司为例，以下为示例：</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#数据分析基本都将numpy和pandas引入为np，pd。模块的安装可搜索python教程</span><br><span class="line">import datetime</span><br><span class="line">import numpy as np</span><br><span class="line">import pandas as pd</span><br><span class="line">import quandl, math</span><br><span class="line">import sklearn</span><br><span class="line">from sklearn.linear_model import LinearRegression</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">from matplotlib import style</span><br><span class="line"></span><br><span class="line">#获取苹果股价历史数据</span><br><span class="line">df = quandl.get(&quot;WIKI/AAPL&quot;)</span><br><span class="line"></span><br><span class="line">#打印几行数据</span><br><span class="line">print(df.head())</span><br><span class="line"></span><br><span class="line">#显示苹果的Adj. Close变化趋势，从上一行打印出的信息中选择Adj. Close（收盘价）这一项来作图</span><br><span class="line">df[&apos;Adj. Close&apos;].plot()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#print(df.head())打印得数据如下</span><br><span class="line"></span><br><span class="line">             Open   High    Low  ...  Adj. Low  Adj. Close  Adj. Volume</span><br><span class="line">Date                             ...                                   </span><br><span class="line">1980-12-12  28.75  28.87  28.75  ...  0.422706    0.422706  117258400.0</span><br><span class="line">1980-12-15  27.38  27.38  27.25  ...  0.400652    0.400652   43971200.0</span><br><span class="line">1980-12-16  25.37  25.37  25.25  ...  0.371246    0.371246   26432000.0</span><br><span class="line">1980-12-17  25.87  26.00  25.87  ...  0.380362    0.380362   21610400.0</span><br><span class="line">1980-12-18  26.63  26.75  26.63  ...  0.391536    0.391536   18362400.0</span><br><span class="line"></span><br><span class="line">[5 rows x 12 columns]</span><br></pre></td></tr></table></figure><h2 id="选择训练集，测试集然后进行预测"><a href="#选择训练集，测试集然后进行预测" class="headerlink" title="选择训练集，测试集然后进行预测"></a>选择训练集，测试集然后进行预测</h2><p>训练集和测试集是机器学习的基本概念，简单来说就是一部分数据用于测试一部分数据用于验证，如果你用训练的数据进行验证，那结果就没有意义了。下面是完整源码，</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">import datetime</span><br><span class="line">import numpy as np</span><br><span class="line">import pandas as pd</span><br><span class="line">import quandl, math</span><br><span class="line">from sklearn import preprocessing, model_selection, svm</span><br><span class="line">from sklearn.linear_model import LinearRegression</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">from matplotlib import style</span><br><span class="line"></span><br><span class="line">#下载历史数据</span><br><span class="line">df = quandl.get(&quot;WIKI/AAPL&quot;)</span><br><span class="line">print(df.head())</span><br><span class="line">#提取历史数据的后1%用来进行预测</span><br><span class="line">#计算历史数据1%的数值</span><br><span class="line">forecast = int(math.ceil(0.01 * len(df)))</span><br><span class="line">forecast_df = df[-forecast:]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#提取历史数据的剩余部分用来训练和测试模型表现</span><br><span class="line">AAPL = df[:-forecast]</span><br><span class="line">#把label以外的字段作为特征X</span><br><span class="line">X = np.array(AAPL.drop([&apos;Adj. Close&apos;], 1))</span><br><span class="line">#设置Adj. Clos字段为目标值y</span><br><span class="line">y = np.array(AAPL[&apos;Adj. Close&apos;])</span><br><span class="line">#划分训练集和测试集，测试集占比20%，训练集占比80%</span><br><span class="line">X_train, X_test, y_train, y_test = model_selection.train_test_split(X, y, test_size=0.2)</span><br><span class="line"></span><br><span class="line">#使用训练集数据对模型进行训练</span><br><span class="line">clf = LinearRegression(n_jobs=-1)</span><br><span class="line">clf.fit(X_train, y_train)</span><br><span class="line"></span><br><span class="line">#使用测试集数据层查看模型准确率得分</span><br><span class="line">confidence = clf.score(X_test, y_test)</span><br><span class="line">print(confidence)</span><br><span class="line"></span><br><span class="line">#对1%的预留数据进行预测</span><br><span class="line">f_X=np.array(forecast_df.drop([&apos;Adj. Close&apos;], 1))</span><br><span class="line">forecast_set = clf.predict(f_X)</span><br><span class="line"></span><br><span class="line">#创建一个Forecast列存放预测值</span><br><span class="line">AAPL[&apos;Forecast&apos;] = np.nan</span><br><span class="line">#查看数据表中最后一条数据的日期</span><br><span class="line">last_date = AAPL.iloc[-1].name</span><br><span class="line">#将最后一条数据的日期转化为秒</span><br><span class="line">last_unix = last_date.timestamp()</span><br><span class="line">#一天等于86400秒</span><br><span class="line">one_day = 86400</span><br><span class="line">#下一天=数据表最后一天日期数值+一天的秒数值</span><br><span class="line">next_unix = last_unix + one_day</span><br><span class="line">#循环输出日期及预测值</span><br><span class="line">for i in forecast_set:</span><br><span class="line">    next_date = datetime.datetime.fromtimestamp(next_unix)</span><br><span class="line">    next_unix += 86400</span><br><span class="line">    AAPL.loc[next_date] = [np.nan for _ in range(len(AAPL.columns)-1)]+[i]</span><br><span class="line"></span><br><span class="line">#预测后的数据表</span><br><span class="line">print(AAPL.head())</span><br><span class="line">print(AAPL.tail())</span><br><span class="line"></span><br><span class="line">#对真实值和预测值可视化</span><br><span class="line">fig = plt.figure(figsize = (12,12))</span><br><span class="line">AAPL[&apos;Adj. Close&apos;].plot()</span><br><span class="line">AAPL[&apos;Forecast&apos;].plot()</span><br><span class="line">plt.legend(loc=4)</span><br><span class="line">plt.xlabel(&apos;Date&apos;)</span><br><span class="line">plt.ylabel(&apos;Price&apos;)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure><p>最后绘制出的图形：</p><p><img src="https://s2.ax1x.com/2019/03/02/kbTwz8.jpg" alt="APPLE股价预测图"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+          <category> 数据分析实例 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> 数据分析 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>详解用户体验</title>
+      <link href="/2019/01/07/%E8%AF%A6%E8%A7%A3%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/"/>
+      <url>/2019/01/07/%E8%AF%A6%E8%A7%A3%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/</url>
+      
+        <content type="html"><![CDATA[<p> 大部分时候大部分产品经理口中的体验，都是指用户体验或者客户体验。</p><p>这是一个宽泛的概念，包括了一系列子概念，如：信息架构、人机交互、交互设计、图形设计、可用性、以用户为中心的设计等等。</p><a id="more"></a><h1 id="我们最需要关注两点："><a href="#我们最需要关注两点：" class="headerlink" title="我们最需要关注两点："></a>我们最需要关注两点：</h1><h2 id="可用性："><a href="#可用性：" class="headerlink" title="可用性："></a>可用性：</h2><blockquote><p>特定的<strong>用户</strong>在特定的使用<strong>场景</strong>下，为了达到特定的<strong>目标</strong>而使用某产品时，所感受到的有效性、效率及满意的程度。——ISO 9241</p></blockquote><p>用户-&gt;场景-&gt;目标(功能)</p><p>这是我在前面文章中强调的一个思考方式。</p><p>摘录我《用户与场景》一文中的一段</p><blockquote><p>在分析用户需求的时候，我们首先要明确：<strong>用户与场景是紧密联系的，不同人在不同场景下的行为是不同的。</strong></p><h2 id="分析方法"><a href="#分析方法" class="headerlink" title="分析方法"></a>分析方法</h2><p>这里写的方法是基于快速迭代的思路，这里我把方法分为五步：</p><h3 id="1-寻找用户"><a href="#1-寻找用户" class="headerlink" title="1.寻找用户"></a>1.寻找用户</h3><p>这部分用户在产品起步阶段，大致的划分出的目标客户。可能是天使用户，也可能是探索者或是geek。不必太精细，因为后续步骤会将用户继续细化（真正的客户会被验证）。</p><h3 id="2-场景"><a href="#2-场景" class="headerlink" title="2.场景"></a>2.场景</h3><p>在不同场景使用产品必然有不同的需求，例如在火车站绝大部分人需要吃快餐，所以不会有西餐厅开在火车站内，在地铁上手机信号不不好，所以QQ空间现在也支持离线发说说了。</p><h3 id="3-找到问题（需求）"><a href="#3-找到问题（需求）" class="headerlink" title="3.找到问题（需求）"></a>3.找到问题（需求）</h3><p>在确定了用户和场景之后，通过排列组合，我们可以列出很多需求。并且提出<strong>假设</strong>。</p><h3 id="4-验证假设"><a href="#4-验证假设" class="headerlink" title="4.验证假设"></a>4.验证假设</h3><p>假设不一定是正确，当然我们需要去验证。错误的方向只能带来浪费。验证的方式有很多，在产品初期最低成本低风险的方案当属<strong>用户访谈</strong>（这方面后续会写）。</p><h3 id="5-解决方案"><a href="#5-解决方案" class="headerlink" title="5.解决方案"></a>5.解决方案</h3><p>在完成上述步骤后，最终我们就应该有能做出解决用户在某些场景下需求的功能或方案。最终将我们的产品推向市场，然后从步骤1继续循环，这就是<strong>迭代</strong>。这里需要注意，一个产品的生命周期是<strong>有限的</strong>，如果不能在有限的时间内<strong>迭代足够多的次数</strong>，产品就会不成熟，影响收益。就像青春是有限的，如果一个人在年轻力壮没有好好努力的话，就会老大徒伤悲。</p></blockquote><h2 id="UCD-User-Centered-Design-以用户为中心的设计："><a href="#UCD-User-Centered-Design-以用户为中心的设计：" class="headerlink" title="UCD (User-Centered Design) 以用户为中心的设计："></a>UCD (User-Centered Design) 以用户为中心的设计：</h2><p>什么是UCD：</p><blockquote><p>1.用户积极的<strong>融入</strong>及对用户和他们的任务<strong>需求</strong>的清晰理解。</p><p>2.用户与技术之间一个合适的<strong>功能定位</strong></p><p>3.设计方案的<strong>迭代</strong></p><p>4.<strong>跨学科</strong>的设计</p></blockquote><p>就是说，我们需要搞明白<strong>用户</strong>需要什么；</p><p>技术也不是越NB越好，而是要平衡<strong>用户</strong>需求和技术功能；</p><p>现有方案出现BUG影响<strong>用户</strong>体验了，一定要快速的迭代修复；</p><p><strong>用户</strong>的体验是多方面的，所以需要跨学科的知识。</p><p>总之<strong>想用户所想</strong>。</p><h1 id="狭义的用户体验："><a href="#狭义的用户体验：" class="headerlink" title="狭义的用户体验："></a>狭义的用户体验：</h1><p><img src="https://s2.ax1x.com/2019/03/12/AiEIl8.md.jpg" alt="产品可用性"></p><p>上图是一个产品对功能的要求，</p><p><strong>有用：</strong>首先我们应当思考我们的产品或功能是否真的能满足用户的某个<strong>需求</strong>，满足了，就说明我们的产品是有用的。</p><p><strong>可用：</strong>然后就是可用性的问题，有些产品虽然新颖、吸引人，但是功能复杂或者<strong>不切实际</strong>，用户体验后觉得难用，那么这个产品或功能就是不可用的。如果用户使用我们的产品没那么难<strong>上手</strong>没有<strong>困难</strong>，那么我们就达到了可用的标准。</p><p><strong>好用：</strong>当用户能够<strong>习惯</strong></p><h1 id="广义的用户体验："><a href="#广义的用户体验：" class="headerlink" title="广义的用户体验："></a>广义的用户体验：</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 产品 </category>
+          
+          <category> 产品设计 </category>
+          
+          <category> 用户体验 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 产品 </tag>
+            
+            <tag> 产品设计 </tag>
+            
+            <tag> 用户体验 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>用户体验的三条定律</title>
+      <link href="/2018/11/20/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E7%9A%84%E4%B8%89%E6%9D%A1%E5%AE%9A%E5%BE%8B/"/>
+      <url>/2018/11/20/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E7%9A%84%E4%B8%89%E6%9D%A1%E5%AE%9A%E5%BE%8B/</url>
+      
+        <content type="html"><![CDATA[<p>个矛盾的集合体，每个用户都不太一样。让用户觉得简单是一件很直觉的事情，不必多费笔墨。</p><p>但用户又不喜欢过于简单的交互过程，会让人觉得简陋。那么用户到底喜欢什么样的体验呢？</p><p>本篇并不能给出答案，千人千面，不可能面面俱到。因此本篇还是以避免踩坑为主。</p><p>下面内容，其实在前面一些文章中都提到过，但是还是单独拎出来，便于思考。</p><a id="more"></a><h2 id="不要让用户等："><a href="#不要让用户等：" class="headerlink" title="不要让用户等："></a>不要让用户等：</h2><p>用户的<strong>耐心</strong>有限</p><p><strong>响应速度</strong>必须达到平均水准以上，响应慢让人血压升高的体验相信大家都有</p><h2 id="不要让用户想："><a href="#不要让用户想：" class="headerlink" title="不要让用户想："></a>不要让用户想：</h2><p>不要让用户思考了才能明白某个功能或组件，最好让用户只停留在<strong>本能直觉</strong>层面上</p><p>关注用户需要的操作，给出明确清晰的<strong>指引</strong>。用户耐心有限，指引尽可能<strong>简明扼要</strong></p><p>尽可能降低用户<strong>学习成本</strong></p><h2 id="不要让用户烦："><a href="#不要让用户烦：" class="headerlink" title="不要让用户烦："></a>不要让用户烦：</h2><p>不告诉用户错误，且帮用户<strong>处理错误</strong>。<strong>频繁提示</strong>用户错误会使用户失去耐心。</p><p>不过多重复性操作。</p><p>能做到以上3点，一个产品在用户体验上至少算是到及格线了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 产品 </category>
+          
+          <category> 产品设计 </category>
+          
+          <category> 用户体验 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 产品 </tag>
+            
+            <tag> 产品设计 </tag>
+            
+            <tag> 用户体验 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>产品设计中的心智模型</title>
+      <link href="/2018/11/14/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%E4%B8%AD%E7%9A%84%E5%BF%83%E6%99%BA%E6%A8%A1%E5%9E%8B/"/>
+      <url>/2018/11/14/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%E4%B8%AD%E7%9A%84%E5%BF%83%E6%99%BA%E6%A8%A1%E5%9E%8B/</url>
+      
+        <content type="html"><![CDATA[<p>一个成功的产品，必然是要抓住用户的心滴~</p><blockquote><p><em>心智模型</em>的理论是基于一个试图对某事做出合理解释的个人会发展可行的方法的假设，在有限的领域知识和有限的信息处理能力上，产生合理的解释。</p></blockquote><a id="more"></a><h2 id="心智模型："><a href="#心智模型：" class="headerlink" title="心智模型："></a>心智模型：</h2><h3 id="一、关于心理价值和固有价值"><a href="#一、关于心理价值和固有价值" class="headerlink" title="一、关于心理价值和固有价值"></a>一、关于心理价值和固有价值</h3><ol><li><p><strong>禀赋效应</strong></p><p>这个理论，是指当个人一旦拥有某项物品，那么他对该物品价值的评价要比未拥有之前大大增加——百度百科<br>当需要获得某样东西时，它的价值就会降低。比如，当你想要卖掉一桶冰淇淋时，你可能觉得它应该值5美元，但是当你自己想买它的时候，你又希望它能便宜一点，你或许只想出3美元来买它。</p></li><li><p><strong>现状偏差</strong></p><p>现状偏差是情绪性地倾向于维持现状的一种认知偏差。当现状客观上优于其它选项或者在信息不完善时，做出维持现状的决定是一种理性的行为，但现状偏差与此不同。在现状偏差的情况下，现状被当成是基准，任何改变都被视为一种损失。大量证据表明人的决策经常会受到现状偏差的影响。——维基百科<br> 一种称为「默认」或「惯性」的奇特方式。在物理学中，惯性是物体改变其速度状态的阻力。当作用在物体上的外力为零时，惯性表现为物体保持其运动状态不变，即保持静止或匀速直线运动；当作用在物体上的外力不为零时，惯性表现为外力改变物体运动状态的难易程度。当我们表现出对保持事物初始状态和接受默认状态的偏好时，我们就会以现状偏差的形式表现出同样的特征。</p></li></ol><h3 id="二、关于创新"><a href="#二、关于创新" class="headerlink" title="二、关于创新"></a>二、关于创新</h3><ol><li><p><strong>功能固着</strong></p><p>功能固着是指人们把某种功能赋予某种物体的倾向，认定原有的行为就不会再去考虑其他方面的作用。功能固着的产生原因包括心理因素和行为习惯两个方面。功能固着对于我们创造性地解决问题有消极影响，因此应该采用各种方法消除负面影响。——百度百科</p><p>这是一种认知偏差，人们无法用新颖的方式想象产品或体验。创新被所谓的「知识诅咒」所扼杀，在这种「知识诅咒」中，人们对某种东西太熟悉了，以至于无法忘记它的一些传统属性，无法以一种新鲜，未经训练的眼光来看待它。丹尼尔·卡内曼（Daniel Kahneman）将这种认知方法称为「快速思考」——一种简单的思维模式，以至于刻板印象在无意识中形成，没有创造空间。 亚当·格兰特（Adam Grant ）在他的《离经叛道，不按常理出牌的人如何改变世界》一书中写道： 「原创」的起点是好奇心。我们面对一些熟悉的事情，如果使用一些新的视角去看待它，就使我们能够对旧的问题有新的见解。</p><p>随着时间的推移，功能固着强化了这一规律。在产品中，重要的是需要认识到，遵循「有效」的传统决策与「新常态」的创新机会。</p></li><li><p><strong>第一性原理</strong></p><p>避免功能固着的一种方法是抽象问题并以基本原则进行思考。第一原则中的推理意味着将复杂的场景分解为基本的事实，并从头开始构建一个解决方案。亚里士多德早在2000多年前就提出了这个概念，并将其定义为「认识事物的第一基础」。</p><p>我倾向于从物理框架来研究问题。物理学教会你从基本原理出发而不是通过类比来进行推理。所以我说让我们验证第一原则。火箭是由什么组成的？航空级铝合金，外加钛，铜和碳纤维。然后我问，这些材料在商品市场上的价值是多少？结果证明，火箭的材料成本大约只相当于大型机械产品价格的2%，这是一个不可思议的比例。（译者注：这个案例可能是想说明，如果按照类比性推理，可能会觉得火箭的材料成本特别贵，而其实不然。）</p></li></ol><h3 id="三、担心错过"><a href="#三、担心错过" class="headerlink" title="三、担心错过"></a>三、担心错过</h3><ol><li><p><strong>厌恶损失</strong></p><p>没有人想有损失，但更有趣的是，人们宁愿避免失去某些东西，也不愿意获得同等的东西。在行为心理学中，厌恶损失是「预期理论」的基础：人们认为损失的痛苦是获得快乐的两倍，因此他们会冒着额外的风险，以避免任何潜在的损失。</p></li><li><p><strong>社会认同</strong></p><p>社会认同是指在自己的未知领域，人们会倾向于通过观察过来人的行为来帮助自己做决定。比如你叫外卖时，想尝试一家新的店铺，这时你一定会看看已经吃过这家店的人对这家店的评价，再做决定。在产品设计中，可以通过喜欢（赞同）数量、访问数量、评论数量、正向的追评、回访，或者展示其他用户的行为动作来利用社会认同现象。</p></li></ol><h3 id="四、关于用户的重要性"><a href="#四、关于用户的重要性" class="headerlink" title="四、关于用户的重要性"></a>四、关于用户的重要性</h3><ol><li><p><strong>网络效应</strong></p><p>网络效应指在经济学或商业中，消费者选用某项商品或服务，其所获得的效用与「使用该商品或服务的其他用户人数」具有相关性时，此商品或服务即被称为具有网上外部性。 最常见的例子是电话或社交网络服务：采用某一种社交媒体的用户人数越多，每一位用户获得越高的使用价值。——维基百科</p></li><li><p><strong>群聚效应</strong></p><p>群聚效应（Critical mass）是一个社会动力学的名词，用来描述在一个社会系统里，某件事情的存在已达至一个足够的动量，使它能够自我维持，并为往后的成长提供动力。——维基百科</p></li></ol><h3 id="五、关于资料的介绍"><a href="#五、关于资料的介绍" class="headerlink" title="五、关于资料的介绍"></a>五、关于资料的介绍</h3><ol><li><p><strong>锚定效应</strong></p><p>人类在进行决策时，会过度偏重先前取得的资讯（这称为锚点），即使这个资讯与这项决定无关。在进行决策时，人类倾向于利用此片断资讯（锚点），快速做出决定。在接下来的决定中，再以第一个决定为基准，逐步修正。但是人类容易过度利用锚点，来对其他资讯与决定做出诠释，当锚点与实际上的事实之间的有很大出入，就会出现当局者迷的情况。——维基百科</p></li><li><p><strong>框架效应</strong></p><p>框架效应指人们对一个客观上相同问题的不同描述导致了不同的决策判断。框架效应的概念由 Tversky 和 Kahneman 于1981年首次提出。——百度百科</p></li></ol><p>转载：<a href="https://www.uisdc.com/10-basic-mental-models" target="_blank" rel="noopener">https://www.uisdc.com/10-basic-mental-models</a></p><h2 id="心智模型在产品设计中的应用："><a href="#心智模型在产品设计中的应用：" class="headerlink" title="心智模型在产品设计中的应用："></a>心智模型在产品设计中的应用：</h2><p>1.由于<strong>现状偏差</strong>的存在，我们就应当尽可能的在产品设计中给与用户充分的引导，大小用户的顾虑。</p><p>2.由于<strong>功能固着</strong>效应，在我们做同类App的时候，应当尽量照顾用户原有使用该类App的习惯。</p><p>另外我们也可以培养用户的习惯，增强用户对产品的依赖性。</p><p>3.<strong>第一性原理</strong>告诉我们尽量把交互逻辑和业务逻辑清晰地或者由着重地展现给用户。</p><p>4.<strong>社会认同</strong>就是我们常说的排队效应，用户就是我们产品最好的广告。</p><p>5.当用户达到一定量级之后就会触发<strong>网络效应</strong>和<strong>群聚效应</strong>，使我们的产品脱颖而出并具有强自我维持能力。</p><p>6.<strong>锚定效应</strong>一般用于调节客户期望，比如64g/128g/256g iPhone的定价，就会让人忽略自己的需求，</p><p>产生越大容量iPhone越划算的感觉。</p><p>7.<strong>框架效应</strong>其实就是看一个事物角度的问题。<strong>屡战屡败</strong>跟<strong>屡败屡战</strong>，相同的事实，都是失败，但后者显得更为积极。这告诉我们有时候重要的并不是内容，而是如何呈现内容。现在进某写app前，一般都会播放个3秒的光广告，而传统广告浮在App上，需要我们手动关闭，可以思考一下，为什么同样的广告，呈现方式不同效果就不同。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 产品 </category>
+          
+          <category> 产品设计 </category>
+          
+          <category> 心智模型 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 产品 </tag>
+            
+            <tag> 产品设计 </tag>
+            
+            <tag> 心智模型 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>产品设计的方法，你知道了吗？</title>
+      <link href="/2018/11/14/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
+      <url>/2018/11/14/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="产品的目标："><a href="#产品的目标：" class="headerlink" title="产品的目标："></a>产品的目标：</h2><p>产品由5大要素组成，如下图：</p><p><img src="https://s2.ax1x.com/2019/03/09/ASrD9f.jpg" alt="用户体验要锁"></p><a id="more"></a><p>由<strong>重要性</strong>排序来解释</p><p><strong>战略层：</strong>在设计一个产品之前，我们应当明确我们解决了用户的什么<strong>需求</strong>，我们这么做有多大的<strong>商业价值</strong>。</p><p><strong>范围层：</strong>在想好如何解决用户需求之后，我们就可以开始思考我们产品的<strong>功能点</strong>。</p><p><strong>结构层：</strong>有了功能点之后，功能需要页面来呈现，那么我们需要明确每个功能之间的<strong>逻辑关系</strong>时什么，页面如何跳转。</p><p><strong>框架层：</strong>在功能和结构完备之后，我们就要想办法让用户尽可能<strong>直觉</strong>的<strong>低学习成本</strong>的来使用我们的产品。于是我们要思考如何合理设计我的UI页面，导航和提示信息等等。</p><p><strong>表现层：</strong>审美需求是人的基本需求，自然是越好看越直观越好。不过这不是PM的主要职责。</p><p>由这样的顺序进行，可以避免一些无谓的浪费，比如返工。 这就是为什么我们使用的处在初期的App多数较为简陋。</p><h2 id="产品的价值："><a href="#产品的价值：" class="headerlink" title="产品的价值："></a>产品的价值：</h2><p>用户对产品价值的要求基本上可以表述为</p><p><strong>有用-&gt;可用-&gt;好用-&gt;令人愉悦-&gt;有重要意义</strong></p><p>一个合格的产品至少要做到前3条。</p><p>靠谱的根基比炫酷的视觉效果，新颖的操作方式来的更重要。</p><h2 id="产品设计中应当注意的点："><a href="#产品设计中应当注意的点：" class="headerlink" title="产品设计中应当注意的点："></a>产品设计中应当注意的点：</h2><p>避免错误比取得成功更容易一些，也更有性价比一些。因为错误往往是致命的。</p><p>如果在避免错误之后做出正确的设计，我们的产品成功的概率就会大大提高了。</p><h3 id="心智模型："><a href="#心智模型：" class="headerlink" title="心智模型："></a>心智模型：</h3><p>不要设计一些违反<strong>生理结构</strong>或<strong>心理直觉</strong>的设计，例如没有将不能按的按钮设计成灰色。</p><p>我们最好设计符合用户<strong>现有习惯</strong>，或者符合<strong>直觉</strong>，至少是<strong>学习成本</strong>较低的设计。</p><p>心智模型时复杂的，详见另一篇文章。</p><p>URL……………………..</p><h3 id="预设用途："><a href="#预设用途：" class="headerlink" title="预设用途："></a>预设用途：</h3><p>不要向用户暗示错误的预设用途，例如需要推的门却有门把手，给人需要拉的感觉。</p><h3 id="没有有效反馈："><a href="#没有有效反馈：" class="headerlink" title="没有有效反馈："></a>没有有效反馈：</h3><p>出发的事件、进行中的工作都需要进行有效的<strong>反馈</strong>。试想一下用户点击下载按钮之后，却没有进度条来反馈进度的样子。</p><p>我们应当根据用户需求，最好给出动态的、及时的反馈，并设计合理的反馈途径，比如拍照的咔嚓声。</p><p>典型的例子就是现在将商品加入购物车时都会有一个商品<strong>飞入购物车的动画</strong>。</p><h3 id="限制性："><a href="#限制性：" class="headerlink" title="限制性："></a>限制性：</h3><p>给用户一定程度的限制，避免出现<strong>不可控</strong>的情况，也可以提供有效的<strong>引导</strong>。</p><p>例如iPhone的home键，唯一的home键有效的引导和限制了用户的行为。</p><p>我们还需要给用户一定的<strong>暗示</strong>，例如将不可按的按钮显示为灰色，提示用户不可点击。</p><p>另外我们还需要主动<strong>纠正</strong>用户的错误。频繁提示用户使用的错误会消磨用户的耐心。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 产品 </category>
+          
+          <category> 产品设计 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 产品 </tag>
+            
+            <tag> 产品设计 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>怎么制作产品流程图</title>
+      <link href="/2018/11/08/%E4%BA%A7%E5%93%81%E6%B5%81%E7%A8%8B%E5%9B%BE/"/>
+      <url>/2018/11/08/%E4%BA%A7%E5%93%81%E6%B5%81%E7%A8%8B%E5%9B%BE/</url>
+      
+        <content type="html"><![CDATA[<p> 工欲善其事必先利其器，方向都没搞清楚就开车，绕的路就越远。本篇我们就来介绍产品的方向盘——产品流程图。</p><h2 id="什么是流程图："><a href="#什么是流程图：" class="headerlink" title="什么是流程图："></a>什么是流程图：</h2><p>流程图就是将<strong>逻辑关系</strong>用<strong>图形</strong>表现出来，图形直观，可读性强，也便于之后修改。</p><h2 id="为什么要画流程图："><a href="#为什么要画流程图：" class="headerlink" title="为什么要画流程图："></a>为什么要画流程图：</h2><p><strong>1、帮助梳理逻辑</strong></p><p>大脑的记忆能力并不是很强，你一定有想问题的时候想到后面忘了前面的体验。同样我们上来就画原型就有可能做很多无用功，而流程图就可以帮助我们理清楚思路。</p><p><strong>2、便于修改</strong></p><p>国家政策都改个不停，更不用说我们的产品了，市场瞬息万变。</p><p><strong>3、便于宣讲和传播</strong></p><p>产品经理需要跟很多人对接，如果有一张清晰的流程图，可以帮助你更容易的说明业务逻辑，也便于其他人理解这个项目。</p><a id="more"></a><h2 id="流程图的组成："><a href="#流程图的组成：" class="headerlink" title="流程图的组成："></a>流程图的组成：</h2><h3 id="流程图符号："><a href="#流程图符号：" class="headerlink" title="流程图符号："></a>流程图符号：</h3><p><img src="https://s2.ax1x.com/2019/03/07/kxuinA.jpg" alt="流程图符号"></p><h2 id="绘制的流程图"><a href="#绘制的流程图" class="headerlink" title="绘制的流程图"></a>绘制的流程图</h2><p>产品流程图主要分为：<strong>业务路程图、任务流程图、页面流程图</strong></p><p><img src="https://s2.ax1x.com/2019/03/07/kxMeyQ.png" alt="3种流程图"></p><h3 id="业务路程图："><a href="#业务路程图：" class="headerlink" title="业务路程图："></a>业务路程图：</h3><p>业务路程图也叫泳道图，它能够展示工作流程中每个步骤涉及的流程和职能部门。泳道流程图是一种特殊的图表可以展示出一个商业过程之间的关系，并展示为那个过程负责的功能板块（比如说部门）。泳道流程图专注于价值活动之间的逻辑关系，更好地展示每个价值活动的责任。</p><blockquote><p>流程图描述一个过程的步骤，当这个过程涉及许多不同的人，部门或功能区域时，很难跟踪每个步骤的负责人。解决此问题的一个有用方法是把流程图分栏，这样也能清晰地了解任务转交的次数。在每一栏的顶部写出负责此栏内过程的人或部门的名字。每次执行一个行为时，在此栏描述。</p></blockquote><p>例如网上购物的业务流程图如下。</p><p><img src="https://s2.ax1x.com/2019/03/07/kxM3WT.png" alt="业务路程图"></p><h3 id="任务流程图："><a href="#任务流程图：" class="headerlink" title="任务流程图："></a>任务流程图：</h3><p>任务流程图很常见，写程序前要画任务流程图，做电子设计前也要画任务流程图，总的来说就是<strong>具体执行某个任务</strong>时，我们就需要任务流程图了。</p><p>例如下面我们网上购物的任务流程图。</p><p><img src="https://s2.ax1x.com/2019/03/07/kxBXMd.png" alt="任务流程图"></p><h3 id="页面流程图："><a href="#页面流程图：" class="headerlink" title="页面流程图："></a>页面流程图：</h3><p>页面流程图的对象是页面，<strong>页面</strong>是互联网产品设计最基本的单元，不管APP也好、H5也好、PC端也好，这些产品由一个个页面组成。页面流描述了用户完成一个任务需要经过哪些页面。也就是我在哪，经过什么操作，能去哪。</p><p>页面流有三个要素：<strong>页面</strong>、<strong>行动点</strong>、<strong>连接线</strong>。</p><p>例如下面拿购物的页面流：</p><p><img src="https://s2.ax1x.com/2019/03/07/kxDEss.png" alt="页面流程图"></p><h2 id="如何确定流程："><a href="#如何确定流程：" class="headerlink" title="如何确定流程："></a>如何确定流程：</h2><blockquote><p>讲完了基础的东西，接下来我们来梳理下，该如何确定产品的流程。</p><p>首先我们要设计的是产品的核心功能流程，也就是用户的核心使用路径。拿微博进行举例，微博用户的核心操作路径是这样的：</p><ul><li>路径一：登录微博-&gt;查看微博动态-&gt;转发、点赞、评论微博</li><li>路径二：登录微博-&gt;发表自己的微博-&gt;查看私信，回复微博评论</li></ul><p>这是微博用户最常有的两种操作行为，所以你会发现：所谓产品的核心功能流程，就是一个产品对用户产生的价值，用户要感知到这个价值需要完成的最简操作步骤。微博这个产品对用户来说，最大的价值无非就是两个方面，一个是可以碎片化地浏览资讯，一个是可以碎片化地发表自己的动态信息。用户要感知到这两个价值，就必然要做出上述的一系列操作流程和步骤。</p><p>所以，在确定产品的主干流程的时候，需要先弄清楚产品的价值到底体现在哪里，用户要完成对这个产品价值的感知，需要付出哪些行为。通过这样一个简单的分析，我们就能得出产品的主流程了。</p><p>当然，这里输出的产品主流程，只是一个产品的整体使用流程，具体到某一个功能如何进行操作使用，就需要花费更多的精力去进行细化分解。</p><p>那对于某个功能的产品操作流程梳理，我们又具体怎么来做呢？</p><p>我建议可以从下面3步着手。</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 产品 </category>
+          
+          <category> 产品流程图 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 产品 </tag>
+            
+            <tag> 产品流程图 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>leetcode 删除重复的电子邮箱(SQL)</title>
+      <link href="/2018/10/23/leetcode%20sql%20%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E7%9A%84%E7%94%B5%E5%AD%90%E9%82%AE%E7%AE%B1/"/>
+      <url>/2018/10/23/leetcode%20sql%20%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E7%9A%84%E7%94%B5%E5%AD%90%E9%82%AE%E7%AE%B1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="原题："><a href="#原题：" class="headerlink" title="原题："></a>原题：</h2><p>编写一个 SQL 查询，来删除 <code>Person</code> 表中所有重复的电子邮箱，重复的邮箱里只保留 <strong>Id</strong> <em>最小</em> 的那个。</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">+----+------------------+</span><br><span class="line">| Id | Email            |</span><br><span class="line">+----+------------------+</span><br><span class="line">| 1  | john@example.com |</span><br><span class="line">| 2  | bob@example.com  |</span><br><span class="line">| 3  | john@example.com |</span><br><span class="line">+----+------------------+</span><br><span class="line">Id 是这个表的主键。</span><br></pre></td></tr></table></figure><p>例如，在运行你的查询语句之后，上面的 <code>Person</code> 表应返回以下几行:</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">+----+------------------+</span><br><span class="line">| Id | Email            |</span><br><span class="line">+----+------------------+</span><br><span class="line">| 1  | john@example.com |</span><br><span class="line">| 2  | bob@example.com  |</span><br><span class="line">+----+------------------+</span><br></pre></td></tr></table></figure><a id="more"></a><h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">delete p1</span><br><span class="line">from Person p1, Person p2</span><br><span class="line">where p1.email = p2.email</span><br><span class="line">and p1.id&gt;p2.id;</span><br></pre></td></tr></table></figure><h2 id="解析："><a href="#解析：" class="headerlink" title="解析："></a>解析：</h2><p>DELETE：DELETE FROM 表名称 WHERE 列名称 = 值,删除符合目标的值</p><p>WHERE：设置筛选条件</p><p>FROM：from后用’，’连接，其效果相当于join(内连)</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+          <category> leetcode </category>
+          
+          <category> SQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> SQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>leetcode 超过经理收入的员工(SQL)</title>
+      <link href="/2018/10/20/leetcode%20sql%20%E8%B6%85%E8%BF%87%E7%BB%8F%E7%90%86%E6%94%B6%E5%85%A5%E7%9A%84%E5%91%98%E5%B7%A5/"/>
+      <url>/2018/10/20/leetcode%20sql%20%E8%B6%85%E8%BF%87%E7%BB%8F%E7%90%86%E6%94%B6%E5%85%A5%E7%9A%84%E5%91%98%E5%B7%A5/</url>
+      
+        <content type="html"><![CDATA[<h2 id="原题："><a href="#原题：" class="headerlink" title="原题："></a>原题：</h2><p>SQL架构</p><p><code>Employee</code> 表包含所有员工，他们的经理也属于员工。每个员工都有一个 Id，此外还有一列对应员工的经理的 Id。</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">+----+-------+--------+-----------+</span><br><span class="line">| Id | Name  | Salary | ManagerId |</span><br><span class="line">+----+-------+--------+-----------+</span><br><span class="line">| 1  | Joe   | 70000  | 3         |</span><br><span class="line">| 2  | Henry | 80000  | 4         |</span><br><span class="line">| 3  | Sam   | 60000  | NULL      |</span><br><span class="line">| 4  | Max   | 90000  | NULL      |</span><br><span class="line">+----+-------+--------+-----------+</span><br></pre></td></tr></table></figure><p>给定 <code>Employee</code> 表，编写一个 SQL 查询，该查询可以获取收入超过他们经理的员工的姓名。在上面的表格中，Joe 是唯一一个收入超过他的经理的员工。</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">+----------+</span><br><span class="line">| Employee |</span><br><span class="line">+----------+</span><br><span class="line">| Joe      |</span><br><span class="line">+----------+</span><br></pre></td></tr></table></figure><a id="more"></a><h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select E1.Name Employee from Employee E1, Employee E2</span><br><span class="line">where E1.ManagerId = E2.Id and E1.Salary &gt; E2.Salary;</span><br></pre></td></tr></table></figure><h2 id="解析："><a href="#解析：" class="headerlink" title="解析："></a>解析：</h2><p> WHERE：设置筛选条件</p><p>FROM：from后用’，’连接，其效果相当于join(内连)</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+          <category> leetcode </category>
+          
+          <category> SQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> SQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>leetcode 有趣的电影(SQL)</title>
+      <link href="/2018/10/18/leetcode%20sql%20%E8%B6%85%E8%BF%875%E5%90%8D%E5%AD%A6%E7%94%9F%E7%9A%84%E8%AF%BE/"/>
+      <url>/2018/10/18/leetcode%20sql%20%E8%B6%85%E8%BF%875%E5%90%8D%E5%AD%A6%E7%94%9F%E7%9A%84%E8%AF%BE/</url>
+      
+        <content type="html"><![CDATA[<h2 id="原题："><a href="#原题：" class="headerlink" title="原题："></a>原题：</h2><p>SQL架构</p><p>有一个<code>courses</code> 表 ，有: <strong>student (学生)</strong> 和 <strong>class (课程)</strong>。</p><p>请列出所有超过或等于5名学生的课。</p><p>例如,表:</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">+---------+------------+</span><br><span class="line">| student | class      |</span><br><span class="line">+---------+------------+</span><br><span class="line">| A       | Math       |</span><br><span class="line">| B       | English    |</span><br><span class="line">| C       | Math       |</span><br><span class="line">| D       | Biology    |</span><br><span class="line">| E       | Math       |</span><br><span class="line">| F       | Computer   |</span><br><span class="line">| G       | Math       |</span><br><span class="line">| H       | Math       |</span><br><span class="line">| I       | Math       |</span><br><span class="line">+---------+------------+</span><br></pre></td></tr></table></figure><p>应该输出:</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">+---------+</span><br><span class="line">| class   |</span><br><span class="line">+---------+</span><br><span class="line">| Math    |</span><br><span class="line">+---------+</span><br></pre></td></tr></table></figure><a id="more"></a><h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select class</span><br><span class="line">from courses</span><br><span class="line">group by class having count(distinct student)&gt;=5;</span><br></pre></td></tr></table></figure><h2 id="解析："><a href="#解析：" class="headerlink" title="解析："></a>解析：</h2><p><strong>Where</strong> 是约束声明，可以约束数据库的数据，Where是在结果返回之前起作用的，因此Where中不能使用聚合函数。</p><p><strong>Having</strong> 是过滤声明，在查询返回结果集以后对查询结果进行的过滤操作，因此Having中可以使用聚合函数。</p><p><strong>GROUP BY</strong> ： GROUP BY class 时，只有属于同一个class的一组数据，返回一行值。 </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+          <category> leetcode </category>
+          
+          <category> SQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> SQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>leetcode 有趣的电影(SQL)</title>
+      <link href="/2018/10/15/leetcode%20sql%20%E6%9C%89%E8%B6%A3%E7%9A%84%E7%94%B5%E5%BD%B1/"/>
+      <url>/2018/10/15/leetcode%20sql%20%E6%9C%89%E8%B6%A3%E7%9A%84%E7%94%B5%E5%BD%B1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="原题："><a href="#原题：" class="headerlink" title="原题："></a>原题：</h2><p>SQL架构</p><p>某城市开了一家新的电影院，吸引了很多人过来看电影。该电影院特别注意用户体验，专门有个 LED显示板做电影推荐，上面公布着影评和相关电影描述。</p><p>作为该电影院的信息部主管，您需要编写一个 SQL查询，找出所有影片描述为<strong>非</strong> <code>boring</code> (不无聊) 的并且 <strong>id 为奇数</strong> 的影片，结果请按等级 <code>rating</code> 排列。</p><p>例如，下表 <code>cinema</code>:</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">+---------+-----------+--------------+-----------+</span><br><span class="line">|   id    | movie     |  description |  rating   |</span><br><span class="line">+---------+-----------+--------------+-----------+</span><br><span class="line">|   1     | War       |   great 3D   |   8.9     |</span><br><span class="line">|   2     | Science   |   fiction    |   8.5     |</span><br><span class="line">|   3     | irish     |   boring     |   6.2     |</span><br><span class="line">|   4     | Ice song  |   Fantacy    |   8.6     |</span><br><span class="line">|   5     | House card|   Interesting|   9.1     |</span><br><span class="line">+---------+-----------+--------------+-----------+</span><br></pre></td></tr></table></figure><p>对于上面的例子，则正确的输出是为：</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">+---------+-----------+--------------+-----------+</span><br><span class="line">|   id    | movie     |  description |  rating   |</span><br><span class="line">+---------+-----------+--------------+-----------+</span><br><span class="line">|   5     | House card|   Interesting|   9.1     |</span><br><span class="line">|   1     | War       |   great 3D   |   8.9     |</span><br><span class="line">+---------+-----------+--------------+-----------+</span><br></pre></td></tr></table></figure><a id="more"></a><h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">select *</span><br><span class="line">from cinema</span><br><span class="line">where description!=&apos;boring&apos;</span><br><span class="line">and mod(id,2)=1</span><br><span class="line">order by rating desc;</span><br></pre></td></tr></table></figure><h2 id="解析："><a href="#解析：" class="headerlink" title="解析："></a>解析：</h2><p>select *：匹配所有匹配项</p><p>where：设置筛选条件</p><p>mod()函数：取模运算，模2余1即为奇数</p><p>order by：由某项参数进行排序</p><p>desc：逆向排序（升序变降序，降序变升序）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+          <category> leetcode </category>
+          
+          <category> SQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> SQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>leetcode 交换工资(SQL)</title>
+      <link href="/2018/10/12/leetcode%20sql%20%E4%BA%A4%E6%8D%A2%E5%B7%A5%E8%B5%84/"/>
+      <url>/2018/10/12/leetcode%20sql%20%E4%BA%A4%E6%8D%A2%E5%B7%A5%E8%B5%84/</url>
+      
+        <content type="html"><![CDATA[<h2 id="原题："><a href="#原题：" class="headerlink" title="原题："></a>原题：</h2><p>SQL架构</p><p>给定一个 <code>salary</code> 表，如下所示，有 m=男性 和 f=女性 的值 。交换所有的 f 和 m 值（例如，将所有 f 值更改为 m，反之亦然）。要求使用一个更新（Update）语句，并且没有中间临时表。</p><p>请注意，你必须编写一个 Update 语句，不要编写任何 Select 语句。</p><p>例如:</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">| id | name | sex | salary |</span><br><span class="line">|----|------|-----|--------|</span><br><span class="line">| 1  | A    | m   | 2500   |</span><br><span class="line">| 2  | B    | f   | 1500   |</span><br><span class="line">| 3  | C    | m   | 5500   |</span><br><span class="line">| 4  | D    | f   | 500    |</span><br></pre></td></tr></table></figure><p>运行你所编写的更新语句之后，将会得到以下表:</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">| id | name | sex | salary |</span><br><span class="line">|----|------|-----|--------|</span><br><span class="line">| 1  | A    | f   | 2500   |</span><br><span class="line">| 2  | B    | m   | 1500   |</span><br><span class="line">| 3  | C    | f   | 5500   |</span><br><span class="line">| 4  | D    | m   | 500    |</span><br></pre></td></tr></table></figure><a id="more"></a><h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Update salary</span><br><span class="line">set</span><br><span class="line">    sex = case sex when &apos;f&apos; then &apos;m&apos; else &apos;f&apos;</span><br><span class="line">end;</span><br></pre></td></tr></table></figure><h2 id="解析："><a href="#解析：" class="headerlink" title="解析："></a>解析：</h2><p><strong>UPDATE</strong> ：UPDATE 语句用于更新表中已存在的记录</p><p>语法</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UPDATE 表名称 SET 列名称 = 新值 WHERE 列名称 = 某值</span><br></pre></td></tr></table></figure><p>CASE函数：</p><p>两种用法</p><p><strong>简单Case函数</strong></p><pre><code>CASE sex WHEN &apos;f&apos; THEN &apos;m&apos;WHEN &apos;m&apos; THEN &apos;f&apos;ELSE &apos;other&apos; END;</code></pre><p><strong>Case搜索函数</strong></p><pre><code>CASE WHEN sex = &apos;f&apos; THEN &apos;m&apos; WHEN sex = &apos;m&apos; THEN &apos;f&apos; ELSE &apos;other&apos; END </code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+          <category> leetcode </category>
+          
+          <category> SQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> SQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>需求的分析与管理</title>
+      <link href="/2018/10/03/%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%92%8C%E7%AE%A1%E7%90%86/"/>
+      <url>/2018/10/03/%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%92%8C%E7%AE%A1%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[<p> 需求是产品经理每天接触最多的东西，总有要改的需求，总有新增的需求，本篇就来谈谈需求。</p><h2 id="什么是需求："><a href="#什么是需求：" class="headerlink" title="什么是需求："></a>什么是需求：</h2><h3 id="从用户的角度："><a href="#从用户的角度：" class="headerlink" title="从用户的角度："></a>从用户的角度：</h3><p>从用户的角度看，就是用户<strong>想要什么</strong>。</p><p>比如现在有个用户想要开窗。</p><h3 id="关注背景："><a href="#关注背景：" class="headerlink" title="关注背景："></a>关注背景：</h3><p>在了解了用户想要什么之后一定要关注<strong>背景</strong>，否则就容易给出<strong>治标不治本</strong>的解决方案。</p><p>比如现在这个用户的背景是在屋子里很热，汗流浃背。</p><h3 id="从产品经理的角度："><a href="#从产品经理的角度：" class="headerlink" title="从产品经理的角度："></a>从产品经理的角度：</h3><p>通过前两个角度的分析，我们发现用户的<strong>根本问题</strong>是屋子里太热了。</p><p>于是我可以选择给用户安装风扇空调，这就是解决方案。</p><a id="more"></a><h3 id="需求即用户产生问题的根本原因："><a href="#需求即用户产生问题的根本原因：" class="headerlink" title="需求即用户产生问题的根本原因："></a>需求即用户产生问题的根本原因：</h3><p>需求只于用户产生问题的<strong>根本原因</strong>有关。并不是一些<strong>表面的原因</strong>。</p><p>另一个很经典的例子：就是人跟人交流，传递信息。</p><p>解决方案的历史：喊-&gt;飞鸽传书-&gt;邮局-&gt;电报-&gt;电话-&gt;IM软件。</p><p>我们可以发现，用户的需求一直都是交流。</p><h3 id="需求与背景："><a href="#需求与背景：" class="headerlink" title="需求与背景："></a>需求与背景：</h3><p>需求必须与背景相匹配。在现在不会人人都会使用IM软件，不会有人使用飞鸽传书。</p><p>比如内燃机时代，用户说自己需要更快的马，于是我们就要去训练更好的马吗？</p><p>我们知道福特给出的方案是发明了汽车。因为用户的需求是更快的交通工具。</p><p>但是如果放到现代，一个用户家里有车，说自己需要更快的马。那么他很可能是马术爱好者，确实只是需要更好的马。</p><h3 id="需求层次理论："><a href="#需求层次理论：" class="headerlink" title="需求层次理论："></a>需求层次理论：</h3><blockquote><p>马斯洛的需求层次理论（英语：Maslow’s hierarchy of needs）是亚伯拉罕·马斯洛于1943年《心理学评论》的论文〈人类动机的理论〉（A Theory of Human Motivation）中所提出的理论[2]。马斯洛随后延伸了这个想法，包含了他对人类天生好奇心的观察。他的理论与其他人类发展心理学的理论可以并行，尤其是针对人类成长阶段的描述。马斯洛使用了“生理”、“安全”、“隶属”与“爱”、“自尊”、“自我实现”与“自我超越”等术语，描述人类动机推移的脉络。</p></blockquote><p><img src="https://s2.ax1x.com/2019/03/05/kXsomq.png" alt="马斯洛的需求层次模型"></p><p>一般来说，越是底层，需求就越大越强。产品可以在满足基本需要时，可以分析用户的马斯洛需求，进一步满足用户<strong>更高层次的需求</strong>，从而提升产品竞争力。</p><p>比如支付宝微信红包功能，红包上还能写祝福语，那么已经有转账功能了为什么还需要一个红包功能呢？</p><p>就是因为转账只能满足用户便捷和安全的需要，而红包能够更近一步的满足<strong>社交和情感化需求</strong>。</p><h2 id="如何寻找需求："><a href="#如何寻找需求：" class="headerlink" title="如何寻找需求："></a>如何寻找需求：</h2><p>用户的需求与冰山类似，我们只能看到少部分<strong>已知的需求</strong>，例如：用户热，所以我们提供空调。</p><p>一部分<strong>隐含的需求</strong>，例如：有人买奔驰，不仅仅是因为奔驰的车性能好，还隐含着他对社交的需求，对尊重的需求，还可能是炫耀，而这种需求一般不会说出来。</p><p>还有一部分<strong>未知的需求</strong>，比如要更快的马的人其实并不清楚自己要的是更快的交通工具。</p><p>所以在我们挖掘需求时，需要注重方法，尽可能的挖掘需求。</p><h3 id="需求调研："><a href="#需求调研：" class="headerlink" title="需求调研："></a>需求调研：</h3><p>需求调研大致可以总结为以下三步</p><p><strong>询问</strong>：找到关键问题，询问用户的看法。</p><p><strong>倾听</strong>：切记不要对用户的观点进行评价，评价会使用户不能真实表达，仅仅做好倾听者的角色。</p><p><strong>场景</strong>：分析用户场景，最好到用户所在场景中去调研，而不是把用户招来我们的办公室。</p><p><strong>行为</strong>：观察用户的真实行为，行为往往能更真实的反应用户的需求。</p><p>例：Sony在调研用户所喜欢的MP3的颜色，询问用户对不同颜色MP3的看法，大多数用户在谈到黑色时，</p><p>说黑色沉闷无趣。但Sony的高明之处在于，在调研活动结束时可以让被调研用户选择一个颜色的MP3带走。</p><p>这时，大部分用户却选择了黑色。再落实到场景，因为MP3是便携设备，大多数人要考虑带出去的情况，</p><p>而大和民族是一个不主张个性的民族，那么黑色就更贴合他们外出时的心理需求。</p><h3 id="找到刚需、频发的需求："><a href="#找到刚需、频发的需求：" class="headerlink" title="找到刚需、频发的需求："></a>找到刚需、频发的需求：</h3><p><strong>刚需</strong>，典型代表就是住房，高企的房价可以说明很多问题了。</p><p><strong>频发的需求</strong>，典型代表就是IM软件，我们日常需要不停的发消息，与人进行沟通。</p><p>满足这样的需求，才能带来客观的<strong>商业价值</strong>。</p><h3 id="分辨真假需求："><a href="#分辨真假需求：" class="headerlink" title="分辨真假需求："></a>分辨真假需求：</h3><p>有些功能做了绝大多数用户都不去使用，那么恭喜，你验证了一个假需求。</p><p>例如飞行航路图，绝大部分用户并不关心航线是怎样的，比起航线用户更关心时间等其他信息。</p><p>那么怎么去辨别呢？这里提供三个步骤</p><p><strong>观察需求是否普遍，分析需求发生背景，分析需求来源</strong>。</p><p>网络定票12306满足了人们出行的普遍需求。4G时代短视频APP的流行迎合了4G高速网络的背景。</p><p>以上两个例子都有深刻的需求来源，前者是出行，后者是娱乐。</p><p>这时这并不能绝对的判断是真还是假需求。</p><p>诺基亚的时代，iPhone还没出世，智能机的需求看起来并不普遍。</p><p>而在那时能推出iPhone的人，也成为了传奇。</p><h2 id="需求的管理："><a href="#需求的管理：" class="headerlink" title="需求的管理："></a>需求的管理：</h2><p>建模是思考的好方法，更能将问题抽象化。在管理需求时，我们引入卡诺模型。</p><h3 id="卡诺模型："><a href="#卡诺模型：" class="headerlink" title="卡诺模型："></a>卡诺模型：</h3><p><img src="https://s2.ax1x.com/2019/03/05/kXftRf.png" alt="卡诺模型"></p><p><strong>必备属性</strong>：基本必须功能。</p><p><strong>期望属性</strong>：用户想要的功能，产品越能提高这项属性，用户的满意度越高。</p><p><strong>魅力属性</strong>：用户没想到的功能，产品提供了令人惊喜的功能，用户满意度大幅提高。</p><p><strong>无差异特性</strong>：此特性不管做多做少，用户都不会在意。</p><p><strong>反向特性</strong>：如果产品中有此特性越多，用户越不满意。</p><p>我们可以将我们需要的功能的进行属性上的划分，以便管理。</p><p><img src="https://s2.ax1x.com/2019/03/05/kXfRQU.png" alt="卡诺模型表"></p><p>在用户满意度调查中也可以依据卡诺模型合理设置问题，得到绘制卡诺图所需要的数据。</p><h3 id="需求管理表："><a href="#需求管理表：" class="headerlink" title="需求管理表："></a>需求管理表：</h3><p>需求管理列表的几项要素：<strong>编号、优先级、商业价值、备注、状态、时间、描述、类型</strong></p><p>这里列举几个更为便捷的需求管理工具：</p><p><strong>Rational RequisitePro</strong></p><p><strong>IBM Rational DOORS</strong></p><p><strong>青铜器RDM</strong></p><h2 id="需求的规划"><a href="#需求的规划" class="headerlink" title="需求的规划"></a>需求的规划</h2><p>我们的资源是有限的，不可能同时满足所有需求。</p><p>自然我们就需要规划需求，其实这就是评估需求<strong>商业价值</strong>和<strong>优先级</strong>的过程。</p><p>一般的思路为：<strong>基础，引流，连结，筑墙，延伸</strong></p><p>基础，很好理解，一个产品，首先必须是合格的产品才能走向市场。</p><p>引流，使用现有所有资源来寻找用户，使产品尽早达到<strong>网络效应</strong>的<strong>临界点</strong></p><p>连结，将公司的其他产品或是合作公司的应用用产品或场景连结。</p><p>筑墙，构建核心竞争力。</p><p>延伸，拓展业务场景，用户或盈利模式。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 产品研发 </category>
+          
+          <category> 需求分析 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 产品 </tag>
+            
+            <tag> 需求 </tag>
+            
+            <tag> 分析 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>商业模式</title>
+      <link href="/2018/09/27/%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F/"/>
+      <url>/2018/09/27/%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F/</url>
+      
+        <content type="html"><![CDATA[<h2 id="商业模式的定义"><a href="#商业模式的定义" class="headerlink" title="商业模式的定义"></a>商业模式的定义</h2><p>关于商业模式，我们先来明确一下定义，下面定义摘自wiki。</p><blockquote><p>商业模式描述的是一个很大范围内正式或非正式的模型，这些模型被公司用来描述商业行为中的不同方面，如<strong>操作流程，组织结构，及金融预测</strong>。虽然这个概念早在20世纪50年代就被提出，但直到20世纪90年代才被广泛接受。在很多商业方面的文献中，这个概念被给与不少非正式的定义。</p><p>商业模型是一个理论工具，它包含大量的<strong>商业元素</strong>及它们之间的关系，并且能够描述特定公司的商业模式。它能显示一个公司在以下一个或多个方面的价值所在：<strong>客户，公司结构</strong>，以及，以<strong>营利和可持续性盈利</strong>为目的，用以<strong>生产，销售，传递价值</strong>及关系资本的<strong>客户网</strong>。</p><p>人们在文献中使用商业模式这一名词的时候，往往模糊了两种不同的含义：一类作者简单地用它来指公司如何从事商业的具体方法和途径，另一类作者则更强调模型方面的意义。这两者实质上是有所不同的：前者泛指一个公司从事商业的方式，而后者指的是这种方式的概念化。后一观点的支持者们提出了一些由要素及其之间关系构成的参考模型（Reference Model），用以描述公司的商业模式。</p></blockquote><p>只有确立了商业模式之后，才能进入商业计划阶段。</p><a id="more"></a><h2 id="如何分析商业模式"><a href="#如何分析商业模式" class="headerlink" title="如何分析商业模式"></a>如何分析商业模式</h2><p>商业模式，也就是一个模型。我们通常由点至面的去分析一个模型。以下是分析商业模式的4个要点。</p><ul><li><strong>基础设施（如何提供）</strong></li><li><strong>产品（提供什么）</strong></li><li><strong>用户/客户（为谁提供）</strong></li><li><strong>财务情况（成本与收益）</strong></li></ul><p>由此展开，我们可以得到一个商业模式框架：</p><p><img src="https://s2.ax1x.com/2019/03/03/kL0rVg.jpg" alt="商业模式框架"></p><p>进而我们就可以画出一张商业模式画布：</p><p><img src="https://s2.ax1x.com/2019/03/03/kLBGLT.jpg" alt="商业模式画布"></p><h3 id="重要概念解释"><a href="#重要概念解释" class="headerlink" title="重要概念解释"></a>重要概念解释</h3><ul><li><p><strong>价值主张</strong>（Value Proposition）：即公司通过其产品和服务所能向消费者提供的<strong>价值</strong>。价值主张<strong>确认了公司对消费者的实用意义</strong>。</p><p>价值主张可能是创新的，表现为一个全新或者破坏性的产品，有一些则与市场现有产品类似，知识增加了一些功能和特性。</p></li><li><p><strong>消费者目标群体</strong>（Target Customer Segments）：即公司所瞄准的消费者群体。这些群体具有某些共性，从而使公司能够（针对这些共性）创造价值。定义消费者群体的过程也被称为<strong>市场划分</strong>（Market Segmentation）。</p><p>客户是任何商业模式的核心。客户体现为独立的客户细分群体，企业需要做出<strong>合理决策</strong>来决定那一部分客户需要<strong>忽略</strong>，哪一部分需要<strong>重视</strong>。</p></li><li><p><strong>渠道通路</strong>（Channels）：即公司用来接触消费者的各种途径。这里阐述了公司如何开拓市场。它涉及到公司的市场和分销策略。</p><p>渠道通路包含以下功能：<strong>提升公司产品和服务在客户人群中的认知、帮助用户评估价值主张、协助客户购买特定产品与服务、向客户传递价值主张、为客户提供售后支持。</strong></p></li><li><p><strong>客户关系</strong>（Customer Relationships）：即公司同其消费者群体之间所建立的联系。我们所说的客户关系管理即与此相关。</p><p>客户关系经常被下列动机驱动：<strong>客户获取、客户维系、提升销售</strong>。</p></li><li><p><strong>价值配置</strong>（Value Configurations）：即资源和活动的配置。例如百度的搜索业务是其核心业务，需要配置大量资源。而像麦肯锡这样的咨询公司，其核心业务是为客户解决问题。</p></li><li><p><strong>核心资源</strong>（Core Resource）：即公司执行其商业模式所需的能力和资源。</p><p>核心资源可以是：<strong>实体资产、金融资产、知识产权、人力资源</strong>。核心资源可以是公司自己持有的，可以是以租借的形式得到的，也可以是从重要伙伴手中获得的。</p></li><li><p><strong>合作伙伴网络</strong>（Partner Network）：即公司同其他公司之间为有效地提供价值并实现其商业化而形成的合作关系网络。这也描述了公司的商业联盟（Business Alliances）范围。</p><p>合作关系可以分为4种类型：<strong>非竞争者之间的合作关系、竞争者之间的合作关系、为开发新业务的合资关系、为确保可靠供应的购买方与供应商的合作关系。</strong></p></li><li><p><strong>成本结构</strong>（Cost Structure）：即所使用的工具和方法的货币描述。</p></li><li><p><strong>收入模型</strong>（Revenue Model）：即公司通过各种收入流（Revenue Flow）来创造财富的途径。</p><p>通常包括：<strong>客户一次性支付获得的交易收入、源于客户为获得价值主张和售后服务所支付的持续性收入</strong></p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 产品 </category>
+          
+          <category> 商业模式 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 产品 </tag>
+            
+            <tag> 商业模式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>产品经理怎么做市场调研</title>
+      <link href="/2018/09/23/%E5%B8%82%E5%9C%BA%E8%B0%83%E7%A0%94%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+      <url>/2018/09/23/%E5%B8%82%E5%9C%BA%E8%B0%83%E7%A0%94%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</url>
+      
+        <content type="html"><![CDATA[<p>PM需要分析的数据，一般都是市场数据，所以大家一般也把这个过程叫做市场调研。</p><h2 id="为什么要做市场调研"><a href="#为什么要做市场调研" class="headerlink" title="为什么要做市场调研"></a>为什么要做市场调研</h2><p>一般公司都有marketing部门帮助PM完成这项工作，但是这并不代表我们不需要学习它了。从原理上理解我们的工作是十分重要的，就像搞数据分析的人可以用matlab、可以用R写脚本但还是得学好基本的数学一样。</p><a id="more"></a><h2 id="做市场调研的基本方法"><a href="#做市场调研的基本方法" class="headerlink" title="做市场调研的基本方法"></a>做市场调研的基本方法</h2><p>先上个例子。cesim公司的市场调研报告的目录。</p><p><img src="https://s2.ax1x.com/2019/02/15/krJoC9.md.jpg" alt="cesim市场调研报告目录"></p><p>其中市场调研部分包括广告效应、销售预测、影响用户购买决策的产品特性、渠道投资、PDA特征喜好。那么为什么企业要调查这些指标呢？</p><ol><li><h3 id="明确目标"><a href="#明确目标" class="headerlink" title="明确目标"></a>明确目标</h3><p>做市场调研之前，首先要明确我们想搞清楚的问题是什么。一般对于to c的产品，常用5W1H法（六何分析法）。</p><h3 id="以互联网产品为例（用户导向）："><a href="#以互联网产品为例（用户导向）：" class="headerlink" title="以互联网产品为例（用户导向）："></a>以互联网产品为例（用户导向）：</h3><p>Who: <strong>目标用户</strong>是什么样的<br>When：用户使用产品的<strong>时间</strong>（行为习惯）<br>What：用户会<strong>做什么</strong><br>Where：用户使用的<strong>场景</strong><br>Why：用户<strong>需求</strong></p><p>How：用户执行任务或达到目标所使用的具体方法<br>简而言之就是，什么样的人 在什么时间 什么场景 用什么样的设备 干什么样的事情 以及是怎么干的。</p><h3 id="以传统生产行业为例（产品导向）："><a href="#以传统生产行业为例（产品导向）：" class="headerlink" title="以传统生产行业为例（产品导向）："></a>以传统生产行业为例（产品导向）：</h3></li></ol><table><thead><tr><th></th><th>现状</th><th>原因</th><th>如何改善</th></tr></thead><tbody><tr><td><strong>对象（What）</strong></td><td>现在的产品是怎样的</td><td>为什么生产这个产品</td><td>工艺改良？能不能生产别的？</td></tr><tr><td><strong>目的（Why）</strong></td><td>生产的原因</td><td>为什么是这个目的</td><td>能不能是别的目的</td></tr><tr><td><strong>场所（Where）</strong></td><td>在哪儿做</td><td>为什么在那儿干</td><td>有没有更好的场所</td></tr><tr><td><strong>时间（When）</strong></td><td>什么时候做</td><td>为什么是这个时候</td><td>有没有更好的时间</td></tr><tr><td><strong>作业员（Who）</strong></td><td>谁来做</td><td>为什么是这样的人</td><td>有没有更好的人选</td></tr><tr><td><strong>方法（How）</strong></td><td>怎么做</td><td>为什么这么做</td><td>能不能改进现有的方法</td></tr></tbody></table><p>   可见虽然两者思考的东西不同，但仍可用相同的方式思考。</p><p>   市场经济时代大家都很注重成本，于是又提出了一个How much,变成了5W2H。</p><p>   可扩为下图</p><p>   <img src="https://s2.ax1x.com/2019/02/15/kr31ts.png" alt="5W2H分析法"></p><ol start="2"><li><h3 id="设计调研方法（主要部分）"><a href="#设计调研方法（主要部分）" class="headerlink" title="设计调研方法（主要部分）"></a>设计调研方法（主要部分）</h3></li></ol><p>那么，如何去填补我们不知道的部分？就和做其他任何研究一样，这一步必须明确调研的方法。  一般有竞品分析、行业分析、需求分析、数据收集等方面。</p><ol start="3"><li><h3 id="实施"><a href="#实施" class="headerlink" title="实施"></a>实施</h3><p>根据方法目标和具体调查对象等因素，收集数据，分析数据。这些会在数据分析部分着重讨论。 </p></li><li><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>得出结果。</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 产品 </category>
+          
+          <category> 数据分析 </category>
+          
+          <category> 市场调研 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据分析 </tag>
+            
+            <tag> 市场调研 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>想要成为PM要怎么起步？</title>
+      <link href="/2018/09/13/%E6%83%B3%E8%A6%81%E6%88%90%E4%B8%BAPM%E8%A6%81%E6%80%8E%E4%B9%88%E8%B5%B7%E6%AD%A5%EF%BC%9F/"/>
+      <url>/2018/09/13/%E6%83%B3%E8%A6%81%E6%88%90%E4%B8%BAPM%E8%A6%81%E6%80%8E%E4%B9%88%E8%B5%B7%E6%AD%A5%EF%BC%9F/</url>
+      
+        <content type="html"><![CDATA[<p>想要解答一个问题的方法，从小学开始老师就已经教授过了。首先我们得知道<strong>定义</strong>，然后从定义出发，发掘我们所需要的<strong>条件</strong>。</p><h2 id="什么是PM"><a href="#什么是PM" class="headerlink" title="什么是PM"></a>什么是PM</h2><blockquote><p><strong>产品经理</strong>（英文：<strong>Product manager</strong>，缩写：<strong>PM</strong>）也称<strong>产品企划</strong>，是指在公司中针对某一项或是某一类的产品进行规划和管理的人员，主要负责产品的研发、制造、营销、渠道等工作。产品经理是很难定义的一个角色，如果非要一句话定义，那么产品经理是为终端用户服务，负责产品整个生命周期的人。——维基百科</p></blockquote><a id="more"></a><h2 id="PM得技能组成"><a href="#PM得技能组成" class="headerlink" title="PM得技能组成"></a>PM得技能组成</h2><p>有产品的地方就有产品经理，就算在相同行业，对产品经理的要求也不太相同<del>（一般都是因为对应岗位没人，PM顶上）</del>。但是产品经理的核心能力是确实不变的，只是在不同行业内形式有些差别。下面我总结了一个导图，叶子节点不一定很全面，主要在于抓住上一层的<strong>核心技能</strong>。掌握核心能力，就是我们得出答案的条件。</p><p><img src="https://s2.ax1x.com/2019/02/15/kD0qVx.png" alt="PM技能树"></p><p>就像RPG游戏一样打怪升级点技能树，PM的技能树就是根据<strong>核心能力</strong>结合所处行业的不通过要求得来得叶子节点。举个例子，比如互联网PM，想要点亮<strong>运营策略</strong>这个技能，就必须先学会<strong>活动策划、提供内容、用户调研、推广渠道</strong>这几项技能。</p><h2 id="从哪里开始"><a href="#从哪里开始" class="headerlink" title="从哪里开始"></a>从哪里开始</h2><p>俗话说的好 缺什么补什么，少什么添什么（张宇语录）。首先我们应挑选一个自己最感兴趣的技能去学习，这样能减少一些挫败感多一些成就感。喜欢数据分析的就可以从数据分析入手，喜欢运营的就从运营入手。</p><p>但强调一点，作为PM得学会把握趋势，大数据时代，<strong>数据分析</strong>是大势所趋。在我看来PM更靠近决策者，PM得每项技能都有职业可以代替，数据分析有数据分析师，产品运营有运营，研发有项目经理。PM该做的事情是从市场数据中提炼出市场需求，根据需求提出一个产品。一专多强的模式是很适合PM的。这一专，便是<strong>数据分析</strong>。</p><p>即便<strong>数据分析</strong>是那么的重要，但在本博客我们从<strong>市场</strong>入手来学习如何做一个优秀的PM。当我们对市场和运营有所了解之后，对于为什么要数据分析这个问题，就可以有一个很直觉的答案了。小时候学数学，不知道为什么要学，那个痛苦啊。当你需要它的时候，相信我，它会变得可爱动人。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 产品 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 产品 </tag>
+            
+            <tag> 产品经理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>leetcode题解 第二高的薪水(SQL)</title>
+      <link href="/2018/08/19/leetcode%20sql%20%E4%B8%8A%E5%8D%87%E7%9A%84%E6%B8%A9%E5%BA%A6/"/>
+      <url>/2018/08/19/leetcode%20sql%20%E4%B8%8A%E5%8D%87%E7%9A%84%E6%B8%A9%E5%BA%A6/</url>
+      
+        <content type="html"><![CDATA[<h2 id="原题："><a href="#原题：" class="headerlink" title="原题："></a>原题：</h2><p>SQL架构</p><p>给定一个 <code>Weather</code> 表，编写一个 SQL 查询，来查找与之前（昨天的）日期相比温度更高的所有日期的 Id。</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">+---------+------------------+------------------+</span><br><span class="line">| Id(INT) | RecordDate(DATE) | Temperature(INT) |</span><br><span class="line">+---------+------------------+------------------+</span><br><span class="line">|       1 |       2015-01-01 |               10 |</span><br><span class="line">|       2 |       2015-01-02 |               25 |</span><br><span class="line">|       3 |       2015-01-03 |               20 |</span><br><span class="line">|       4 |       2015-01-04 |               30 |</span><br><span class="line">+---------+------------------+------------------+</span><br></pre></td></tr></table></figure><p>例如，根据上述给定的 <code>Weather</code> 表格，返回如下 Id:</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">+----+</span><br><span class="line">| Id |</span><br><span class="line">+----+</span><br><span class="line">|  2 |</span><br><span class="line">|  4 |</span><br><span class="line">+----+</span><br></pre></td></tr></table></figure><a id="more"></a><h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select w1.id as Id from weather w1, weather w2 WHERE w1.Temperature &gt; w2.Temperature</span><br><span class="line">and SUBDATE(w1.RecordDate, 1) = w2.RecordDate;</span><br></pre></td></tr></table></figure><h2 id="解析："><a href="#解析：" class="headerlink" title="解析："></a>解析：</h2><ul><li>AS 用来起别名。</li><li>WHERE 设置筛选条件，详细用法请自行搜索。</li><li>SUBDATE 函数从日期减去指定的时间间隔。第一个参数为时间，第二个参数为希望减去的整数。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+          <category> leetcode </category>
+          
+          <category> SQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> SQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>leetcode题解 第二高的薪水(SQL)</title>
+      <link href="/2018/08/18/leetcode%20sql%20%E7%AC%AC%E4%BA%8C%E9%AB%98%E7%9A%84%E8%96%AA%E6%B0%B4/"/>
+      <url>/2018/08/18/leetcode%20sql%20%E7%AC%AC%E4%BA%8C%E9%AB%98%E7%9A%84%E8%96%AA%E6%B0%B4/</url>
+      
+        <content type="html"><![CDATA[<h2 id="原题："><a href="#原题：" class="headerlink" title="原题："></a>原题：</h2><p>SQL架构</p><p>编写一个 SQL 查询，获取 <code>Employee</code> 表中第二高的薪水（Salary） 。</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">+----+--------+</span><br><span class="line">| Id | Salary |</span><br><span class="line">+----+--------+</span><br><span class="line">| 1  | 100    |</span><br><span class="line">| 2  | 200    |</span><br><span class="line">| 3  | 300    |</span><br><span class="line">+----+--------+</span><br></pre></td></tr></table></figure><p>例如上述 <code>Employee</code> 表，SQL查询应该返回 <code>200</code> 作为第二高的薪水。如果不存在第二高的薪水，那么查询应返回 <code>null</code>。</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">+---------------------+</span><br><span class="line">| SecondHighestSalary |</span><br><span class="line">+---------------------+</span><br><span class="line">| 200                 |</span><br><span class="line">+---------------------+</span><br></pre></td></tr></table></figure><a id="more"></a><h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select IFNULL </span><br><span class="line">((select DISTINCT Salary from Employee order by Salary desc limit 1,1),NULL)</span><br><span class="line">AS SecondHighestSalary;</span><br></pre></td></tr></table></figure><h2 id="解析："><a href="#解析：" class="headerlink" title="解析："></a>解析：</h2><ul><li><p>DISTINCT 语句</p><p>在表中，可能会包含重复值。关键词 DISTINCT 用于返回唯一不同的值。</p></li><li><p>IFNULL 语句用于处理NULL的情况，结果非NULL返回前一个表达式，为NULL则返回后一个表达式。</p></li><li><p>AS 用来起别名。</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+          <category> leetcode </category>
+          
+          <category> SQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> SQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>leetcode题解 组合两表(SQL)</title>
+      <link href="/2018/08/18/leetcode%20sql%20%E7%BB%84%E5%90%88%E4%B8%A4%E8%A1%A8/"/>
+      <url>/2018/08/18/leetcode%20sql%20%E7%BB%84%E5%90%88%E4%B8%A4%E8%A1%A8/</url>
+      
+        <content type="html"><![CDATA[<h2 id="原题："><a href="#原题：" class="headerlink" title="原题："></a>原题：</h2><p>SQL架构</p><p>表1: <code>Person</code></p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">+-------------+---------+</span><br><span class="line">| 列名         | 类型     |</span><br><span class="line">+-------------+---------+</span><br><span class="line">| PersonId    | int     |</span><br><span class="line">| FirstName   | varchar |</span><br><span class="line">| LastName    | varchar |</span><br><span class="line">+-------------+---------+</span><br><span class="line">PersonId 是上表主键</span><br></pre></td></tr></table></figure><p>表2: <code>Address</code></p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">+-------------+---------+</span><br><span class="line">| 列名         | 类型    |</span><br><span class="line">+-------------+---------+</span><br><span class="line">| AddressId   | int     |</span><br><span class="line">| PersonId    | int     |</span><br><span class="line">| City        | varchar |</span><br><span class="line">| State       | varchar |</span><br><span class="line">+-------------+---------+</span><br><span class="line">AddressId 是上表主键</span><br></pre></td></tr></table></figure><p>编写一个 SQL 查询，满足条件：无论 person 是否有地址信息，都需要基于上述两表提供 person 的以下信息：</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FirstName, LastName, City, State</span><br></pre></td></tr></table></figure><a id="more"></a><h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select  P.FirstName, P.Lastname, A.City, A.State from Person P left join Address A on P.PersonId = A.PersonId;</span><br></pre></td></tr></table></figure><h2 id="解析："><a href="#解析：" class="headerlink" title="解析："></a>解析：</h2><ul><li>这里考察<strong>连接查询</strong></li><li>join 内连接会舍弃2个表不匹配的数据</li><li>left join: 左外连接(左连接), 以左表为主表，右表不存在的元素补充为null</li><li>right join: 右外连接(右连接), 以右表为主表，左表不存在的元素补充为null</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+          <category> leetcode </category>
+          
+          <category> SQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> SQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>leetcode题解 验证回文串(Python3)</title>
+      <link href="/2018/07/20/leetcode%20%E9%AA%8C%E8%AF%81%E5%9B%9E%E6%96%87%E4%B8%B2/"/>
+      <url>/2018/07/20/leetcode%20%E9%AA%8C%E8%AF%81%E5%9B%9E%E6%96%87%E4%B8%B2/</url>
+      
+        <content type="html"><![CDATA[<p> <strong>说在前面：本题解旨在熟悉python3的基本操作和库函数的使用，仅采用最简便方法，而非时间或空间复杂度较小的方法。若读者想要学习数据结构还是推荐使用C/C++或Java。</strong></p><h2 id="原题："><a href="#原题：" class="headerlink" title="原题："></a>原题：</h2><p>给定一个字符串，验证它是否是回文串，只考虑字母和数字字符，可以忽略字母的大小写。</p><p><strong>说明：</strong>本题中，我们将空字符串定义为有效的回文串。</p><p><strong>示例 1:</strong></p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;A man, a plan, a canal: Panama&quot;</span><br><span class="line">输出: true</span><br></pre></td></tr></table></figure><p><strong>示例 2:</strong></p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;race a car&quot;</span><br><span class="line">输出: false</span><br></pre></td></tr></table></figure><a id="more"></a><h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def isPalindrome(self, s: str) -&gt; bool:</span><br><span class="line">        import re</span><br><span class="line">        s=re.sub(&apos;[^a-z0-9]&apos;,&apos;&apos;,s.lower())</span><br><span class="line">        return s==s[::-1]</span><br></pre></td></tr></table></figure><h2 id="解析："><a href="#解析：" class="headerlink" title="解析："></a>解析：</h2><p>使用正则表达式来替换字符。</p><p><strong>re.sub()</strong>：用于替换字符串中的匹配项。</p><p>语法：</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">re.sub(pattern, repl, string, count=0, flags=0)</span><br></pre></td></tr></table></figure><p>参数：</p><ul><li>pattern : 正则中的模式字符串。</li><li>repl : 替换的字符串，也可为一个函数。</li><li>string : 要被查找替换的原始字符串。</li><li>count : 模式匹配后替换的最大次数，默认 0 表示替换所有的匹配。</li></ul><p><strong>^a-z0-9</strong>：表示匹配除a-z和0-9以外的字符。</p><p><strong>s.lower()</strong>：将字符串s中的字符变为小写。</p><p>更多关于<strong>正则表达式</strong>的内容见：<a href="http://www.runoob.com/python/python-reg-expressions.html" target="_blank" rel="noopener">http://www.runoob.com/python/python-reg-expressions.html</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+          <category> leetcode </category>
+          
+          <category> 字符串 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> 字符串 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>leetcode题解 反转字符串(Python3)</title>
+      <link href="/2018/07/19/leetcode%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%94%AF%E4%B8%80%E5%AD%97%E7%AC%A6/"/>
+      <url>/2018/07/19/leetcode%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%94%AF%E4%B8%80%E5%AD%97%E7%AC%A6/</url>
+      
+        <content type="html"><![CDATA[<p> <strong>说在前面：本题解旨在熟悉python3的基本操作和库函数的使用，仅采用最简便方法，而非时间或空间复杂度较小的方法。若读者想要学习数据结构还是推荐使用C/C++或Java。</strong></p><h2 id="原题："><a href="#原题：" class="headerlink" title="原题："></a>原题：</h2><p>给定一个字符串，找到它的第一个不重复的字符，并返回它的索引。如果不存在，则返回 -1。</p><p><strong>案例:</strong></p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s = &quot;leetcode&quot;</span><br><span class="line">返回 0.</span><br><span class="line"></span><br><span class="line">s = &quot;loveleetcode&quot;,</span><br><span class="line">返回 2.</span><br></pre></td></tr></table></figure><p><strong>注意事项：</strong>您可以假定该字符串只包含小写字母。</p><a id="more"></a><h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def firstUniqChar(self, s: str) -&gt; int:</span><br><span class="line">        sSet = set(s)</span><br><span class="line">        chaDic = &#123;&#125;</span><br><span class="line">        for i in sSet:</span><br><span class="line">            chaDic[i] = s.count(i)</span><br><span class="line">        for i, j in enumerate(s):</span><br><span class="line">            if chaDic.get(j) == 1:</span><br><span class="line">                return i</span><br><span class="line">        return -1</span><br></pre></td></tr></table></figure><h2 id="解析："><a href="#解析：" class="headerlink" title="解析："></a>解析：</h2><p><strong>set()</strong> 函数创建一个无序不重复元素集，可进行关系测试，删除重复数据，还可以计算交集、差集、并集等。</p><p><strong>enumerate()</strong> 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中。</p><p><strong>count()</strong> 方法用于统计字符串里某个字符出现的次数。可选参数为在字符串搜索的开始与结束位置。</p><p>count()方法语法：</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.count(sub, start= 0,end=len(string))</span><br></pre></td></tr></table></figure><ul><li>sub – 搜索的子字符串</li><li>start – 字符串开始搜索的位置。默认为第一个字符,第一个字符索引值为0。</li><li>end – 字符串中结束搜索的位置。字符中第一个字符的索引为 0。默认为字符串的最后一个位置。</li></ul><p>该方法返回子字符串在字符串中出现的次数。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+          <category> leetcode </category>
+          
+          <category> 字符串 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> 字符串 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>leetcode题解 反转字符串(Python3)</title>
+      <link href="/2018/07/17/leetcode%20%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+      <url>/2018/07/17/leetcode%20%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
+      
+        <content type="html"><![CDATA[<p> <strong>说在前面：本题解旨在熟悉python3的基本操作和库函数的使用，仅采用最简便方法，而非时间或空间复杂度较小的方法。若读者想要学习数据结构还是推荐使用C/C++或Java。</strong></p><h2 id="原题："><a href="#原题：" class="headerlink" title="原题："></a>原题：</h2><p>编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 <code>char[]</code> 的形式给出。</p><p>不要给另外的数组分配额外的空间，你必须<strong>原地修改输入数组</strong>、使用 O(1) 的额外空间解决这一问题。</p><p>你可以假设数组中的所有字符都是 <a href="https://baike.baidu.com/item/ASCII" target="_blank" rel="noopener">ASCII</a> 码表中的可打印字符。</p><a id="more"></a><p><strong>示例 1：</strong></p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：[&quot;h&quot;,&quot;e&quot;,&quot;l&quot;,&quot;l&quot;,&quot;o&quot;]</span><br><span class="line">输出：[&quot;o&quot;,&quot;l&quot;,&quot;l&quot;,&quot;e&quot;,&quot;h&quot;]</span><br></pre></td></tr></table></figure><p><strong>示例 2：</strong></p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：[&quot;H&quot;,&quot;a&quot;,&quot;n&quot;,&quot;n&quot;,&quot;a&quot;,&quot;h&quot;]</span><br><span class="line">输出：[&quot;h&quot;,&quot;a&quot;,&quot;n&quot;,&quot;n&quot;,&quot;a&quot;,&quot;H&quot;]</span><br></pre></td></tr></table></figure><h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def reverseString(self, s: List[str]) -&gt; None:</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        Do not return anything, modify s in-place instead.</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        for i in range(len(s)):</span><br><span class="line">            if i&gt;= len(s)/2:</span><br><span class="line">                break</span><br><span class="line">            s[i],s[-i-1] = s[-i-1],s[i]</span><br><span class="line">            #也可以直接写s[:]=s[::-1]，最简单的写法。</span><br></pre></td></tr></table></figure><h2 id="解析："><a href="#解析：" class="headerlink" title="解析："></a>解析：</h2><p><strong>s[i],s[-i-1] = s[-i-1],s[i]</strong></p><p>相当于C和Java中的：</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int temp = s[i];</span><br><span class="line">s[i] = s[-i-1];</span><br><span class="line">s[-i-1] = temp;</span><br></pre></td></tr></table></figure><p>简单的交换。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+          <category> leetcode </category>
+          
+          <category> 字符串 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> 字符串 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>leetcode题解 旋转图像(Python3)</title>
+      <link href="/2018/07/13/leetcode%20%E6%97%8B%E8%BD%AC%E5%9B%BE%E5%83%8F/"/>
+      <url>/2018/07/13/leetcode%20%E6%97%8B%E8%BD%AC%E5%9B%BE%E5%83%8F/</url>
+      
+        <content type="html"><![CDATA[<p> <strong>说在前面：本题解旨在熟悉python3的基本操作和库函数的使用，仅采用最简便方法，而非时间或空间复杂度较小的方法。若读者想要学习数据结构还是推荐使用C/C++或Java。</strong></p><h2 id="原题："><a href="#原题：" class="headerlink" title="原题："></a>原题：</h2><p>给定一个 <em>n</em> × <em>n</em> 的二维矩阵表示一个图像。</p><p>将图像顺时针旋转 90 度。</p><p><strong>说明：</strong></p><p>你必须在<strong>原地</strong>旋转图像，这意味着你需要直接修改输入的二维矩阵。<strong>请不要</strong>使用另一个矩阵来旋转图像。</p><a id="more"></a><p><strong>示例 1:</strong></p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">给定 matrix = </span><br><span class="line">[</span><br><span class="line">  [1,2,3],</span><br><span class="line">  [4,5,6],</span><br><span class="line">  [7,8,9]</span><br><span class="line">],</span><br><span class="line"></span><br><span class="line">原地旋转输入矩阵，使其变为:</span><br><span class="line">[</span><br><span class="line">  [7,4,1],</span><br><span class="line">  [8,5,2],</span><br><span class="line">  [9,6,3]</span><br><span class="line">]</span><br></pre></td></tr></table></figure><p><strong>示例 2:</strong></p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">给定 matrix =</span><br><span class="line">[</span><br><span class="line">  [ 5, 1, 9,11],</span><br><span class="line">  [ 2, 4, 8,10],</span><br><span class="line">  [13, 3, 6, 7],</span><br><span class="line">  [15,14,12,16]</span><br><span class="line">], </span><br><span class="line"></span><br><span class="line">原地旋转输入矩阵，使其变为:</span><br><span class="line">[</span><br><span class="line">  [15,13, 2, 5],</span><br><span class="line">  [14, 3, 4, 1],</span><br><span class="line">  [12, 6, 8, 9],</span><br><span class="line">  [16, 7,10,11]</span><br><span class="line">]</span><br></pre></td></tr></table></figure><h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def rotate(self, matrix: List[List[int]]) -&gt; None:</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        Do not return anything, modify matrix in-place instead.</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        matrix[:]=map(list,zip(*matrix[::-1]))</span><br></pre></td></tr></table></figure><h2 id="解析："><a href="#解析：" class="headerlink" title="解析："></a>解析：</h2><p><strong>matrix[:]</strong> 表示重新生成matrix中的元素，若仅使用matrix并不会改变matrix中的元素。</p><p><strong>map</strong></p><blockquote><p><code>map()</code>函数接收两个参数，一个是函数，一个是<code>Iterable</code>，<code>map</code>将传入的函数依次作用到序列的每个元素，并把结果作为新的<code>Iterator</code>返回。</p><p>举例说明，比如我们有一个函数f(x)=x2，要把这个函数作用在一个list <code>[1, 2, 3, 4, 5, 6, 7, 8, 9]</code>上，就可以用<code>map()</code>实现如下：</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&gt;             f(x) = x * x</span><br><span class="line">&gt; </span><br><span class="line">&gt;                   │</span><br><span class="line">&gt;                   │</span><br><span class="line">&gt;   ┌───┬───┬───┬───┼───┬───┬───┬───┐</span><br><span class="line">&gt;   │   │   │   │   │   │   │   │   │</span><br><span class="line">&gt;   ▼   ▼   ▼   ▼   ▼   ▼   ▼   ▼   ▼</span><br><span class="line">&gt; </span><br><span class="line">&gt; [ 1   2   3   4   5   6   7   8   9 ]</span><br><span class="line">&gt; </span><br><span class="line">&gt;   │   │   │   │   │   │   │   │   │</span><br><span class="line">&gt;   │   │   │   │   │   │   │   │   │</span><br><span class="line">&gt;   ▼   ▼   ▼   ▼   ▼   ▼   ▼   ▼   ▼</span><br><span class="line">&gt; </span><br><span class="line">&gt; [ 1   4   9  16  25  36  49  64  81 ]</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></blockquote><p><strong>zip</strong></p><blockquote><p><strong>zip()</strong> 函数用于将可迭代的对象作为参数，将对象中对应的元素打包成一个个元组，然后返回由这些元组组成的对象，这样做的好处是节约了不少的内存。</p><p>我们可以使用 list() 转换来输出列表。</p><p>如果各个迭代器的元素个数不一致，则返回列表长度与最短的对象相同，利用 <strong>*</strong> 号操作符，可以将元组解压为列表。</p></blockquote><p>关于zip更多详细信息和实例：<a href="https://www.programiz.com/python-programming/methods/built-in/zip" target="_blank" rel="noopener">https://www.programiz.com/python-programming/methods/built-in/zip</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+          <category> leetcode </category>
+          
+          <category> 数组 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> 数组 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>leetcode题解 搜索二维矩阵 II(Python3)</title>
+      <link href="/2018/07/12/leetcode%20%E6%90%9C%E7%B4%A2%E4%BA%8C%E7%BB%B4%E7%9F%A9%E9%98%B5%20II/"/>
+      <url>/2018/07/12/leetcode%20%E6%90%9C%E7%B4%A2%E4%BA%8C%E7%BB%B4%E7%9F%A9%E9%98%B5%20II/</url>
+      
+        <content type="html"><![CDATA[<p> <strong>说在前面：本题解旨在熟悉python3的基本操作和库函数的使用，仅采用最简便方法，而非时间或空间复杂度较小的方法。若读者想要学习数据结构还是推荐使用C/C++或Java。</strong></p><h2 id="原题："><a href="#原题：" class="headerlink" title="原题："></a>原题：</h2><p>编写一个高效的算法来搜索 <em>m</em> x <em>n</em> 矩阵 matrix 中的一个目标值 target。该矩阵具有以下特性：</p><ul><li>每行的元素从左到右升序排列。</li><li>每列的元素从上到下升序排列。</li></ul><p><strong>示例:</strong></p><p>现有矩阵 matrix 如下：</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  [1,   4,  7, 11, 15],</span><br><span class="line">  [2,   5,  8, 12, 19],</span><br><span class="line">  [3,   6,  9, 16, 22],</span><br><span class="line">  [10, 13, 14, 17, 24],</span><br><span class="line">  [18, 21, 23, 26, 30]</span><br><span class="line">]</span><br></pre></td></tr></table></figure><p>给定 target = <code>5</code>，返回 <code>true</code>。</p><p>给定 target = <code>20</code>，返回 <code>false</code>。</p><a id="more"></a><h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def searchMatrix(self, matrix, target):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type matrix: List[List[int]]</span><br><span class="line">        :type target: int</span><br><span class="line">        :rtype: bool</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        if not matrix:</span><br><span class="line">            return False</span><br><span class="line">        i = 0</span><br><span class="line">        j = len(matrix[0]) - 1</span><br><span class="line">        while i &lt; len(matrix) and j &gt;= 0:</span><br><span class="line">            if matrix[i][j] == target: </span><br><span class="line">                return True</span><br><span class="line">            elif matrix[i][j] &gt; target: </span><br><span class="line">                j -= 1</span><br><span class="line">            else: </span><br><span class="line">                i += 1</span><br><span class="line">        return False</span><br></pre></td></tr></table></figure><h2 id="解析："><a href="#解析：" class="headerlink" title="解析："></a>解析：</h2><p>很简单的从右上角开始自上而下 从右向左的搜索。</p><p>如果要更高的效率可以使用二分查找。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+          <category> leetcode </category>
+          
+          <category> 数组 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> 数组 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>leetcode题解 合并两个有序数组(Python3)</title>
+      <link href="/2018/07/12/leetcode%20%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/"/>
+      <url>/2018/07/12/leetcode%20%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/</url>
+      
+        <content type="html"><![CDATA[<p> <strong>说在前面：本题解旨在熟悉python3的基本操作和库函数的使用，仅采用最简便方法，而非时间或空间复杂度较小的方法。若读者想要学习数据结构还是推荐使用C/C++或Java。</strong></p><h2 id="原题："><a href="#原题：" class="headerlink" title="原题："></a>原题：</h2><p>给定两个有序整数数组 <em>nums1</em> 和 <em>nums2</em>，将 <em>nums2</em> 合并到 <em>nums1</em> 中<em>，</em>使得 <em>num1</em> 成为一个有序数组。</p><p><strong>说明:</strong></p><ul><li>初始化 <em>nums1</em> 和 <em>nums2</em> 的元素数量分别为 <em>m</em> 和 <em>n</em>。</li><li>你可以假设 <em>nums1</em> 有足够的空间（空间大小大于或等于 <em>m + n</em>）来保存 <em>nums2</em> 中的元素。</li></ul><p><strong>示例:</strong></p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">nums1 = [1,2,3,0,0,0], m = 3</span><br><span class="line">nums2 = [2,5,6],       n = 3</span><br><span class="line"></span><br><span class="line">输出: [1,2,2,3,5,6]</span><br></pre></td></tr></table></figure><a id="more"></a><h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -&gt; None:</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        Do not return anything, modify nums1 in-place instead.</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        cnt = len(nums1)</span><br><span class="line">        for n in nums1[::-1]:</span><br><span class="line">            if(cnt==m):</span><br><span class="line">                    break</span><br><span class="line">            if n==0:</span><br><span class="line">                nums1.pop(len(nums1)-1)</span><br><span class="line">                cnt-=1</span><br><span class="line">            else:</span><br><span class="line">                break</span><br><span class="line">        nums1[:]=sorted(nums1+nums2)</span><br></pre></td></tr></table></figure><h2 id="解析："><a href="#解析：" class="headerlink" title="解析："></a>解析：</h2><p><strong>for n in nums1[::-1]:</strong>从尾至头进行循环</p><p><strong>num[:]</strong> 表示重新生成num函数中的函数，若仅使用num并不会改变num中的元素。<br><strong>list.pop()</strong>移除列表中的一个元素（默认最后一个元素），并且返回该元素的值</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+          <category> leetcode </category>
+          
+          <category> 数组 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> 数组 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>leetcode题解 从排序数组中删除重复项(Python3)</title>
+      <link href="/2018/07/12/leetcode%20%E4%BB%8E%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E9%A1%B9/"/>
+      <url>/2018/07/12/leetcode%20%E4%BB%8E%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E9%A1%B9/</url>
+      
+        <content type="html"><![CDATA[<p> <strong>说在前面：本题解旨在熟悉python3的基本操作和库函数的使用，仅采用最简便方法，而非时间或空间复杂度较小的方法。若读者想要学习数据结构还是推荐使用C/C++或Java。</strong></p><h2 id="原题："><a href="#原题：" class="headerlink" title="原题："></a>原题：</h2><p>给定一个排序数组，你需要在<strong>原地</strong>删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。</p><p>不要使用额外的数组空间，你必须在<strong>原地修改输入数组</strong>并在使用 O(1) 额外空间的条件下完成。</p><a id="more"></a><p><strong>示例 1:</strong></p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">给定数组 nums = [1,1,2], </span><br><span class="line"></span><br><span class="line">函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。 </span><br><span class="line"></span><br><span class="line">你不需要考虑数组中超出新长度后面的元素。</span><br></pre></td></tr></table></figure><p><strong>示例 2:</strong></p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">给定 nums = [0,0,1,1,1,2,2,3,3,4],</span><br><span class="line"></span><br><span class="line">函数应该返回新的长度 5, 并且原数组 nums 的前五个元素被修改为 0, 1, 2, 3, 4。</span><br><span class="line"></span><br><span class="line">你不需要考虑数组中超出新长度后面的元素。</span><br></pre></td></tr></table></figure><p><strong>说明:</strong></p><p>为什么返回数值是整数，但输出的答案是数组呢?</p><p>请注意，输入数组是以<strong>“引用”</strong>方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。</p><p>你可以想象内部操作如下:</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// nums 是以“引用”方式传递的。也就是说，不对实参做任何拷贝</span><br><span class="line">int len = removeDuplicates(nums);</span><br><span class="line"></span><br><span class="line">// 在函数里修改输入数组对于调用者是可见的。</span><br><span class="line">// 根据你的函数返回的长度, 它会打印出数组中该长度范围内的所有元素。</span><br><span class="line">for (int i = 0; i &lt; len; i++) &#123;</span><br><span class="line">    print(nums[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def removeDuplicates(self, nums: List[int]) -&gt; int:</span><br><span class="line">        nums[:] = sorted(set(nums))</span><br><span class="line">        return len(nums)</span><br></pre></td></tr></table></figure><h2 id="解析："><a href="#解析：" class="headerlink" title="解析："></a>解析：</h2><p><strong>num[:]</strong> 表示重新生成num函数中的函数，若仅使用num并不会改变num中的元素。</p><p><strong>sorted()</strong> 函数对所有可迭代的对象进行排序操作。</p><blockquote><p><strong>sort 与 sorted 区别：</strong></p><p>sort 是应用在 list 上的方法，sorted 可以对所有可迭代的对象进行排序操作。</p><p>list 的 sort 方法返回的是对已经存在的列表进行操作，而内建函数 sorted 方法返回的是一个新的 list，而不是在原来的基础上进行的操作。</p></blockquote><p>sorted 语法：</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sorted(iterable, key=None, reverse=False)</span><br></pre></td></tr></table></figure><p>参数说明：</p><ul><li>iterable – 可迭代对象。</li><li>key – 主要是用来进行比较的元素，只有一个参数，具体的函数的参数就是取自于可迭代对象中，指定可迭代对象中的一个元素来进行排序。</li><li>reverse – 排序规则，reverse = True 降序 ， reverse = False 升序（默认）。</li></ul><p><strong>集合（set）</strong>是一个无序的不重复元素序列。</p><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">使用</span><br><span class="line">s = &#123;value01,value02,...&#125;</span><br><span class="line">或者</span><br><span class="line">set(value)</span><br><span class="line">创建一个集合</span><br></pre></td></tr></table></figure><p>更多集合操作可参考官方文档：</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+          <category> leetcode </category>
+          
+          <category> 数组 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> 数组 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>互联网产品几个规律及特点</title>
+      <link href="/2018/06/23/%E4%BA%92%E8%81%94%E7%BD%91%E8%A1%8C%E4%B8%9A%E7%89%B9%E7%82%B9/"/>
+      <url>/2018/06/23/%E4%BA%92%E8%81%94%E7%BD%91%E8%A1%8C%E4%B8%9A%E7%89%B9%E7%82%B9/</url>
+      
+        <content type="html"><![CDATA[<h2 id="联网产品的几个规律"><a href="#联网产品的几个规律" class="headerlink" title="联网产品的几个规律"></a>联网产品的几个规律</h2><p><strong>产品价值守恒：</strong>长期来看，产品的使用价值与产品所带来的商业价值相等。</p><p><strong>产品复杂度守恒：</strong>用户交互越复杂，开发工作量越小，用户交互越简单，开发工作量越大。</p><p><strong>互联网产品的商业模式：</strong><br>    低者为王：金字塔结构，赚的大多是三低人群的钱。（娱乐 低龄 低收入）<br>    用户体验低门槛为王：对用户要求低，谁都能用，有效提高用户数量、<br>    印钞机式赚钱：吃软饭，赚硬钱（随着用户增加，利润明显增加，但成本增加不大）etc.世纪佳缘 获得信息，真爱网 需要红娘，属于劳动密集型产业</p><p><strong>诺威格定律：</strong>当公司市场占有率达到50%以上时，市场占有率就无法再翻番了。 所以大公司往往扩展其他业务提升利润。<br><strong>越成功的公司越难拐弯：</strong>在某一领域特别成功的公司，其公司文化、商业模式、管理机制等已经被优化的极度适应当前领域。若想要进入新的市场就会变得难以适应。因此现在<br>一些大公司都会有独立子公司或者独立工作室来减小这种影响。<br><strong>顺势而为：</strong>行业分析。</p><a id="more"></a><h2 id="联网产品的几个特点"><a href="#联网产品的几个特点" class="headerlink" title="联网产品的几个特点"></a>联网产品的几个特点</h2><p><strong>互联网产品的交互性：</strong><br>凯文凯利曾举过一个例子来描述这个特性，他说蜜蜂要觉得去哪儿采蜜时所做的决策并不是由蜂后来决定的，而是由无数的蜜蜂去探索之后，将好的坏的情况的信息带回，然后再由一波蜜蜂去验证，如此循环之后，就可以做出一个不错的决定。这就是典型的信息交互。互联网产品与传统产品最大的不同点就在于信息的交互。当产品上线之后，产品经理可以得到非常快速的及时的<strong>信息反馈</strong>。<br><strong>高固定成本，低边际成本：</strong><br>吃软饭，赚硬钱（随着用户增加，利润明显增加，但成本增加不大）<br><strong>网络效应：</strong><br>用户量可以提升产品本身的价值量，用户也是产品的一部分。IM产品尤为明显（QQ，微信，随着用户群体增加，产品的<strong>商业价值</strong>快速上升）。价值量提升基于用户数量和和产品<strong>规则设计</strong>，同样的用户数量，良好的规则设计可以带来更多的价值提升。因此，应当尽快增<strong>加用户数量</strong>，设计产品使产品的网络效应的<strong>临界点</strong>更小，并且尽快先于对手达到<strong>临界点</strong>。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 互联网 </category>
+          
+          <category> 特点 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 互联网 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>产品经理怎么做数据分析</title>
+      <link href="/2018/06/23/%E7%AB%9E%E5%93%81%E5%88%86%E6%9E%90/"/>
+      <url>/2018/06/23/%E7%AB%9E%E5%93%81%E5%88%86%E6%9E%90/</url>
+      
+        <content type="html"><![CDATA[<p>PM需要分析的数据，一般都是市场数据，所以大家一般也把这个过程叫做市场调研。</p><h2 id="为什么要做市场调研"><a href="#为什么要做市场调研" class="headerlink" title="为什么要做市场调研"></a>为什么要做市场调研</h2><p>一般公司都有marketing部门帮助PM完成这项工作，但是这并不代表我们不需要学习它了。从原理上理解我们的工作是十分重要的，就像搞数据分析的人可以用matlab、可以用R写脚本但还是得学好基本的数学一样。</p><a id="more"></a>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>用户与场景</title>
+      <link href="/2018/06/02/%E7%94%A8%E6%88%B7%E4%B8%8E%E5%9C%BA%E6%99%AF/"/>
+      <url>/2018/06/02/%E7%94%A8%E6%88%B7%E4%B8%8E%E5%9C%BA%E6%99%AF/</url>
+      
+        <content type="html"><![CDATA[<p>在分析用户需求的时候，我们首先要明确：<strong>用户与场景是紧密联系的，不同人在不同场景下的行为是不同的。</strong></p><h2 id="分析方法"><a href="#分析方法" class="headerlink" title="分析方法"></a>分析方法</h2><p>这里写的方法是基于快速迭代的思路，这里我把方法分为五步：</p><a id="more"></a><h3 id="1-寻找用户"><a href="#1-寻找用户" class="headerlink" title="1.寻找用户"></a>1.寻找用户</h3><p>这部分用户在产品起步阶段，大致的划分出的目标客户。可能是天使用户，也可能是探索者或是geek。不必太精细，因为后续步骤会将用户继续细化（真正的客户会被验证）。</p><h3 id="2-场景"><a href="#2-场景" class="headerlink" title="2.场景"></a>2.场景</h3><p>在不同场景使用产品必然有不同的需求，例如在火车站绝大部分人需要吃快餐，所以不会有西餐厅开在火车站内，在地铁上手机信号不不好，所以QQ空间现在也支持离线发说说了。</p><h3 id="3-找到问题（需求）"><a href="#3-找到问题（需求）" class="headerlink" title="3.找到问题（需求）"></a>3.找到问题（需求）</h3><p>在确定了用户和场景之后，通过排列组合，我们可以列出很多需求。并且提出<strong>假设</strong>。</p><h3 id="4-验证假设"><a href="#4-验证假设" class="headerlink" title="4.验证假设"></a>4.验证假设</h3><p>假设不一定是正确，当然我们需要去验证。错误的方向只能带来浪费。验证的方式有很多，在产品初期最低成本低风险的方案当属<strong>用户访谈</strong>（这方面后续会写）。</p><h3 id="5-解决方案"><a href="#5-解决方案" class="headerlink" title="5.解决方案"></a>5.解决方案</h3><p>在完成上述步骤后，最终我们就应该有能做出解决用户在某些场景下需求的功能或方案。最终将我们的产品推向市场，然后从步骤1继续循环，这就是<strong>迭代</strong>。这里需要注意，一个产品的生命周期是<strong>有限的</strong>，如果不能在有限的时间内<strong>迭代足够多的次数</strong>，产品就会不成熟，影响收益。就像青春是有限的，如果一个人在年轻力壮没有好好努力的话，就会老大徒伤悲。</p><h2 id="关于用户的几个要点"><a href="#关于用户的几个要点" class="headerlink" title="关于用户的几个要点"></a>关于用户的几个要点</h2><p>用户不一定能为你创造价值，但是客户一定出自用户。这里我们就应该尽可能的拓展用户数量，尽可能的提高用户转换为客户的转换率。</p><p>学会换位思考，多从用户的角度想问题，这样能提出更靠谱的假设，也可能带来一些新的灵感。</p><p>用户划分一定要足够细致，用户对产品的依赖越强，就越有可能盈利。这一条带来的就是转化率这个指标的提高。</p><p>出现问题太多，没有重点的时候，应当思考是不是用户划分不够细致，用户过于散乱。现在精准流量与泛流量的概念很好的解释了这点。精准流量的抖音账号，10W+粉打个广告也差不多10W，而泛流量的账号，100W粉才差不多这个价钱。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 产品 </category>
+          
+          <category> 用户与场景 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 产品 </tag>
+            
+            <tag> 用户 </tag>
+            
+            <tag> 场景 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>行业发展因素分析</title>
+      <link href="/2018/05/20/%E8%A1%8C%E4%B8%9A%E5%88%86%E6%9E%90/"/>
+      <url>/2018/05/20/%E8%A1%8C%E4%B8%9A%E5%88%86%E6%9E%90/</url>
+      
+        <content type="html"><![CDATA[<p>进入一个行业，或是做一个产品，都要考虑这个行业整体的状况。爬楼梯再努力，也没坐电梯的快，一个简单的选择的问题。行业端是高于市场端的，宏观的行业分析正确，可以包容微观执行的不利。下面粗略罗列了一些影响行业分析的因素，以供参考。</p><a id="more"></a><h2 id="行业发展因素分析"><a href="#行业发展因素分析" class="headerlink" title="行业发展因素分析"></a>行业发展因素分析</h2><h3 id="行业发展因素分析的内容："><a href="#行业发展因素分析的内容：" class="headerlink" title="行业发展因素分析的内容："></a>行业发展因素分析的内容：</h3><p>1、行业在社会经济中的地位分析。行业在社会经济中的地位，主要表现在三个方面：</p><p>　　（1）行业的产值（净产值和总产值）、利税额及吸收劳动力的数量，在全国工业产值、财政收入和就业总量中所占的比重；</p><p>　　（2）行业的现状和未来对整个社会经济及其他行业发展的影响程度；</p><p>　　（3）行业在国际市场上的竞争、创汇能力分析。行业的产品收入弹性也能说明行业在社会经济中的地位。其公式如下：</p><p>　　某行业的产品收入弹性系数=某行业产品的需求增长率/人均国民收入的增长率若弹性系数大于1，说明这种行业在产业结构中能够占有更大的份额，有更广阔的发展余地。</p><p>　　在分析行业社会经济地位时，确定行业是否是社会经济发展的主导行业是非常重要的。</p><p>　　2、行业特性分析。</p><p>　　行业特性是由于各行业由于其使命，发展条件以及产品和生产过程方面的不同而使各行业具有的不同性质。行业特性分析有助于把握行业的特点，了解行业环境。行业特性分析可以从以下几个方面入手：</p><p>　　（1）从行业分工来确定行业的特性。行业内存在着的纵横的分工关系界定了每个企业在本行业中的经营范围，决定了每个企业与其他企业的分工关系。</p><p>　　（2）从行业在工业生产中的位置来分析行业的性质。</p><p>　　（3）从行业所使用的资源和技术来分析，可分为劳动密集型行业、资金密集型行业和技术密集型行业。</p><p>　　（4）从行业所需资源的可靠性和及时性来进行分析，比如说行业依靠的是农产品则行业的变化将受到天气变化的影响。</p><p>　　（5）从行业技术发展趋势及前景、技术进步状况进行分析。</p><p>　　3、行业规模结构分析。</p><p>　　一类是悬殊型，即一个行业内大企业处于领导地位，小企业和大企业在规模和实力上相差很大，行业内竞争不甚激烈；</p><p>　　第二类是均衡型，行业内各企业之间势均力敌，竞争十分激烈。在进行行业规模结构分析的时候，一定要分析行业内几家大企业的经营状况，因为他们的行动会对行业的发展及利润起主导作用，分析他们的经营思想、经营战略、产品特色、技术水平、竞争能力及市场占有率及其优劣势等因素，对行业的环境分析具有十分重要的意义。</p><p>　　4、行业数量结构分析。</p><p>　　一般来讲，市场规模大，企业数量就多，行业内集中程度低，大企业少。反之，市场规模小，企业数量就少，行业集中程度高，大企业就多。</p><p>　　5、行业组织结构分析。</p><p>　　应对行业内企业联合的状况进行分析，对联合与竞争的趋势进行估计和<a href="https://wiki.mbalib.com/wiki/%E9%A2%84%E6%B5%8B" target="_blank" rel="noopener">预测</a>。</p><p>　　6、行业市场结构分析。</p><p>　　从行业供求关系来看，基本上可以分为三类，即供不应求、供求平衡和供大于求。若供大于求，则企业间的竞争激烈，可能导致价格下跌和高额的销售费用支出，有的企业可能会发生亏损；若供小于求，则各企业产品都可以找到合适的市场，价格相对稳定，新企业会大量涌入本行业。同时，还应对行业市场的需求分布状态、对行业产品需求变动的频繁性进行分析。</p><p>　　7、行业社会环境方面的限制分析。</p><p>　　行业发展过程中，应当防止对空气、森林、水源、地貌等自然环境的污染，这些因素将会对行业的发展起限制作用。</p><p>　　以上讨论的七个因素都是相互联系的，每个方面的变化都会引起其它方面的变化，因此在分析行业发展变化时，必须注意抓好关键信息，以便企业领导人能及时恰当的作出反应。</p><p>　　行业社会环境方面的限制分析。行业发展过程中，应当防止对空气、森林、水源、地貌等自然环境的污染，这些因素将会对行业的发展起限制作用。以上讨论的七个因素都是相互联系的，每个方面的变化都会引起其它方面的变化，因此在分析行业发展变化时，必须注意抓好关键信息，以便企业领导人能及时恰当的作出反应。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 产品 </category>
+          
+          <category> 行业分析 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 产品 </tag>
+            
+            <tag> 行业分析 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+    
+    
+    <entry>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="关于这个博客和我"><a href="#关于这个博客和我" class="headerlink" title="关于这个博客和我"></a><strong>关于这个博客和我</strong></h1><h3 id="我为什么要写这个博客"><a href="#我为什么要写这个博客" class="headerlink" title="我为什么要写这个博客"></a>我为什么要写这个博客</h3><p>本博客记录博主的一些所思所想和学习经历，是博主整理自己脑内知识条理的一种方式，有条理的复刻自己脑内的知识体系。但碍于时间，仅记录了博主一部分的知识。希望在更远的将来，能记录下更多。</p><h3 id="我想做PM的原因"><a href="#我想做PM的原因" class="headerlink" title="我想做PM的原因"></a>我想做PM的原因</h3><p>在博主小时候，跟很多贪玩男孩一样，总是想做一些新奇的玩具。长大一点呢，觉得有技术才能做自己想要的东西，故选择了技术之路。随着慢慢对社会、工业和商业方面的了解，博主发现一般人都是帮别人做别人的东西，自己想做的东西呢，单凭自己也做不出来。那作为老板就能随便做自己想要的产品吗？那当然也不是。老板不根据市场需求来做产品，最终不能盈利的话，这个产品最后还是得凉凉。</p><p>世上没有谁是能完全随心所欲的。所以我想，我能不能根据市场需求加入一点自己的想法去做一个东西，这样我便萌生了做产品经理的想法。</p><p>​       </p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+  
+</search>

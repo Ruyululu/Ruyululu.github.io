@@ -45,11 +45,40 @@
   </entry>
   
   <entry>
-    <title>怎么制作产品流程图</title>
-    <link href="https://ruyululu.com/2018/11/20/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/"/>
-    <id>https://ruyululu.com/2018/11/20/用户体验/</id>
+    <title>详解用户体验</title>
+    <link href="https://ruyululu.com/2019/01/07/%E8%AF%A6%E8%A7%A3%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/"/>
+    <id>https://ruyululu.com/2019/01/07/详解用户体验/</id>
+    <published>2019-01-06T17:29:46.000Z</published>
+    <updated>2019-03-12T13:54:59.379Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt; 大部分时候大部分产品经理口中的体验，都是指用户体验或者客户体验。&lt;/p&gt;
+&lt;p&gt;这是一个宽泛的概念，包括了一系列子概念，如：信息架构、人机交互、交互设计、图形设计、可用性、以用户为中心的设计等等。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="产品" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="产品设计" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
+    
+      <category term="用户体验" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/"/>
+    
+    
+      <category term="产品" scheme="https://ruyululu.com/tags/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="产品设计" scheme="https://ruyululu.com/tags/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
+    
+      <category term="用户体验" scheme="https://ruyululu.com/tags/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用户体验的三条定律</title>
+    <link href="https://ruyululu.com/2018/11/20/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E7%9A%84%E4%B8%89%E6%9D%A1%E5%AE%9A%E5%BE%8B/"/>
+    <id>https://ruyululu.com/2018/11/20/用户体验的三条定律/</id>
     <published>2018-11-20T12:12:44.000Z</published>
-    <updated>2019-03-10T05:09:36.667Z</updated>
+    <updated>2019-03-12T08:09:37.923Z</updated>
     
     <summary type="html">
     
@@ -587,37 +616,6 @@
 &lt;p&gt;&lt;strong&gt;案例:&lt;/strong&gt;&lt;/p&gt;
 &lt;figure class=&quot;hljs highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;s = &amp;quot;leetcode&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;返回 0.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;s = &amp;quot;loveleetcode&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;返回 2.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;strong&gt;注意事项：&lt;/strong&gt;您可以假定该字符串只包含小写字母。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Python" scheme="https://ruyululu.com/categories/Python/"/>
-    
-      <category term="leetcode" scheme="https://ruyululu.com/categories/Python/leetcode/"/>
-    
-      <category term="字符串" scheme="https://ruyululu.com/categories/Python/leetcode/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
-    
-      <category term="Python" scheme="https://ruyululu.com/tags/Python/"/>
-    
-      <category term="leetcode" scheme="https://ruyululu.com/tags/leetcode/"/>
-    
-      <category term="字符串" scheme="https://ruyululu.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode题解 反转字符串(Python3)</title>
-    <link href="https://ruyululu.com/2018/07/17/leetcode%20%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    <id>https://ruyululu.com/2018/07/17/leetcode 反转字符串/</id>
-    <published>2018-07-17T05:09:03.000Z</published>
-    <updated>2019-03-06T05:16:10.578Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt; &lt;strong&gt;说在前面：本题解旨在熟悉python3的基本操作和库函数的使用，仅采用最简便方法，而非时间或空间复杂度较小的方法。若读者想要学习数据结构还是推荐使用C/C++或Java。&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&quot;原题：&quot;&gt;&lt;a href=&quot;#原题：&quot; class=&quot;headerlink&quot; title=&quot;原题：&quot;&gt;&lt;/a&gt;原题：&lt;/h2&gt;&lt;p&gt;编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 &lt;code&gt;char[]&lt;/code&gt; 的形式给出。&lt;/p&gt;
-&lt;p&gt;不要给另外的数组分配额外的空间，你必须&lt;strong&gt;原地修改输入数组&lt;/strong&gt;、使用 O(1) 的额外空间解决这一问题。&lt;/p&gt;
-&lt;p&gt;你可以假设数组中的所有字符都是 &lt;a href=&quot;https://baike.baidu.com/item/ASCII&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;ASCII&lt;/a&gt; 码表中的可打印字符。&lt;/p&gt;
     
     </summary>
     

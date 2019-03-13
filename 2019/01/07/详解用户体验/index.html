@@ -81,7 +81,7 @@
     <script defer type="text/javascript" src="/js/index.js"></script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>怎么制作产品流程图 | 苦瓜不灵's Note - 记录我的大脑</title>
+    <title>详解用户体验 | 苦瓜不灵's Note - 记录我的大脑</title>
   </head>
   <body itemscope="" itemtype="http://schema.org/WebPage" lang="zh_CN" data-spy="scroll" data-target=".list-group">
     
@@ -127,7 +127,7 @@
   
   <article class="article post card animate" itemscope="" itemtype="http://schema.org/Article">
     <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="https://ruyululu.com/2018/11/20/用户体验/">
+      <link itemprop="mainEntityOfPage" href="https://ruyululu.com/2019/01/07/详解用户体验/">
       <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
        <meta itemprop="name" content="苦瓜不灵">
        <meta itemprop="description" content="">
@@ -138,11 +138,11 @@
       </span>
     </div>
     <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">怎么制作产品流程图</h1>
+      <h1 class="post-title" itemprop="name headline">详解用户体验</h1>
       <div class="post-meta">
         
         <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-11-20T20:12:44+08:00">2018-11-20 20:12:44</time></span>
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-01-07T01:29:46+08:00">2019-01-07 01:29:46</time></span>
         </span>
         
         
@@ -158,20 +158,42 @@
       </div>
     </header>
     <main class="post-main" itemprop="articleBody">
-      <p>个矛盾的集合体，每个用户都不太一样。让用户觉得简单是一件很直觉的事情，不必多费笔墨。</p>
-<p>但用户又不喜欢过于简单的交互过程，会让人觉得简陋。那么用户到底喜欢什么样的体验呢？</p>
-<p>本篇并不能给出答案，千人千面，不可能面面俱到。因此本篇还是以避免踩坑为主。</p>
-<p>下面内容，其实在前面一些文章中都提到过，但是还是单独拎出来，便于思考。</p>
+      <p> 大部分时候大部分产品经理口中的体验，都是指用户体验或者客户体验。</p>
+<p>这是一个宽泛的概念，包括了一系列子概念，如：信息架构、人机交互、交互设计、图形设计、可用性、以用户为中心的设计等等。</p>
 <a id="more"></a>
-<h2 id="不要让用户等："><a href="#不要让用户等：" class="headerlink" title="不要让用户等："></a>不要让用户等：</h2><p>用户的<strong>耐心</strong>有限</p>
-<p><strong>响应速度</strong>必须达到平均水准以上，响应慢让人血压升高的体验相信大家都有</p>
-<h2 id="不要让用户想："><a href="#不要让用户想：" class="headerlink" title="不要让用户想："></a>不要让用户想：</h2><p>不要让用户思考了才能明白某个功能或组件，最好让用户只停留在<strong>本能直觉</strong>层面上</p>
-<p>关注用户需要的操作，给出明确清晰的<strong>指引</strong>。用户耐心有限，指引尽可能<strong>简明扼要</strong></p>
-<p>尽可能降低用户<strong>学习成本</strong></p>
-<h2 id="不要让用户烦："><a href="#不要让用户烦：" class="headerlink" title="不要让用户烦："></a>不要让用户烦：</h2><p>不告诉用户错误，且帮用户<strong>处理错误</strong>。<strong>频繁提示</strong>用户错误会使用户失去耐心。</p>
-<p>不过多重复性操作。</p>
-<p>能做到以上3点，一个产品在用户体验上至少算是到及格线了。</p>
-
+<h1 id="我们最需要关注两点："><a href="#我们最需要关注两点：" class="headerlink" title="我们最需要关注两点："></a>我们最需要关注两点：</h1><h2 id="可用性："><a href="#可用性：" class="headerlink" title="可用性："></a>可用性：</h2><blockquote>
+<p>特定的<strong>用户</strong>在特定的使用<strong>场景</strong>下，为了达到特定的<strong>目标</strong>而使用某产品时，所感受到的有效性、效率及满意的程度。——ISO 9241</p>
+</blockquote>
+<p>用户-&gt;场景-&gt;目标(功能)</p>
+<p>这是我在前面文章中强调的一个思考方式。</p>
+<p>摘录我《用户与场景》一文中的一段</p>
+<blockquote>
+<p>在分析用户需求的时候，我们首先要明确：<strong>用户与场景是紧密联系的，不同人在不同场景下的行为是不同的。</strong></p>
+<h2 id="分析方法"><a href="#分析方法" class="headerlink" title="分析方法"></a>分析方法</h2><p>这里写的方法是基于快速迭代的思路，这里我把方法分为五步：</p>
+<h3 id="1-寻找用户"><a href="#1-寻找用户" class="headerlink" title="1.寻找用户"></a>1.寻找用户</h3><p>这部分用户在产品起步阶段，大致的划分出的目标客户。可能是天使用户，也可能是探索者或是geek。不必太精细，因为后续步骤会将用户继续细化（真正的客户会被验证）。</p>
+<h3 id="2-场景"><a href="#2-场景" class="headerlink" title="2.场景"></a>2.场景</h3><p>在不同场景使用产品必然有不同的需求，例如在火车站绝大部分人需要吃快餐，所以不会有西餐厅开在火车站内，在地铁上手机信号不不好，所以QQ空间现在也支持离线发说说了。</p>
+<h3 id="3-找到问题（需求）"><a href="#3-找到问题（需求）" class="headerlink" title="3.找到问题（需求）"></a>3.找到问题（需求）</h3><p>在确定了用户和场景之后，通过排列组合，我们可以列出很多需求。并且提出<strong>假设</strong>。</p>
+<h3 id="4-验证假设"><a href="#4-验证假设" class="headerlink" title="4.验证假设"></a>4.验证假设</h3><p>假设不一定是正确，当然我们需要去验证。错误的方向只能带来浪费。验证的方式有很多，在产品初期最低成本低风险的方案当属<strong>用户访谈</strong>（这方面后续会写）。</p>
+<h3 id="5-解决方案"><a href="#5-解决方案" class="headerlink" title="5.解决方案"></a>5.解决方案</h3><p>在完成上述步骤后，最终我们就应该有能做出解决用户在某些场景下需求的功能或方案。最终将我们的产品推向市场，然后从步骤1继续循环，这就是<strong>迭代</strong>。这里需要注意，一个产品的生命周期是<strong>有限的</strong>，如果不能在有限的时间内<strong>迭代足够多的次数</strong>，产品就会不成熟，影响收益。就像青春是有限的，如果一个人在年轻力壮没有好好努力的话，就会老大徒伤悲。</p>
+</blockquote>
+<h2 id="UCD-User-Centered-Design-以用户为中心的设计："><a href="#UCD-User-Centered-Design-以用户为中心的设计：" class="headerlink" title="UCD (User-Centered Design) 以用户为中心的设计："></a>UCD (User-Centered Design) 以用户为中心的设计：</h2><p>什么是UCD：</p>
+<blockquote>
+<p>1.用户积极的<strong>融入</strong>及对用户和他们的任务<strong>需求</strong>的清晰理解。</p>
+<p>2.用户与技术之间一个合适的<strong>功能定位</strong></p>
+<p>3.设计方案的<strong>迭代</strong></p>
+<p>4.<strong>跨学科</strong>的设计</p>
+</blockquote>
+<p>就是说，我们需要搞明白<strong>用户</strong>需要什么；</p>
+<p>技术也不是越NB越好，而是要平衡<strong>用户</strong>需求和技术功能；</p>
+<p>现有方案出现BUG影响<strong>用户</strong>体验了，一定要快速的迭代修复；</p>
+<p><strong>用户</strong>的体验是多方面的，所以需要跨学科的知识。</p>
+<p>总之<strong>想用户所想</strong>。</p>
+<h1 id="狭义的用户体验："><a href="#狭义的用户体验：" class="headerlink" title="狭义的用户体验："></a>狭义的用户体验：</h1><p><img src="https://s2.ax1x.com/2019/03/12/AiEIl8.md.jpg" alt="产品可用性"></p>
+<p>上图是一个产品对功能的要求，</p>
+<p><strong>有用：</strong>首先我们应当思考我们的产品或功能是否真的能满足用户的某个<strong>需求</strong>，满足了，就说明我们的产品是有用的。</p>
+<p><strong>可用：</strong>然后就是可用性的问题，有些产品虽然新颖、吸引人，但是功能复杂或者<strong>不切实际</strong>，用户体验后觉得难用，那么这个产品或功能就是不可用的。如果用户使用我们的产品没那么难<strong>上手</strong>没有<strong>困难</strong>，那么我们就达到了可用的标准。</p>
+<p><strong>好用：</strong>当用户能够<strong>习惯</strong></p>
+<h1 id="广义的用户体验："><a href="#广义的用户体验：" class="headerlink" title="广义的用户体验："></a>广义的用户体验：</h1>
     </main>
     <footer class="post-footer">
       
@@ -192,7 +214,7 @@
   <nav class="page-nav">
     <div class="page-nav-next page-nav-item">
       
-      <a href="/2018/11/14/产品设计中的心智模型/" rel="next" title="产品设计中的心智模型"><i class="fas fa-angle-left"></i><span class="nav-title">产品设计中的心智模型</span></a>
+      <a href="/2018/11/20/用户体验的三条定律/" rel="next" title="用户体验的三条定律"><i class="fas fa-angle-left"></i><span class="nav-title">用户体验的三条定律</span></a>
       
     </div>
     <div class="page-nav-prev page-nav-item">
@@ -229,7 +251,7 @@
     
     <div class="archives-count">
       <div class="site-count-title">归档</div>
-      <div><a href="/archives/">28</a></div>
+      <div><a href="/archives/">29</a></div>
     </div>
     
     
@@ -268,7 +290,7 @@
     <hr>
     <div class="post-toc sidebar-item" id="toc-div">
       <div><i class="fas fa-list-ol"></i>文章目录</div>
-      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#不要让用户等："><span class="toc-text">不要让用户等：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#不要让用户想："><span class="toc-text">不要让用户想：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#不要让用户烦："><span class="toc-text">不要让用户烦：</span></a></li></ol></div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#我们最需要关注两点："><span class="toc-text">我们最需要关注两点：</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#可用性："><span class="toc-text">可用性：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#分析方法"><span class="toc-text">分析方法</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#1-寻找用户"><span class="toc-text">1.寻找用户</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#2-场景"><span class="toc-text">2.场景</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#3-找到问题（需求）"><span class="toc-text">3.找到问题（需求）</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#4-验证假设"><span class="toc-text">4.验证假设</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#5-解决方案"><span class="toc-text">5.解决方案</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#UCD-User-Centered-Design-以用户为中心的设计："><span class="toc-text">UCD (User-Centered Design) 以用户为中心的设计：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#狭义的用户体验："><span class="toc-text">狭义的用户体验：</span></a></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#广义的用户体验："><span class="toc-text">广义的用户体验：</span></a></li></ol></div>
     </div>
     
     

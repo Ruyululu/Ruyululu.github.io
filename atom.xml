@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ruyululu.com/"/>
-  <updated>2019-03-02T07:13:28.131Z</updated>
+  <updated>2019-03-13T14:40:06.461Z</updated>
   <id>https://ruyululu.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://ruyululu.com/2019/01/20/Python%E5%88%86%E6%9E%90%E9%A2%84%E6%B5%8B%E8%82%A1%E4%BB%B7/"/>
     <id>https://ruyululu.com/2019/01/20/Python分析预测股价/</id>
     <published>2019-01-20T15:22:09.000Z</published>
-    <updated>2019-03-02T07:13:28.131Z</updated>
+    <updated>2019-03-13T14:40:06.461Z</updated>
     
     <summary type="html">
     
@@ -45,11 +45,39 @@
   </entry>
   
   <entry>
+    <title>Nielsen的10条用户交互设计原则</title>
+    <link href="https://ruyululu.com/2019/01/16/Nielsen%E7%9A%8410%E6%9D%A1%E7%94%A8%E6%88%B7%E4%BA%A4%E4%BA%92%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/"/>
+    <id>https://ruyululu.com/2019/01/16/Nielsen的10条用户交互设计原则/</id>
+    <published>2019-01-16T15:09:45.000Z</published>
+    <updated>2019-03-20T05:05:56.754Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt; 早在1994年，Nielsen就提出了10条至今仍被广泛使用的用户交互设计原则。但因为它们是宽泛的经验法则，而不是具体可用的方针，所以它们被称为“启发式”的原则。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="产品" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="产品设计" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
+    
+      <category term="用户体验" scheme="https://ruyululu.com/categories/%E4%BA%A7%E5%93%81/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/"/>
+    
+    
+      <category term="产品" scheme="https://ruyululu.com/tags/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="产品设计" scheme="https://ruyululu.com/tags/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
+    
+      <category term="用户体验" scheme="https://ruyululu.com/tags/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>详解用户体验</title>
     <link href="https://ruyululu.com/2019/01/07/%E8%AF%A6%E8%A7%A3%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/"/>
     <id>https://ruyululu.com/2019/01/07/详解用户体验/</id>
     <published>2019-01-06T17:29:46.000Z</published>
-    <updated>2019-03-12T13:54:59.379Z</updated>
+    <updated>2019-03-20T04:29:01.351Z</updated>
     
     <summary type="html">
     
@@ -70,6 +98,71 @@
       <category term="产品设计" scheme="https://ruyululu.com/tags/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
     
       <category term="用户体验" scheme="https://ruyululu.com/tags/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode题解 第N高的薪水(SQL)</title>
+    <link href="https://ruyululu.com/2018/12/05/leetcode%20sql%20%E7%AC%AC%E4%BA%8C%E9%AB%98%E7%9A%84%E8%96%AA%E6%B0%B4/"/>
+    <id>https://ruyululu.com/2018/12/05/leetcode sql 第二高的薪水/</id>
+    <published>2018-12-05T13:53:31.000Z</published>
+    <updated>2019-03-14T04:41:49.065Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;原题：&quot;&gt;&lt;a href=&quot;#原题：&quot; class=&quot;headerlink&quot; title=&quot;原题：&quot;&gt;&lt;/a&gt;原题：&lt;/h2&gt;&lt;p&gt;编写一个 SQL 查询，获取 &lt;code&gt;Employee&lt;/code&gt; 表中第 &lt;em&gt;n&lt;/em&gt; 高的薪水（Salary）。&lt;/p&gt;
+&lt;figure class=&quot;hljs highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;+----+--------+&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| Id | Salary |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+----+--------+&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| 1  | 100    |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| 2  | 200    |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| 3  | 300    |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+----+--------+&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;例如上述 &lt;code&gt;Employee&lt;/code&gt; 表，&lt;em&gt;n = 2&lt;/em&gt; 时，应返回第二高的薪水 &lt;code&gt;200&lt;/code&gt;。如果不存在第 &lt;em&gt;n&lt;/em&gt; 高的薪水，那么查询应返回 &lt;code&gt;null&lt;/code&gt;。&lt;/p&gt;
+&lt;figure class=&quot;hljs highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;+------------------------+&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| getNthHighestSalary(2) |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+------------------------+&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| 200                    |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+------------------------+&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="https://ruyululu.com/categories/Python/"/>
+    
+      <category term="leetcode" scheme="https://ruyululu.com/categories/Python/leetcode/"/>
+    
+      <category term="SQL" scheme="https://ruyululu.com/categories/Python/leetcode/SQL/"/>
+    
+    
+      <category term="Python" scheme="https://ruyululu.com/tags/Python/"/>
+    
+      <category term="leetcode" scheme="https://ruyululu.com/tags/leetcode/"/>
+    
+      <category term="SQL" scheme="https://ruyululu.com/tags/SQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode 有趣的电影(SQL)</title>
+    <link href="https://ruyululu.com/2018/12/01/leetcode%20sql%20%E6%9F%A5%E6%89%BE%E9%87%8D%E5%A4%8D%E7%9A%84%E7%94%B5%E5%AD%90%E9%82%AE%E7%AE%B1/"/>
+    <id>https://ruyululu.com/2018/12/01/leetcode sql 查找重复的电子邮箱/</id>
+    <published>2018-12-01T07:47:26.000Z</published>
+    <updated>2019-03-14T04:18:17.326Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;原题：&quot;&gt;&lt;a href=&quot;#原题：&quot; class=&quot;headerlink&quot; title=&quot;原题：&quot;&gt;&lt;/a&gt;原题：&lt;/h2&gt;&lt;p&gt;SQL架构&lt;/p&gt;
+&lt;p&gt;编写一个 SQL 查询，查找 &lt;code&gt;Person&lt;/code&gt; 表中所有重复的电子邮箱。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例：&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;hljs highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;+----+---------+&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| Id | Email   |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+----+---------+&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| 1  | a@b.com |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| 2  | c@d.com |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| 3  | a@b.com |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+----+---------+&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;根据以上输入，你的查询应返回以下结果：&lt;/p&gt;
+&lt;figure class=&quot;hljs highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;+---------+&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| Email   |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+---------+&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| a@b.com |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+---------+&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;说明：&lt;/strong&gt;所有电子邮箱都是小写字母。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="https://ruyululu.com/categories/Python/"/>
+    
+      <category term="leetcode" scheme="https://ruyululu.com/categories/Python/leetcode/"/>
+    
+      <category term="SQL" scheme="https://ruyululu.com/categories/Python/leetcode/SQL/"/>
+    
+    
+      <category term="Python" scheme="https://ruyululu.com/tags/Python/"/>
+    
+      <category term="leetcode" scheme="https://ruyululu.com/tags/leetcode/"/>
+    
+      <category term="SQL" scheme="https://ruyululu.com/tags/SQL/"/>
     
   </entry>
   
@@ -231,7 +324,7 @@
     <link href="https://ruyululu.com/2018/10/30/leetcode%20sql%20%E5%A4%A7%E7%9A%84%E5%9B%BD%E5%AE%B6/"/>
     <id>https://ruyululu.com/2018/10/30/leetcode sql 大的国家/</id>
     <published>2018-10-30T05:49:17.000Z</published>
-    <updated>2019-03-13T13:08:57.952Z</updated>
+    <updated>2019-03-13T14:31:51.314Z</updated>
     
     <summary type="html">
     
@@ -536,104 +629,6 @@
       <category term="产品" scheme="https://ruyululu.com/tags/%E4%BA%A7%E5%93%81/"/>
     
       <category term="产品经理" scheme="https://ruyululu.com/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode题解 第二高的薪水(SQL)</title>
-    <link href="https://ruyululu.com/2018/08/19/leetcode%20sql%20%E4%B8%8A%E5%8D%87%E7%9A%84%E6%B8%A9%E5%BA%A6/"/>
-    <id>https://ruyululu.com/2018/08/19/leetcode sql 上升的温度/</id>
-    <published>2018-08-19T05:48:43.000Z</published>
-    <updated>2019-03-10T12:36:57.563Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;原题：&quot;&gt;&lt;a href=&quot;#原题：&quot; class=&quot;headerlink&quot; title=&quot;原题：&quot;&gt;&lt;/a&gt;原题：&lt;/h2&gt;&lt;p&gt;SQL架构&lt;/p&gt;
-&lt;p&gt;给定一个 &lt;code&gt;Weather&lt;/code&gt; 表，编写一个 SQL 查询，来查找与之前（昨天的）日期相比温度更高的所有日期的 Id。&lt;/p&gt;
-&lt;figure class=&quot;hljs highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;+---------+------------------+------------------+&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| Id(INT) | RecordDate(DATE) | Temperature(INT) |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+---------+------------------+------------------+&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|       1 |       2015-01-01 |               10 |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|       2 |       2015-01-02 |               25 |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|       3 |       2015-01-03 |               20 |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|       4 |       2015-01-04 |               30 |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+---------+------------------+------------------+&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;例如，根据上述给定的 &lt;code&gt;Weather&lt;/code&gt; 表格，返回如下 Id:&lt;/p&gt;
-&lt;figure class=&quot;hljs highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;+----+&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| Id |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+----+&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|  2 |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|  4 |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+----+&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Python" scheme="https://ruyululu.com/categories/Python/"/>
-    
-      <category term="leetcode" scheme="https://ruyululu.com/categories/Python/leetcode/"/>
-    
-      <category term="SQL" scheme="https://ruyululu.com/categories/Python/leetcode/SQL/"/>
-    
-    
-      <category term="Python" scheme="https://ruyululu.com/tags/Python/"/>
-    
-      <category term="leetcode" scheme="https://ruyululu.com/tags/leetcode/"/>
-    
-      <category term="SQL" scheme="https://ruyululu.com/tags/SQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode题解 第二高的薪水(SQL)</title>
-    <link href="https://ruyululu.com/2018/08/18/leetcode%20sql%20%E7%AC%AC%E4%BA%8C%E9%AB%98%E7%9A%84%E8%96%AA%E6%B0%B4/"/>
-    <id>https://ruyululu.com/2018/08/18/leetcode sql 第二高的薪水/</id>
-    <published>2018-08-18T08:04:35.000Z</published>
-    <updated>2019-03-10T11:57:50.341Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;原题：&quot;&gt;&lt;a href=&quot;#原题：&quot; class=&quot;headerlink&quot; title=&quot;原题：&quot;&gt;&lt;/a&gt;原题：&lt;/h2&gt;&lt;p&gt;SQL架构&lt;/p&gt;
-&lt;p&gt;编写一个 SQL 查询，获取 &lt;code&gt;Employee&lt;/code&gt; 表中第二高的薪水（Salary） 。&lt;/p&gt;
-&lt;figure class=&quot;hljs highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;+----+--------+&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| Id | Salary |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+----+--------+&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| 1  | 100    |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| 2  | 200    |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| 3  | 300    |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+----+--------+&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;例如上述 &lt;code&gt;Employee&lt;/code&gt; 表，SQL查询应该返回 &lt;code&gt;200&lt;/code&gt; 作为第二高的薪水。如果不存在第二高的薪水，那么查询应返回 &lt;code&gt;null&lt;/code&gt;。&lt;/p&gt;
-&lt;figure class=&quot;hljs highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;+---------------------+&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| SecondHighestSalary |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+---------------------+&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| 200                 |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+---------------------+&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Python" scheme="https://ruyululu.com/categories/Python/"/>
-    
-      <category term="leetcode" scheme="https://ruyululu.com/categories/Python/leetcode/"/>
-    
-      <category term="SQL" scheme="https://ruyululu.com/categories/Python/leetcode/SQL/"/>
-    
-    
-      <category term="Python" scheme="https://ruyululu.com/tags/Python/"/>
-    
-      <category term="leetcode" scheme="https://ruyululu.com/tags/leetcode/"/>
-    
-      <category term="SQL" scheme="https://ruyululu.com/tags/SQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode题解 组合两表(SQL)</title>
-    <link href="https://ruyululu.com/2018/08/18/leetcode%20sql%20%E7%BB%84%E5%90%88%E4%B8%A4%E8%A1%A8/"/>
-    <id>https://ruyululu.com/2018/08/18/leetcode sql 组合两表/</id>
-    <published>2018-08-18T07:28:07.000Z</published>
-    <updated>2019-03-10T11:27:33.407Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;原题：&quot;&gt;&lt;a href=&quot;#原题：&quot; class=&quot;headerlink&quot; title=&quot;原题：&quot;&gt;&lt;/a&gt;原题：&lt;/h2&gt;&lt;p&gt;SQL架构&lt;/p&gt;
-&lt;p&gt;表1: &lt;code&gt;Person&lt;/code&gt;&lt;/p&gt;
-&lt;figure class=&quot;hljs highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;+-------------+---------+&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| 列名         | 类型     |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+-------------+---------+&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| PersonId    | int     |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| FirstName   | varchar |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| LastName    | varchar |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+-------------+---------+&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;PersonId 是上表主键&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;表2: &lt;code&gt;Address&lt;/code&gt;&lt;/p&gt;
-&lt;figure class=&quot;hljs highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;+-------------+---------+&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| 列名         | 类型    |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+-------------+---------+&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| AddressId   | int     |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| PersonId    | int     |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| City        | varchar |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| State       | varchar |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+-------------+---------+&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;AddressId 是上表主键&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;编写一个 SQL 查询，满足条件：无论 person 是否有地址信息，都需要基于上述两表提供 person 的以下信息：&lt;/p&gt;
-&lt;figure class=&quot;hljs highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;FirstName, LastName, City, State&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Python" scheme="https://ruyululu.com/categories/Python/"/>
-    
-      <category term="leetcode" scheme="https://ruyululu.com/categories/Python/leetcode/"/>
-    
-      <category term="SQL" scheme="https://ruyululu.com/categories/Python/leetcode/SQL/"/>
-    
-    
-      <category term="Python" scheme="https://ruyululu.com/tags/Python/"/>
-    
-      <category term="leetcode" scheme="https://ruyululu.com/tags/leetcode/"/>
-    
-      <category term="SQL" scheme="https://ruyululu.com/tags/SQL/"/>
     
   </entry>
   

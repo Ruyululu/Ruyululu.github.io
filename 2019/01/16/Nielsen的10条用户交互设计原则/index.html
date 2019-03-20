@@ -81,7 +81,7 @@
     <script defer type="text/javascript" src="/js/index.js"></script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>leetcode题解 第二高的薪水(SQL) | 苦瓜不灵's Note - 记录我的大脑</title>
+    <title>Nielsen的10条用户交互设计原则 | 苦瓜不灵's Note - 记录我的大脑</title>
   </head>
   <body itemscope="" itemtype="http://schema.org/WebPage" lang="zh_CN" data-spy="scroll" data-target=".list-group">
     
@@ -127,7 +127,7 @@
   
   <article class="article post card animate" itemscope="" itemtype="http://schema.org/Article">
     <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="https://ruyululu.com/2018/08/18/leetcode sql 第二高的薪水/">
+      <link itemprop="mainEntityOfPage" href="https://ruyululu.com/2019/01/16/Nielsen的10条用户交互设计原则/">
       <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
        <meta itemprop="name" content="苦瓜不灵">
        <meta itemprop="description" content="">
@@ -138,11 +138,11 @@
       </span>
     </div>
     <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">leetcode题解 第二高的薪水(SQL)</h1>
+      <h1 class="post-title" itemprop="name headline">Nielsen的10条用户交互设计原则</h1>
       <div class="post-meta">
         
         <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-08-18T16:04:35+08:00">2018-08-18 16:04:35</time></span>
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-01-16T23:09:45+08:00">2019-01-16 23:09:45</time></span>
         </span>
         
         
@@ -151,40 +151,45 @@
         
         <span class="post-categories">
           
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/leetcode/SQL/" itemprop="url" rel="index"><span itemprop="name">SQL</span></a></span>
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/产品/" itemprop="url" rel="index"><span itemprop="name">产品</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/产品/产品设计/" itemprop="url" rel="index"><span itemprop="name">产品设计</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/产品/产品设计/用户体验/" itemprop="url" rel="index"><span itemprop="name">用户体验</span></a></span>
         </span>
         
         
       </div>
     </header>
     <main class="post-main" itemprop="articleBody">
-      <h2 id="原题："><a href="#原题：" class="headerlink" title="原题："></a>原题：</h2><p>SQL架构</p>
-<p>编写一个 SQL 查询，获取 <code>Employee</code> 表中第二高的薪水（Salary） 。</p>
-<figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">+----+--------+</span><br><span class="line">| Id | Salary |</span><br><span class="line">+----+--------+</span><br><span class="line">| 1  | 100    |</span><br><span class="line">| 2  | 200    |</span><br><span class="line">| 3  | 300    |</span><br><span class="line">+----+--------+</span><br></pre></td></tr></table></figure>
-<p>例如上述 <code>Employee</code> 表，SQL查询应该返回 <code>200</code> 作为第二高的薪水。如果不存在第二高的薪水，那么查询应返回 <code>null</code>。</p>
-<figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">+---------------------+</span><br><span class="line">| SecondHighestSalary |</span><br><span class="line">+---------------------+</span><br><span class="line">| 200                 |</span><br><span class="line">+---------------------+</span><br></pre></td></tr></table></figure>
+      <p> 早在1994年，Nielsen就提出了10条至今仍被广泛使用的用户交互设计原则。但因为它们是宽泛的经验法则，而不是具体可用的方针，所以它们被称为“启发式”的原则。</p>
 <a id="more"></a>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select IFNULL </span><br><span class="line">((select DISTINCT Salary from Employee order by Salary desc limit 1,1),NULL)</span><br><span class="line">AS SecondHighestSalary;</span><br></pre></td></tr></table></figure>
-<h2 id="解析："><a href="#解析：" class="headerlink" title="解析："></a>解析：</h2><ul>
-<li><p>DISTINCT 语句</p>
-<p>在表中，可能会包含重复值。关键词 DISTINCT 用于返回唯一不同的值。</p>
-</li>
-<li><p>IFNULL 语句用于处理NULL的情况，结果非NULL返回前一个表达式，为NULL则返回后一个表达式。</p>
-</li>
-<li><p>AS 用来起别名。</p>
-</li>
-</ul>
+<h2 id="状态可视化："><a href="#状态可视化：" class="headerlink" title="状态可视化："></a>状态可视化：</h2><p>产品应始终在合理的时间通过适当的<strong>反馈</strong>向用户，使用户知晓正在发生的事情。</p>
+<h2 id="与现实连结："><a href="#与现实连结：" class="headerlink" title="与现实连结："></a>与现实连结：</h2><p>系统应使用用户<strong>熟悉</strong>的单词，短语和概念来说明产品，而不是面向系统的术语。</p>
+<p>并遵循现实世界中的<strong>习惯</strong>，自然地进行交互。</p>
+<h2 id="用户行为的修正（自由）："><a href="#用户行为的修正（自由）：" class="headerlink" title="用户行为的修正（自由）："></a>用户行为的修正（自由）：</h2><p>用户经常会错误地使用产品功能，所以我们需要一个明显的“紧急出口”来拜托错误的状态。支持<strong>撤消</strong>和<strong>重做</strong>。</p>
+<h2 id="一致性和标准："><a href="#一致性和标准：" class="headerlink" title="一致性和标准："></a>一致性和标准：</h2><p>不应该使用户思考不同的词汇、情境或行为的意义，应当始终使用<strong>相同标准</strong>，<strong>避免二义性</strong>。</p>
+<h2 id="预防错误："><a href="#预防错误：" class="headerlink" title="预防错误："></a>预防错误：</h2><p>与其费心做精细的错误消息，不如<strong>防止问题的发生</strong>。</p>
+<p>我们可以消除容易出错的情况，或者进行检查，并在用户提交操作之前向用户显示确认选项。</p>
+<p>ps：最好在用户未知的情况下直接帮助用户<strong>修正错误</strong>。</p>
+<h2 id="适时提示，不要让用户回顾："><a href="#适时提示，不要让用户回顾：" class="headerlink" title="适时提示，不要让用户回顾："></a>适时提示，不要让用户回顾：</h2><p>应让产品的操作和选项<strong>可见</strong>，尽可能地<strong>减少用户的负担</strong>。</p>
+<p>让用户不必从头到尾记住交互过程或流程，不必返回前面步骤去回忆前面做过的事。</p>
+<p>适当<strong>提示</strong>用户，并且说明应该是可见的或易于检索的</p>
+<h2 id="效率与灵活性："><a href="#效率与灵活性：" class="headerlink" title="效率与灵活性："></a>效率与灵活性：</h2><p>添加“<strong>加速功能</strong>” ，新手用户不会用到，但利于有经验的用户进行快速交互，使得产品既满足缺乏经验也能有经验的用户。</p>
+<p>并且允许用户<strong>定制</strong>频繁的操作，满足灵活操作。</p>
+<h2 id="简约设计："><a href="#简约设计：" class="headerlink" title="简约设计："></a>简约设计：</h2><p>交互过程中不应该包含无关信息。</p>
+<p>交互过程中的每个<strong>无关/额外的信息</strong>会与<strong>主要信息</strong>竞争，会使主要信息容易被忽略。</p>
+<h2 id="帮助用户识别、诊断和回复错误中恢复："><a href="#帮助用户识别、诊断和回复错误中恢复：" class="headerlink" title="帮助用户识别、诊断和回复错误中恢复："></a>帮助用户识别、诊断和回复错误中恢复：</h2><p>错误消息应以简明语言（无代码）表示，准确指出问题，并建设性地提出解决方案。</p>
+<p>ps:如果是面向技术生产的产品，就应当准确的指出问题，使用代码是一个好办法。</p>
+<h2 id="帮助和文档："><a href="#帮助和文档：" class="headerlink" title="帮助和文档："></a>帮助和文档：</h2><p>即使系统可以在没有文档的情况下使用，但还是需要提供帮助和文档。</p>
+<p>并且任何此类信息都应<strong>易于搜索</strong>，并用户需求息息相关，给出<strong>具体步骤</strong>，而不是宽泛的方法。</p>
 
     </main>
     <footer class="post-footer">
       
       <div class="post-tags">
         
-        <a class="post-tag button" href="/tags/Python/" rel="tag"><i class="fas fa-tags"></i>Python</a>
+        <a class="post-tag button" href="/tags/产品/" rel="tag"><i class="fas fa-tags"></i>产品</a>
         
-        <a class="post-tag button" href="/tags/leetcode/" rel="tag"><i class="fas fa-tags"></i>leetcode</a>
+        <a class="post-tag button" href="/tags/产品设计/" rel="tag"><i class="fas fa-tags"></i>产品设计</a>
         
-        <a class="post-tag button" href="/tags/SQL/" rel="tag"><i class="fas fa-tags"></i>SQL</a>
+        <a class="post-tag button" href="/tags/用户体验/" rel="tag"><i class="fas fa-tags"></i>用户体验</a>
         
       </div>
       
@@ -195,12 +200,12 @@
   <nav class="page-nav">
     <div class="page-nav-next page-nav-item">
       
-      <a href="/2018/08/18/leetcode sql 组合两表/" rel="next" title="leetcode题解 组合两表(SQL)"><i class="fas fa-angle-left"></i><span class="nav-title">leetcode题解 组合两表(SQL)</span></a>
+      <a href="/2019/01/07/详解用户体验/" rel="next" title="详解用户体验"><i class="fas fa-angle-left"></i><span class="nav-title">详解用户体验</span></a>
       
     </div>
     <div class="page-nav-prev page-nav-item">
       
-      <a href="/2018/08/19/leetcode sql 上升的温度/" rel="prev" title="leetcode题解 第二高的薪水(SQL)"><span class="nav-title">leetcode题解 第二高的薪水(SQL)</span><i class="fas fa-angle-right"></i></a>
+      <a href="/2019/01/20/Python分析预测股价/" rel="prev" title="Python分析预测股价"><span class="nav-title">Python分析预测股价</span><i class="fas fa-angle-right"></i></a>
       
     </div>
   </nav>
@@ -232,7 +237,7 @@
     
     <div class="archives-count">
       <div class="site-count-title">归档</div>
-      <div><a href="/archives/">31</a></div>
+      <div><a href="/archives/">33</a></div>
     </div>
     
     
@@ -271,7 +276,7 @@
     <hr>
     <div class="post-toc sidebar-item" id="toc-div">
       <div><i class="fas fa-list-ol"></i>文章目录</div>
-      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#原题："><span class="toc-text">原题：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#题解："><span class="toc-text">题解：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#解析："><span class="toc-text">解析：</span></a></li></ol></div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#状态可视化："><span class="toc-text">状态可视化：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#与现实连结："><span class="toc-text">与现实连结：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#用户行为的修正（自由）："><span class="toc-text">用户行为的修正（自由）：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#一致性和标准："><span class="toc-text">一致性和标准：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#预防错误："><span class="toc-text">预防错误：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#适时提示，不要让用户回顾："><span class="toc-text">适时提示，不要让用户回顾：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#效率与灵活性："><span class="toc-text">效率与灵活性：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#简约设计："><span class="toc-text">简约设计：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#帮助用户识别、诊断和回复错误中恢复："><span class="toc-text">帮助用户识别、诊断和回复错误中恢复：</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#帮助和文档："><span class="toc-text">帮助和文档：</span></a></li></ol></div>
     </div>
     
     

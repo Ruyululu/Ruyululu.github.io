@@ -293,7 +293,7 @@
   
   <article class="article post card animate" itemscope="" itemtype="http://schema.org/Article">
     <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="https://ruyululu.com/2018/12/05/leetcode sql 第二高的薪水/">
+      <link itemprop="mainEntityOfPage" href="https://ruyululu.com/2019/01/04/leetcode sql 分数排名/">
       <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
         <meta itemprop="name" content="苦瓜不灵">
         <meta itemprop="description" content="">
@@ -305,7 +305,121 @@
     </div>
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/12/05/leetcode sql 第二高的薪水/" itemprop="url">leetcode题解 第N高的薪水(SQL)</a>
+        <a class="post-title-link post-title-link-external" href="/2019/01/04/leetcode sql 分数排名/" itemprop="url">leetcode题解 分数排名(SQL)</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-01-04T16:48:23+08:00">2019-01-04 16:48:23</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/leetcode/SQL/" itemprop="url" rel="index"><span itemprop="name">SQL</span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      <h2 id="原题："><a href="#原题：" class="headerlink" title="原题："></a>原题：</h2><p>编写一个 SQL 查询来实现分数排名。如果两个分数相同，则两个分数排名（Rank）相同。请注意，平分后的下一个名次应该是下一个连续的整数值。换句话说，名次之间不应该有“间隔”。</p>
+<figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">+----+-------+</span><br><span class="line">| Id | Score |</span><br><span class="line">+----+-------+</span><br><span class="line">| 1  | 3.50  |</span><br><span class="line">| 2  | 3.65  |</span><br><span class="line">| 3  | 4.00  |</span><br><span class="line">| 4  | 3.85  |</span><br><span class="line">| 5  | 4.00  |</span><br><span class="line">| 6  | 3.65  |</span><br><span class="line">+----+-------+</span><br></pre></td></tr></table></figure>
+<p>例如，根据上述给定的 <code>Scores</code> 表，你的查询应该返回（按分数从高到低排列）：</p>
+<figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">+-------+------+</span><br><span class="line">| Score | Rank |</span><br><span class="line">+-------+------+</span><br><span class="line">| 4.00  | 1    |</span><br><span class="line">| 4.00  | 1    |</span><br><span class="line">| 3.85  | 2    |</span><br><span class="line">| 3.65  | 3    |</span><br><span class="line">| 3.65  | 3    |</span><br><span class="line">| 3.50  | 4    |</span><br><span class="line">+-------+------+</span><br></pre></td></tr></table></figure>
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/Python/" rel="tag"><i class="fas fa-tags"></i>Python</a>
+        
+        <a class="post-tag button" href="/tags/leetcode/" rel="tag"><i class="fas fa-tags"></i>leetcode</a>
+        
+        <a class="post-tag button" href="/tags/SQL/" rel="tag"><i class="fas fa-tags"></i>SQL</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card animate" itemscope="" itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://ruyululu.com/2019/01/04/leetcode sql 连续出现的数字/">
+      <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="苦瓜不灵">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="苦瓜不灵's Note">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2019/01/04/leetcode sql 连续出现的数字/" itemprop="url">leetcode题解 连续出现的数字(SQL)</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-01-04T16:48:23+08:00">2019-01-04 16:48:23</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/leetcode/SQL/" itemprop="url" rel="index"><span itemprop="name">SQL</span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      <h2 id="原题："><a href="#原题：" class="headerlink" title="原题："></a>原题：</h2><p>编写一个 SQL 查询，查找所有至少连续出现三次的数字。</p>
+<figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">+----+-----+</span><br><span class="line">| Id | Num |</span><br><span class="line">+----+-----+</span><br><span class="line">| 1  |  1  |</span><br><span class="line">| 2  |  1  |</span><br><span class="line">| 3  |  1  |</span><br><span class="line">| 4  |  2  |</span><br><span class="line">| 5  |  1  |</span><br><span class="line">| 6  |  2  |</span><br><span class="line">| 7  |  2  |</span><br><span class="line">+----+-----+</span><br></pre></td></tr></table></figure>
+<p>例如，给定上面的 <code>Logs</code> 表， <code>1</code> 是唯一连续出现至少三次的数字。</p>
+<figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">+-----------------+</span><br><span class="line">| ConsecutiveNums |</span><br><span class="line">+-----------------+</span><br><span class="line">| 1               |</span><br><span class="line">+-----------------+</span><br></pre></td></tr></table></figure>
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/Python/" rel="tag"><i class="fas fa-tags"></i>Python</a>
+        
+        <a class="post-tag button" href="/tags/leetcode/" rel="tag"><i class="fas fa-tags"></i>leetcode</a>
+        
+        <a class="post-tag button" href="/tags/SQL/" rel="tag"><i class="fas fa-tags"></i>SQL</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card animate" itemscope="" itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://ruyululu.com/2018/12/05/leetcode sql 第N高的薪水/">
+      <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="苦瓜不灵">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="苦瓜不灵's Note">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2018/12/05/leetcode sql 第N高的薪水/" itemprop="url">leetcode题解 第N高的薪水(SQL)</a>
       </h1>
       <div class="post-meta">
         
@@ -575,126 +689,6 @@
     </footer>
   </article>
   
-  <article class="article post card animate" itemscope="" itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="https://ruyululu.com/2018/11/08/产品流程图/">
-      <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="苦瓜不灵">
-        <meta itemprop="description" content="">
-        <meta itemprop="image" content="/images/avatar.jpg">
-      </span>
-      <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="苦瓜不灵's Note">
-      </span>
-    </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/11/08/产品流程图/" itemprop="url">怎么制作产品流程图</a>
-      </h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-11-08T23:38:09+08:00">2018-11-08 23:38:09</time></span>
-        </span>
-        
-        
-        
-        <span class="post-meta-divider divider">|</span>
-        
-        <span class="post-categories">
-          
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/产品/" itemprop="url" rel="index"><span itemprop="name">产品</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/产品/产品流程图/" itemprop="url" rel="index"><span itemprop="name">产品流程图</span></a></span>
-        </span>
-        
-        
-      </div>
-    </header>
-    <main class="post-main" itemprop="articleBody">
-      
-      <p> 工欲善其事必先利其器，方向都没搞清楚就开车，绕的路就越远。本篇我们就来介绍产品的方向盘——产品流程图。</p>
-<h2 id="什么是流程图："><a href="#什么是流程图：" class="headerlink" title="什么是流程图："></a>什么是流程图：</h2><p>流程图就是将<strong>逻辑关系</strong>用<strong>图形</strong>表现出来，图形直观，可读性强，也便于之后修改。</p>
-<h2 id="为什么要画流程图："><a href="#为什么要画流程图：" class="headerlink" title="为什么要画流程图："></a>为什么要画流程图：</h2><p><strong>1、帮助梳理逻辑</strong></p>
-<p>大脑的记忆能力并不是很强，你一定有想问题的时候想到后面忘了前面的体验。同样我们上来就画原型就有可能做很多无用功，而流程图就可以帮助我们理清楚思路。</p>
-<p><strong>2、便于修改</strong></p>
-<p>国家政策都改个不停，更不用说我们的产品了，市场瞬息万变。</p>
-<p><strong>3、便于宣讲和传播</strong></p>
-<p>产品经理需要跟很多人对接，如果有一张清晰的流程图，可以帮助你更容易的说明业务逻辑，也便于其他人理解这个项目。</p>
-      
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        <a class="post-tag button" href="/tags/产品/" rel="tag"><i class="fas fa-tags"></i>产品</a>
-        
-        <a class="post-tag button" href="/tags/产品流程图/" rel="tag"><i class="fas fa-tags"></i>产品流程图</a>
-        
-      </div>
-      
-    </footer>
-  </article>
-  
-  <article class="article post card animate" itemscope="" itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="https://ruyululu.com/2018/11/02/leetcode sql 从不订购的用户/">
-      <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="苦瓜不灵">
-        <meta itemprop="description" content="">
-        <meta itemprop="image" content="/images/avatar.jpg">
-      </span>
-      <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="苦瓜不灵's Note">
-      </span>
-    </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/11/02/leetcode sql 从不订购的用户/" itemprop="url">leetcode 从不订购的用户(SQL)</a>
-      </h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-11-02T18:31:16+08:00">2018-11-02 18:31:16</time></span>
-        </span>
-        
-        
-        
-        <span class="post-meta-divider divider">|</span>
-        
-        <span class="post-categories">
-          
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/leetcode/SQL/" itemprop="url" rel="index"><span itemprop="name">SQL</span></a></span>
-        </span>
-        
-        
-      </div>
-    </header>
-    <main class="post-main" itemprop="articleBody">
-      
-      <h2 id="原题："><a href="#原题：" class="headerlink" title="原题："></a>原题：</h2><p>SQL架构</p>
-<p>某网站包含两个表，<code>Customers</code> 表和 <code>Orders</code> 表。编写一个 SQL 查询，找出所有从不订购任何东西的客户。</p>
-<p><code>Customers</code> 表：</p>
-<figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">+----+-------+</span><br><span class="line">| Id | Name  |</span><br><span class="line">+----+-------+</span><br><span class="line">| 1  | Joe   |</span><br><span class="line">| 2  | Henry |</span><br><span class="line">| 3  | Sam   |</span><br><span class="line">| 4  | Max   |</span><br><span class="line">+----+-------+</span><br></pre></td></tr></table></figure>
-<p><code>Orders</code> 表：</p>
-<figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">+----+------------+</span><br><span class="line">| Id | CustomerId |</span><br><span class="line">+----+------------+</span><br><span class="line">| 1  | 3          |</span><br><span class="line">| 2  | 1          |</span><br><span class="line">+----+------------+</span><br></pre></td></tr></table></figure>
-<p>例如给定上述表格，你的查询应返回：</p>
-<figure class="hljs highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">+-----------+</span><br><span class="line">| Customers |</span><br><span class="line">+-----------+</span><br><span class="line">| Henry     |</span><br><span class="line">| Max       |</span><br><span class="line">+-----------+</span><br></pre></td></tr></table></figure>
-      
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        <a class="post-tag button" href="/tags/Python/" rel="tag"><i class="fas fa-tags"></i>Python</a>
-        
-        <a class="post-tag button" href="/tags/leetcode/" rel="tag"><i class="fas fa-tags"></i>leetcode</a>
-        
-        <a class="post-tag button" href="/tags/SQL/" rel="tag"><i class="fas fa-tags"></i>SQL</a>
-        
-      </div>
-      
-    </footer>
-  </article>
-  
   
   <nav class="pagination">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fas fa-angle-right" aria-label="下一页"></i></a>
@@ -727,7 +721,7 @@
     
     <div class="archives-count">
       <div class="site-count-title">归档</div>
-      <div><a href="/archives/">33</a></div>
+      <div><a href="/archives/">35</a></div>
     </div>
     
     
